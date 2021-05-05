@@ -128,22 +128,25 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 
 (This is a translator's note regarding translation guidelines, and is not found in the original book.)
 
-## การร่วมแปลหนังสือ {-}
+### การร่วมแปลหนังสือ {-}
 
-เรโพสิทอรี (repository) หลักของฉบับภาษาไทยอยู่ที่ https://github.com/srakrn/interpretable-ml-book-th กรุณาอย่าเกรงใจที่จะติดต่อผู้ดูแลเรโพฯ เพื่อเพิ่มคุณเข้าเป็นสมาชิกของเรโพฯ
+เรโพสิทอรี (repository) หลักของฉบับภาษาไทยอยู่ที่ https://github.com/srakrn/interpretable-ml-book-th กรุณาอย่าเกรงใจที่จะติดต่อผู้ดูแลเรโพฯ เพื่อเพิ่มคุณเข้าเป็นสมาชิกสำหรับเข้าถึงการใช้งานบอร์ดงานและวิกิ
 
-### บอร์ดงาน {-}
+#### บอร์ดงาน {-}
 
 หากคุณสนใจแปลงาน คุณสามารถใช้หน้า[บอร์ดคันบันสำหรับรายการบทต่างๆ ในหนังสือ](https://github.com/srakrn/interpretable-ml-book-th/projects/1) เพื่อบอกทุกคนว่าคุณกำลังแปลงานส่วนนี้
 
-"ลาก" ชื่อไฟล์ที่คุณสนใจหยิบมาแปลมาไว้ในส่วน "translating" และเมื่อแปลเสร็จแล้ว กรุณาลากชื่อไฟล์มาไว้ในส่วน "waiting for proofreading" และส่ง pull request มาเป็นการต่อไป
+กรุณาย้ายชื่อไฟล์ที่คุณสนใจหยิบมาแปลมาไว้ในส่วน "translating" และเมื่อแปลเสร็จแล้ว กรุณาย้ายไว้ในส่วน "waiting for proofreading" พร้อมส่ง pull request มาเป็นการต่อไป
 
-นอกจากนี้ กรุณาเพิ่มชื่อลงในหัวข้อ "คณะผู้แปลภาษาไทย" ในรายการด้านล่าง (หากต้องการ)
+นอกจากนี้ กรุณาเพิ่มชื่อลงในหัวข้อ "คณะผู้แปลภาษาไทย" ในรายการด้านล่างหากต้องการ โดยต้องเป็นชื่อจริงหรือนามแฝงส่วนบุคคล และยูอาร์แอลจะต้องเป็นยูอาร์แอลของสื่อสังคมออนไลน์หรือหน้าเว็บส่วนตัวเท่านั้น
 
-### Pull request {-}
+#### Pull request {-}
 
-ใน pull request กรุณาเลือกปลายทางเป็นบรานช์ `th-translation-dev` เพื่อให้ผู้ดูแลเรโพฯ ตรวจสอบ ทานการสะกด และปรับแก้ก่อนรวมเข้าสู่บรานช์ `master`
+ใน pull request กรุณาเลือกปลายทางเป็นบรานช์ `th-translation-dev` เพื่อตรวจสอบ ทานการสะกด และปรับแก้ก่อนรวมเข้าสู่บรานช์ `master`
 
-## คณะผู้แปลภาษาไทย
+#### คำแนะนำในการแปลและอภิธานศัพท์
+
+ศึกษา[คำแนะนำในการแปล](https://github.com/srakrn/interpretable-ml-book-th/wiki/Translation-Guidelines)และ[อภิธานศัพท์](https://github.com/srakrn/interpretable-ml-book-th/wiki/Glossary)ได้จากหน้า[วิกิ](https://github.com/srakrn/interpretable-ml-book-th/wiki)
+### คณะผู้แปลภาษาไทย {-}
 
 * [ศิระกร ลำใย](https://srakrn.me/bio)

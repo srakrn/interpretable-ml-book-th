@@ -106,6 +106,7 @@ fig:unnamed-chunk-53
 fig:unnamed-chunk-54
 fig:unnamed-chunk-55
 fig:unnamed-chunk-59
+คำแนะนำในการแปลและอภธานศพท
 intro
 storytime
 what-is-machine-learning

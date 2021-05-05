@@ -4,6 +4,18 @@ Explaining the decisions and behaviour of machine learning models.
 
 [![Build Status](https://travis-ci.org/christophM/interpretable-ml-book.svg?branch=master)](https://travis-ci.org/christophM/interpretable-ml-book)
 
+## หมายเหตุเพิ่มเติมสำหรับฉบับแปลไทย
+
+### คำแนะนำสำหรับผู้ร่วมแปล
+
+หากต้องการส่งฉบับร่วมแปล สามารถส่ง merge request มายังบรานช์ `th-translation-dev` เพื่อให้ผู้ดูแลเรโพฯ ตรวจสอบ ทานการสะกด และปรับแก้ก่อนรวมเข้าสู่บรานช์ `master` ต่อไป
+
+นอกจากนี้ กรุณาเพิ่มชื่อลงในหัวข้อย่อย "คณะผู้แปลภาษาไทย" ด้านล่าง หากต้องการเครดิต
+
+### คณะผู้แปลภาษาไทย
+
+* [ศิระกร ลำใย](https://srakrn.me/bio)
+
 ## Summary
 You can find the current version of the book here: https://christophm.github.io/interpretable-ml-book/
 

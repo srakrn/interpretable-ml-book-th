@@ -18,6 +18,9 @@ apt_pacakges:
   - libgdal-dev
   - open-cobol
 
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_92725ca94bf5_key -iv $encrypted_92725ca94bf5_iv -in deploy-key.enc -out deploy-key -d
+
 before_install:
   - sudo $(which R) CMD javareconf
   - Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) { install.packages("BiocManager"); BiocManager::install("Biobase")}'
@@ -25,11 +28,11 @@ before_install:
 
 before_script:
 - chmod +x ./_build_and_deploy.sh
-- git config --global user.email "christoph.molnar@gmail.com"
-- git config --global user.name "Christoph Molnar"
+- git config --global user.email "tanersirakorn@gmail.com"
+- git config --global user.name "Sirakorn Lamyai"
 script: ./_build_and_deploy.sh
 env:
   global:
-  - secure: jmo/WiDp6XfW5zU7e9yZuktt74+5WlzqKtXv3Tq14LUdDNuQfopPAvobjh6/ZVIcxA+lsfGt6G2lDMsKBsKuVOK0rrk99WmAt0UWEvS16ftoldFs3U3xHZI9YXmd1iBT5h4b5GNL25woGHfxyHw87dQkacatAbXH7b8D24ALRNvx1UAGVW4Dz/D52xvgL6Lncu296SrGA9PqXmiHuq679p7j7V90+z5KK9XxI1PcYNRKhMdtQkswa4132GM42tBQ8OoU4v2aWBgBEtSO8J6KXO/B1j184c0aSU2qoooxFCN0ZeR+ECs418wDj7wj98VfQDFCUOCteVmLSvLHgct2t70F5bNPbn+7PD+cwz4HPEy7zJffHxjKepsiLZEWUkGoQ6cSYEUUOicAOL0lrQtLxA14Yz/Y569Iq6/TrxL+FDYXBmJkwZ5gBffEbmGfmubkUZLNBfh+n65VYl71tGWM9e8tYBPLq1G0c+2cbN4E9H/A3wo7sP4JjKHmUVvZjqAOfxuuFpXua6wPSa6AyuuvjKfDzJOYjro6CWO4KYjUZ6qZ9DEt+xVrv39KMUviVTZPnUzc8kmz0zFDFnvJeOo/AGZ8ackDK6C3UJmpCAUxkdqFywHcAdl5vhoF4o5kk5Ucsa9Yn+SfNAe3jOicEV1M5U8yZ4vr/xUJTS0E/opkQMc=
+  - secure: cRrbyXDpQofuJ3mNYFPsCqO4lTUDFDSsTqVcFPS9fK25iUGsfqxjEjgOAwn4CrRCyalMeX2ERhqQH1SA6++oNxLKO4keGbzvvti9LWAbZuAG5b628+mD4AWOshajILfe6k6jDEsvxt2uAKsbxuBiPQl7jnnN3+DJDzV8tMHr0YZXuD50HU7mzyqE3RZT6AiKSYzNbiPDe8VZatlmiuBtikmevkaOD37EjIAN0GJBD4bv+o2usdOkDTpbZXSueDnsRY1OantndEbH3j50esjJiPRPcFCk1CsX7CiYUyJZOEhjJLYzblVMXHQhuoHpHpQrwRzSwz+ysxEAvr8g3wR9a6HkLyJFu0GiYE4HIWLx9PLd2st+Rq5pRcS3Fx04M2goDVh6nIvF9JZ/5Yk6N6nGYKrEGDVGwWE1tNKQPZChHcaKu0LjVNL1gh09x3oq4BtSoJ1Gsy6NALwFqkUMmOhQtsDVB+XBdR3YB5mW5P/1Ma143oST43uNYiQ8mO5o71KMYX6fVIWbtGHNbIow1NZxWhhpK6PfuwxqfV50/xwUBkxeeEZmYva+P2jO1AXSSZ+nlSigotjL9bn0dY6xOrEmLKCepcJDU6bM2xObQULAdbWeA3LpPnTWM3Lq/RiOKCXcRIAT1KlB49tK1hzanY6GUcRjONLLs+Knd2ryFt2yQik=
 
 

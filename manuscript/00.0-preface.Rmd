@@ -144,9 +144,10 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 
 ใน pull request กรุณาเลือกปลายทางเป็นบรานช์ `th-translation-dev` เพื่อตรวจสอบ ทานการสะกด และปรับแก้ก่อนรวมเข้าสู่บรานช์ `master`
 
-#### คำแนะนำในการแปลและอภิธานศัพท์
+#### คำแนะนำในการแปลและอภิธานศัพท์ {-}
 
 ศึกษา[คำแนะนำในการแปล](https://github.com/srakrn/interpretable-ml-book-th/wiki/Translation-Guidelines)และ[อภิธานศัพท์](https://github.com/srakrn/interpretable-ml-book-th/wiki/Glossary)ได้จากหน้า[วิกิ](https://github.com/srakrn/interpretable-ml-book-th/wiki)
+
 ### คณะผู้แปลภาษาไทย {-}
 
 * [ศิระกร ลำใย](https://srakrn.me/bio)

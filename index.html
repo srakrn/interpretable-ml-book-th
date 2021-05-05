@@ -24,7 +24,7 @@
 <meta name="author" content="Christoph Molnar" />
 
 
-<meta name="date" content="2021-04-26" />
+<meta name="date" content="2021-05-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -109,7 +109,7 @@ window.cookieconsent.initialise({
 <li><a href="./">Interpretable machine learning</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>บทนำ</a></li>
 <li class="chapter" data-level="" data-path="preface-by-the-author.html"><a href="preface-by-the-author.html"><i class="fa fa-check"></i>Preface by the Author</a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> Story Time</a><ul>
@@ -372,27 +372,27 @@ window.cookieconsent.initialise({
 <h1 class="title">Interpretable Machine Learning</h1>
 <h2 class="subtitle"><em>A Guide for Making Black Box Models Explainable.</em></h2>
 <p class="author"><em>Christoph Molnar</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-04-26</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-05-05</em></p>
 </div>
-<div id="summary" class="section level1 unnumbered">
-<h1>Summary</h1>
+<div id="บทนำ" class="section level1 unnumbered">
+<h1>บทนำ</h1>
 <p><img src="images/title_page.jpg" width="500" style="display: block; margin: auto;" /></p>
-<p>Machine learning has great potential for improving products, processes and research. But <strong>computers usually do not explain their predictions</strong> which is a barrier to the adoption of machine learning. This book is about making machine learning models and their decisions interpretable.</p>
-<p>After exploring the concepts of interpretability, you will learn about simple, <strong>interpretable models</strong> such as decision trees, decision rules and linear regression. Later chapters focus on general model-agnostic methods for <strong>interpreting black box models</strong> like feature importance and accumulated local effects and explaining individual predictions with Shapley values and LIME.</p>
-<p>All interpretation methods are explained in depth and discussed critically. How do they work under the hood? What are their strengths and weaknesses? How can their outputs be interpreted? This book will enable you to select and correctly apply the interpretation method that is most suitable for your machine learning project.</p>
-<p>The book focuses on machine learning models for tabular data (also called relational or structured data) and less on computer vision and natural language processing tasks. Reading the book is recommended for machine learning practitioners, data scientists, statisticians, and anyone else interested in making machine learning models interpretable.</p>
-<p>You can buy the PDF and e-book version (epub, mobi) <a href="https://leanpub.com/interpretable-machine-learning">on leanpub.com</a>.</p>
-<p>You can buy the print version <a href="http://www.lulu.com/shop/christoph-molnar/interpretable-machine-learning/paperback/product-24036234.html">on lulu.com</a>.</p>
-<p><strong>About me:</strong> My name is Christoph Molnar, I'm a statistician and a machine learner. My goal is to make machine learning interpretable.</p>
-<p>Mail: <a href="mailto:christoph.molnar.ai@gmail.com">christoph.molnar.ai@gmail.com</a></p>
-<p>Website: <a href="https://christophm.github.io/" class="uri">https://christophm.github.io/</a></p>
-<p>Follow me on Twitter! <a href="https://twitter.com/ChristophMolnar">@ChristophMolnar</a></p>
-<p>Cover by <a href="https://twitter.com/YvonneDoinel">@YvonneDoinel</a></p>
+<p>จักรกลเรียนรู้มีประโยชน์เป็นอย่างมากในการใช้ปรับปรุงผลิตภัณฑ์ กระบวนการ และการใช้งานในการวิจัย หนังสือเล่มนี้กล่าวถึงกลไกในการแปลความจักรกลเรียนรู้และผลลัพธ์จากการคาดเดาของมัน</p>
+<p>หนังสือเล่มนี้เริ่มต้นด้วยการอธิบายแนวคิดของการแปลความได้ คุณจะได้เริ่มเรียนรู้เกี่ยวกับ<strong>แบบจำลองแปลความได้</strong> ซึ่งโดยมากเป็นแบบจำลองที่ไม่ซับซ้อน เช่นต้นไม้ตัดสินใจ (decision trees) กฎการตัดสินใจ (decision rules) และการถดถอยเชิงเส้น (linear regression) และส่วนหลังในหนังสือพูดถึงขั้นตอนวิธีในการ<strong>แปลความแบบจำลองชนิดกล่องดำ (black box model)</strong> ซึ่งสามารถใช้ได้กับแบบจำลองใดๆ (model-agnostic) อาทิการคำนวณค่าความสำคัญของคุณลักษณะ (feature importance) และค่าผลกระทบสะสม (accumulated local effects) รวมถึงการอธิบายผลการคาดเดาจุดใดจุดหนึ่งผ่านขั้นตอนวิธีเช่น Shapley Values และ LIME</p>
+<p>ในหนังสือเล่มนี้ เราจะพูดถึงขั้นตอนวิธีในการแปลความทั้งในแง่รายละเอียดทางเทคนิกและข้อจำกัด เช่นว่า ขั้นตอนวิธีเหล่านี้มีวิธีการทำงานเบื้องหลังอย่างไร มีข้อดีหรือข้อเสียอย่างไร และเราจะแปลความหมายของผลลัพธ์อย่างไร โดยที่เป้าหมายของหนังสือเล่มนี้คือเพื่อให้ผู้อ่านสามารถเลือกขั้นตอนวิธีการแปลความไปใช้กับงานจักรกลเรียนรู้ที่ผู้อ่านกำลังทำได้อย่างเหมาะสม</p>
+<p>แบบจำลองที่ใช้ในการยกตัวอย่างภายในหนังสือเล่มนี้ส่วนมากเป็นแบบจำลองบนข้อมูลโครงสร้างตาราง (กล่าวคือเป็นข้อมูลที่มีโครงสร้างตายตัว) โดยจะไม่ได้กล่าวถึงแบบจำลองสำหรับการมองเห็นของคอมพิวเตอร์ (computer vision) และการประมวลผลภาษาธรรมชาติ (natural language processing) มากนัก หนังสือเล่มนี้เหมาะสำหรับผู้ต้องการนำจักรกลเรียนรู้ไปใช้งานจริง (machine learning practitioner) นักวิทยาศาสตร์ข้อมูล (data scientist) นักสถิติ และผู้ที่สนใจการทำให้แบบจำลองจักรกลเรียนรู้แปลความไดั</p>
+<p>คุณสาามารถซื้อหนังสือเล่มนี้ (ฉบับภาษาอังกฤษ) ในรูปแบบไฟล์ PDF และ e-book ได้ผ่านเว็บไซต์ <a href="https://leanpub.com/interpretable-machine-learning">leanpub.com</a>.</p>
+<p>คุณสามารถซื้อหนังสือเล่มนี้ในแบบฉบับพิมพ์ได้ที่ <a href="http://www.lulu.com/shop/christoph-molnar/interpretable-machine-learning/paperback/product-24036234.html">lulu.com</a>.</p>
+<p><strong>เกี่ยวกับผู้เขียน (ฉบับภาษาอังกฤษ):</strong> ผมชื่อคริสโตเฟอร์ โมลนาร์ (Christoph Molnar) เป็นนักสถิติและนักจักรกลเรียนรู้ เป้าหมายของผมคือทำให้แบบจำลองจักรกลเรียนรู้แปลความได้</p>
+<p>อีเมล: <a href="mailto:christoph.molnar.ai@gmail.com">christoph.molnar.ai@gmail.com</a></p>
+<p>เว็บไซต์: <a href="https://christophm.github.io/" class="uri">https://christophm.github.io/</a></p>
+<p>มาฟอลโลว์ทวิตเตอร์ได้นะ! <a href="https://twitter.com/ChristophMolnar">@ChristophMolnar</a></p>
+<p>ออกแบบหน้าปกโดย <a href="https://twitter.com/YvonneDoinel">@YvonneDoinel</a></p>
 <div class="figure">
 <img src="images/by-nc-sa.png" alt="Creative Commons License" />
 <p class="caption">Creative Commons License</p>
 </div>
-<p>This book is licensed under the <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<p>หนังสือเล่มนี้ใช้สัญญาอนุญาต <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 </div>
             </section>
 

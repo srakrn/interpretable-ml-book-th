@@ -8,7 +8,7 @@ install.packages("../pkg/sbrl_1.2.tar.gz", repos = NULL, type = "source")
 ```
 
 
-# บทนำ {-}
+# บทนำ {.unnumbered}
 ```{r cover, cache=FALSE, eval = is.html, out.width=500, fig.align="center"}
 knitr::include_graphics('images/title_page.jpg', dpi = NA)
 ```
@@ -51,7 +51,7 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 
 
 
-# คำนำโดยผู้เขียน {-}
+# คำนำโดยผู้เขียน {#preface-by-the-author .unnumbered}
 
 หนังสือเล่มนี้เกิดขึ้นในช่วงเวลาว่าง ขณะที่ผมทำหน้าที่เป็นนักสถิติในงานวิจัยทางการแพทย์
 และเพราะผมทำงาน 4 วันต่อสัปดาห์ เลยมี "วันว่าง" พอให้ทำงานนอก (side project)
@@ -124,15 +124,15 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 ขอให้สนุกกับการอ่านครับ!่
 
 
-# หมายเหตุโดยผู้แปล {-}
+# หมายเหตุโดยผู้แปล {#translator-notes .unnumbered}
 
 (This is a translator's note regarding translation guidelines, and is not found in the original book.)
 
-### การร่วมแปลหนังสือ {-}
+### การร่วมแปลหนังสือ {#translating-guide .unnumbered}
 
 เรโพสิทอรี (repository) หลักของฉบับภาษาไทยอยู่ที่ https://github.com/srakrn/interpretable-ml-book-th กรุณาอย่าเกรงใจที่จะติดต่อผู้ดูแลเรโพฯ เพื่อเพิ่มคุณเข้าเป็นสมาชิกสำหรับเข้าถึงการใช้งานบอร์ดงานและวิกิ
 
-#### บอร์ดงาน {-}
+#### บอร์ดงาน {#translating-kanban-board .unnumbered}
 
 หากคุณสนใจแปลงาน คุณสามารถใช้หน้า[บอร์ดคันบันสำหรับรายการบทต่างๆ ในหนังสือ](https://github.com/srakrn/interpretable-ml-book-th/projects/1) เพื่อบอกทุกคนว่าคุณกำลังแปลงานส่วนนี้
 
@@ -140,14 +140,14 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 
 นอกจากนี้ กรุณาเพิ่มชื่อลงในหัวข้อ "คณะผู้แปลภาษาไทย" ในรายการด้านล่างหากต้องการ โดยต้องเป็นชื่อจริงหรือนามแฝงส่วนบุคคล และยูอาร์แอลจะต้องเป็นยูอาร์แอลของสื่อสังคมออนไลน์หรือหน้าเว็บส่วนตัวเท่านั้น
 
-#### Pull request {-}
+#### Pull request {#translating-pull-request .unnumbered}
 
 ใน pull request กรุณาเลือกปลายทางเป็นบรานช์ `th-translation-dev` เพื่อตรวจสอบ ทานการสะกด และปรับแก้ก่อนรวมเข้าสู่บรานช์ `master`
 
-#### คำแนะนำในการแปลและอภิธานศัพท์ {-}
+#### คำแนะนำในการแปลและอภิธานศัพท์ {#translating-glossary .unnumbered}
 
 ศึกษา[คำแนะนำในการแปล](https://github.com/srakrn/interpretable-ml-book-th/wiki/Translation-Guidelines)และ[อภิธานศัพท์](https://github.com/srakrn/interpretable-ml-book-th/wiki/Glossary)ได้จากหน้า[วิกิ](https://github.com/srakrn/interpretable-ml-book-th/wiki)
 
-### คณะผู้แปลภาษาไทย {-}
+### คณะผู้แปลภาษาไทย {#translators .unnumbered}
 
 * [ศิระกร ลำใย](https://srakrn.me/bio)

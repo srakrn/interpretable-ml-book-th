@@ -4,11 +4,11 @@ output_dir: "_book"
 rmd_subdir: FALSE
 language:
   label:
-    fig: "FIGURE "
-    tab: "TABLE "
+    fig: "ภาพประกอบ "
+    tab: "ตาราง "
   ui:
-    edit: "Edit"
-    chapter_name: "Chapter "
+    edit: "แก้ไข"
+    chapter_name: "บทที่ "
 rmd_files: ["index.Rmd",
             "01-introduction.Rmd",
             "01.2-short-stories.Rmd",

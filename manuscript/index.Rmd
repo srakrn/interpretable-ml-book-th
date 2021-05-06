@@ -1,6 +1,6 @@
 ---
-title: "Interpretable Machine Learning"
-subtitle: "A Guide for Making Black Box Models Explainable."
+title: "จักรกลเรียนรู้แบบแปลความได้"
+subtitle: "ขั้นตอนวิธีที่จะช่วยอธิบายแบบจำลองจักรกลเรียนรู้แบบกล่องดำ"
 author: "Christoph Molnar"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
@@ -13,9 +13,9 @@ fontsize: 12pt
 monofont: "Source Code Pro"
 monofontoptions: "Scale=0.7"
 site: bookdown::bookdown_site
-description: "Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable."
+description: "ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้"
 #url:
-github-repo: christophM/interpretable-ml-book
+github-repo: srakrn/interpretable-ml-book-th
 always_allow_html: yes
 ---
 

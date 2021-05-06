@@ -1,192 +1,147 @@
 
 <!--{pagebreak}-->
 
-## Story Time {#storytime}
+## ได้เวลานิทานก่อนนอน {#storytime}
 
-We will start with some short stories.
-Each story is an admittedly exaggerated call for interpretable machine learning.
-If you are in a hurry, you can skip the stories.
-If you want to be entertained and (de-)motivated, read on!
+เราจะเริ่มกันด้วยเรื่องสั้นสักเล็กน้อย
+ผมสารภาพว่าเรื่องสั้นแต่ละเรื่องถูกใส่สีตีไข่เพื่อให้เข้าใจความจำเป็นว่าด้วยการมีจักรกลเรียนรู้ที่แปลความได้
+ถ้าคุณรีบอ่านรีบใช้เนื้อหาในหนังสือเล่มนี้ ข้ามบทนี้ไปก่อนได้เลย
+แต่ถ้าคุณอยากหาความบันเทิงใส่ตัว หรืออยากหา (เรื่องบั่นทอน) แรงบันดาลใจ มาฟังนิทานกัน!
 
-The format is inspired by Jack Clark's Tech Tales in his [Import AI Newsletter](https://jack-clark.net/).
-If you like this kind of stories or if you are interested in AI, I recommend that you sign up.
+เรื่องเล่าเหล่านี้ได้แรงบันดาลใจมาจากเรื่องเล่าว่าด้วยเทคโนโลยีของ Jack Clark ใน[จดหมายข่าว Import AI](https://jack-clark.net/)
+ถ้าคุณชอบอ่านเรื่องราวประมาณนี้หรือว่ามีความสนใจในปัญญาประดิษฐ์ (AI) เป็นพิเศษ ผมแนะนำให้คุณสมัครบอกรับจดหมายข่าว
 
-### Lightning Never Strikes Twice {-}
-**2030: A medical lab in Switzerland**
+### ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}
+**ค.ศ. 2030: ห้องปฏิบัติการวิจัยทางการแพทย์ ประเทศสวิตเซอร์แลนด์**
 
 ```{r hospital, echo = FALSE, fig.cap = "",width=500}
 knitr::include_graphics("images/hospital.png")
 ```
 
+"ตายแบบนี้ไม่นับว่าศพไม่สวยหรอกนะ" ทอมบอกกับเพื่อนร่วมงาน หวังจะพยายามทำให้สถานการณ์ที่ตึงเครียดพอคลายลงไปได้บ้าง
+เขาถอดเครื่องปั๊มออกจากเสาน้ำเกลือ   
+"คือยังไงก็ตายด้วยสาเหตุไม่ธรรมชาติปะ" เลนาเสริม   
+"เออ ก็ตายด้วยไอ้เครื่องปั๊มสำหรับจ่ายมอร์ฟีนให้คนไข้นี่แหละ งานงอกเราอีก" ทอมบ่นพลางหยิบไขควงมาขันน็อตด้านหลังเครื่องออก เขายกฝาหลังเครื่อง
+เผยให้เห็นถึงพอร์ตเสียบสำหรับวิเคราะห์ตัวเครื่อง เขาเสียบสายเพื่อเตรียมการวิเคราะห์เครื่องปั๊ม   
+"อย่าบอกนะว่าสาเหตุที่เธอบ่นคือ ณ ตอนนี้เรายังไม่ตกงานอะ" เลนาแซวพลางแสยะยิ้ม   
+"ไม่โว้ย!" ทอมเถียงสุดใจ
 
-"It's definitely not the worst way to die!" Tom summarised, trying to find something positive in the tragedy.
-He removed the pump from the intravenous pole.   
-"He just died for the wrong reasons," Lena added.  
-"And certainly with the wrong morphine pump!
-Just creating more work for us!" Tom complained while unscrewing the back plate of the pump.
-After removing all the screws, he lifted the plate and put it aside.
-He plugged a cable into the diagnostic port.   
-"You didn't just complain about having a job, did you?" Lena gave him a mocking smile.  
-"Of course not. Never!" he exclaimed with a sarcastic undertone.
+ทอมเปิดเครื่องปั๊ม เลนาพลางหยิบสายส่งข้อมูลเสียบบนแท็บเล็ตของเธอ   
+"โอเค ปล่อยมันรันโปรแกรมวิเคราะห์ปัญหาไปสักพักแล้วกัน" เลนาเอ่ย   
+"อยากรู้จริงๆ นะว่าอะไรผิดพลาดตรงไหนอะ"
+"เครื่องปั๊มตัวนี้อัดมอร์ฟีนใส่คนไข้รายนี้จนคนไข้น่าจะ*ลอย*จนถึงนิพพาน
+มอร์ฟีนความเข้มข้นสูงขนาดนั้น... แบบ เฮ้ย...
+อะไรแบบนี้เพิ่งเคยเกิดเป็นครั้งแรกใช่ปะ
+ปกติเครื่องปั๊มที่เสียจะจ่ายมอร์ฟีนที่ความเข้มข้นมากไปนิดเดียว หรือไม่ก็ไม่จ่ายเลย
+แต่ไม่เคยเจอเลยนะ ไม่เคยเจอที่จ่ายมอร์ฟีนออกมาถึงขั้นคนไข้ตาย" ทอมอธิบาย
+"รู้แล้ว ไม่ต้องบอกอะไรแล้ว... เอ้ย ดูนี่" เลนากล่าวพลางหยิบแท็บเล็ตขึ้นมา
+"เห็นพี้กของกราฟตรงนี้ไหม อันนี้คือระดับมอร์ฟีนที่ปั๊มนี่จ่ายไปมากที่สุด
+แล้วดูเส้นนี้ นี่ ตรงนี้ นี่คือเส้นระดับมาตรฐานที่ควรจ่ายให้คนไข้
+ปั๊มตัวนี้อัดมอร์ฟีนเข้าตัวคนไข้ในปริมาณมากพอที่จะฆ่าเค้าได้ 17 ครั้งด้วยซ้ำ...
+เอ่อ... แล้วนี่..." เธอปัดแท็บเล็ต "จุดนี้ เห็นได้ชัดเลยว่าคนไข้เสียชีวิต ณ เวลานี้"   
+"พอมีไอเดียไหมว่าเกิดอะไรขึ้น" ทอมถามหัวหน้างานของเขา   
+"อืม... เซนเซอร์ก็ดูปกติดีนะ
+อัตราการเต้นหัวใจ ออกซิเจนในเลือด กลูโคส... ข้อมูลก็เก็บมาครบ
+ค่าระดับออกซิเจนในเลือดหายไปบ้าง แต่ก็ไม่ใช่เรื่องประหลาดอะไร
+เอ้อ มาดูนี่ ตรงนี้เซนเซอร์วัดอัตราการเต้นของหัวใจกับระดับของคอร์ทิซอลในเลือดที่ต่ำกว่าปกติได้ 
+สาเหตุคือสารอนุพันธ์ของมอร์ฟีนกับสารยับยั้งความเจ็บปวดตัวอื่น"   
+เธอปัดหน้าจอแท็บเล็บดูค่าต่างๆ ทอมพลางจ้องมองจอด้วยความฉงน
+นี่เป็นครั้งแรกที่เขาได้เข้าร่วมการสอบสวนกรณีอุปกรณ์เกิดความผิดพลาด
 
-He booted the pump's computer.  
-Lena plugged the other end of the cable into her tablet.
-"All right, diagnostics are running," she announced.
-"I am really curious about what went wrong."  
-"It certainly shot our John Doe into Nirvana.
-That high concentration of this morphine stuff.
-Man. I mean ... that's a first, right?
-Normally a broken pump gives off too little of the sweet stuff or nothing at all.
-But never, you know, like that crazy shot," Tom explained.  
-"I know. You don't have to convince me ... Hey, look at that." Lena held up her tablet.
-"Do you see this peak here? That's the potency of the painkillers mix.
-Look! This line shows the reference level.
-The poor guy had a mixture of painkillers in his blood system that could kill him 17 times over.
-Injected by our pump here.
-And here ..." she swiped, "here you can see the moment of the patient's demise."  
-"So, any idea what happened, boss?" Tom asked his supervisor.  
-"Hm ... The sensors seem to be fine.
-Heart rate, oxygen levels, glucose, ... The data were collected as expected.
-Some missing values in the blood oxygen data, but that's not unusual.
-Look here.
-The sensors have also detected the patient's slowing heart rate and extremely low cortisol levels caused by the morphine derivate and other pain blocking agents."
-She continued to swipe through the diagnostics report.  
-Tom stared captivated at the screen.
-It was his first investigation of a real device failure.
+"โอเค อันนี้คือจิ๊กซอว์ตัวแรกของเรา
+ระบบไม่ได้ส่งสัญญาณเตือนไปที่ช่องทางการสื่อสารของโรงพยาบาล
+แต่ระบบพยายามส่งการแจ้งเตือนนะ แค่มันไปไม่ถึงเพราะถูกบล็อกระดับโปรโตคอล
+อาจจะเป็นความผิดเราก็ได้ แต่ก็อาจจะเป็นความผิดของโรงพยาบาลก็ได้
+รบกวนส่งล็อกไฟล์ทั้งหมดไปให้ฝ่ายไอทีหน่อย" เลนาบอกทอม   
+ทอมพยักหน้า สายตาชองเชายังคงจับจ้องบนจอ
+เลนากล่าวต่อ "แปลกมาก การแจ้งเตือนจากระบบควรสั่งให้ปั๊มนี่หยุดทำงาน
+แต่ปั๊มมันไม่หยุดตามที่ระบบสั่ง ต้องเป็นบั๊กแน่ๆ
+เป็นบั๊กที่ทีมคิวซีหาไม่เจอ บั๊กที่ซวยมากๆ อาจจะเกี่ยวกับโปรโตคอลก็เป็นได้"   
+"โอเค ระบบเซฟตี้ฉุกเฉินของปั๊มอาจจะพัง แต่ว่าเพราะอะไรปั๊มถึงได้เลือก
+ฉีดมอร์ฟีนเข้าไปในตัวคนไข้แบบบ้าคลั่งแบบนี้หละ" ทอมสงสัย
+"จริง เป็นคำถามที่ดี ต่อให้ระบบหยุดการทำงานฉุกเฉินไม่ยอมทำงาน
+ตัวปั๊มก็ไม่ควรทำงานแบบที่ฉีดมอร์ฟีนเข้าไปในตัวคนไข้ในปริมาณระดับนั้นแน่ๆ
+ตัววิธีการทำงานของปั๊มควรจะสั่งให้ปั๊มหยุดการทำงานก่อนหน้านี้นานมากๆ แล้ว
+ยิ่งปั๊มเห็นระดับคอร์ติซอลกับสัญญาณเตือนอื่นๆ จากระบบมอนิเตอร์ด้วยนะ" เลนาอธิบาย   
+"เอ่อ อาจจะโชคร้ายหรือเปล่า เหมือนฟ้าผ่าอะ โอกาสหนึ่งในล้าน" ทอมถาม   
+"ไม่ ทอม ไม่ ถ้าเคยอ่านเอกสารที่ส่งให้ดูไปก่อนหน้านี้ น่าจะพอผ่านตาว่าปั๊มนี้ถูกฝึกสอนด้วยชุดข้อมูล
+จากการทดลองในสัตว์ ตามด้วยชุดข้อมูลจากการทดลองในคน เพื่อให้เรียนรู้ปริมาณการฉีดมอร์ฟีนที่พอดีเป๊ะๆ
+จากข้อมูลที่เซนเซอร์อ่านค่าได้ ขั้นตอนวิธีของปั๊มอาจจะซับซ้อนและอธิบายไม่ได้ แต่ว่ามันไม่ได้เกิดขึ้นสุ่มๆ แน่
+นั่นหมายถึงว่าถ้ามีสถานการณ์แบบนี้เกิดขึ้นอีกครั้ง ผู้ป่วยอีกคนก็จะตายอีกกครั้ง
+ความผิดพลาดนี้เกิดขึ้นเพราะว่าค่าอะไรบางอย่างจากเซนเซอร์ทำให้ปั๊มทำงานแบบนี้
+ก็เพราะแบบนี้แหละเราถึงนั่งงุ่นอยู่ตอนนี้" เลนาอธิบาย
 
-"Ok, here is our first piece of the puzzle.
-The system failed to send a warning to the hospital's communication channel.
-The warning was triggered, but rejected at protocol level.
-It could be our fault, but it could also be the fault of the hospital.
-Please send the logs over to the IT team," Lena told Tom.  
-Tom nodded with his eyes still fixed on the screen.  
-Lena continued:
-"It's odd.
-The warning should also have caused the pump to shut down.
-But it obviously failed to do so.
-That must be a bug.
-Something the quality team missed.
-Something really bad.
-Maybe it's related to the protocol issue."  
-"So, the emergency system of the pump somehow broke down, but why did the pump go full bananas and inject so much painkiller into John Doe?" Tom wondered.  
-"Good question.
-You are right.
-Protocol emergency failure aside, the pump shouldn't have administered that amount of medication at all.
-The algorithm should have stopped much earlier on its own, given the low level of cortisol and other warning signs," Lena explained.  
-"Maybe some bad luck, like a one in a million thing, like being hit by a lightning?" Tom asked her.  
-"No, Tom.
-If you had read the documentation I sent you, you would have known that the pump was first trained in animal experiments, then later on humans, to learn to inject the perfect amount of painkillers based on the sensory input.
-The algorithm of the pump might be opaque and complex, but it's not random.
-That means that in the same situation the pump would behave exactly the same way again.
-Our patient would die again.
-A combination or undesired interaction of the sensory inputs must have triggered the erroneous behavior of the pump.
-That is why we have to dig deeper and find out what happened here," Lena explained.
+"เข้าใจแล้ว..." ทอมตอบเลนา เขาตกอยู่ในห้วงความคิด
+"คนไข้ไม่ได้จะตายอยู่แล้วเหรอ มะเร็งที่เขาเป็นหนะ"   
+เลนาพยักหน้า เธอยังคงอ่านรายงาน
+ทอมลุกขึ้นยืน ทอดสายตาออกไปนอกหน้าต่าง
+"ไม่แน่นะ ไอ้ปั๊มนี่อาจจะเลือกทำแบบนั้นเพื่อตัวเขาก็ได้ หมายถึงว่า ปลดปล่อยเขาจากความมะเร็งหนะ
+เหมือนฟ้าผ่า แต่เป็นในแง่ดี เหมือนถูกหวยที่ไม่ได้มาจากการสุ่ม แต่เกิดขึ้นเพราะเหตุผลอะไรบางอย่าง
+ไม่แน่นะ ถ้าผมเป็นปั๊มนั่น ผมอาจจะทำแบบนี้เหมือนกันก็ได้"   
+เลนาเงยหน้าขึ้น มองทอมที่ยังคงจับจ้องบางสิ่งนอกหน้าต่าง
+เธอก้มหน้า ถอนหายใจ ในหัวเริ่มกลับมาวิเคราะห์ถึงเหตุการณ์อีกครั้ง
 
-"I see ...," Tom replied, lost in thought.
-"Wasn't the patient going to die soon anyway? Because of cancer or something?"  
-Lena nodded while she read the analysis report.  
-Tom got up and went to the window.
-He looked outside, his eyes fixed on a point in the distance.
-"Maybe the machine did him a favor, you know, in freeing him from the pain.
-No more suffering.
-Maybe it just did the right thing.
-Like a lightning, but, you know, a good one. 
-I mean like the lottery, but not random. 
-But for a reason.
-If I were the pump, I would have done the same."  
-She finally lifted her head and looked at him.  
-He kept looking at something outside.  
-Both were silent for a few moments.   
-Lena lowered her head again and continued the analysis.
-"No, Tom. It's a bug... Just a damn bug."
+"ไม่ ทอม มันเป็นบั๊ก... แม่งแค่บั๊ก"
 
-### Trust Fall {-}
 
-**2050: A subway station in Singapore**
+### ขอแค่เธอจงไว้ใจ {-}
+
+**ค.ศ. 2050: สถานีรถไฟฟ้าในสิงคโปร์**
 
 ```{r access-denied, echo = FALSE, fig.cap = "", width=500}
 knitr::include_graphics("images/access-denied.jpg")
 ```
 
-She rushed to the Bishan subway station.
-With her thoughts she was already at work.
-The tests for the new neural architecture should be completed by now.
-She led the redesign of the government's "Tax Affinity Prediction System for Individual Entities", which predicts whether a person will hide money from the tax office.
-Her team has come up with an elegant piece of engineering.
-If successful, the system would not only serve the tax office, but also feed into other systems such as the counter-terrorism alarm system and the commercial registry.
-One day, the government could even integrate the predictions into the Civic Trust Score.
-The Civic Trust Score estimates how trustworthy a person is. 
-The estimate affects every part of your daily life, such as getting a loan or how long you have to wait for a new passport.
-As she descended the escalator, she imagined how an integration of her team's system into the Civic Trust Score System might look like.
+เธอวิ่งตรงไปยังสถานี Bishan
+กายหยาบกำลังใช้แรงเคลื่อนตัว แต่จิตละเอียดนั้นเดินทางจนถึงที่ทำงานแล้ว
+ในใจเธอคิดถึงแต่ผลการทดลองประสาทเทียมแบบใหม่ที่น่าจะเพิ่งทดลองเสร็จไป--
+เธอเป็นหัวหน้างานในการปรับปรุง "ระบบคาดเดาการเลี่ยงภาษีรายบุคคล" ที่ทำหน้าที่ตรงไปตางมาตามชื่อของมัน กล่าวคือคาดเดาว่าใครจะหนีภาษี หรือซ่อนเงินไว้สักที่ที่สรรพากรตรวจไม่พบ   
+งานที่ทีมของเธอทำนั้นล้ำหน้าเป็นอย่างมาก เมื่อผลงานเสร็จสิ้นโดยสมบูรณ์ ระบบนี้จะไม่ได้ถูกใช้แค่ภายในกรมสรรพากร แต่ข้อมูลจะถูกกระจายไปยังโครงข่ายระบบประมวลผลอื่นๆ ไม่ว่าจะเป็นระบบป้องกันการก่อการร้าย หรือระบบลงทะเบียนนิติบุคคล
+วันหนึ่งผลลัพธ์จากระบบคาดเดาการหนีภาษีของเธออาจจะถูกนำไปใช้เป็นส่วนหนึ่งในการคิด "คะแนนพลเรือน" ที่เป็นคะแนนซึ่งประชาชนทุกคนได้รับจากรัฐบาลว่าเป็นบุคคลที่รัฐเชื่อถือได้มากแค่ไหน และแน่นอนว่าระดับคะแนนมีผลต่อการใช้ชีวิตประจำวัน ไม่ว่าจะเป็นการพิจารณาขอสินเชื่อ หรือแม้แต่ระยะเวลาการขอพาสปอร์ต   
+ระหว่างที่เธอลงบันไดเลื่อน ภาพในหัวของเธอจินตนาการถึงอนาคตของประเทศเมื่อระบบที่ทีมของเธอทำถูกนำไปใช้อย่างกว้างขวาง
 
-She routinely wiped her hand over the RFID reader without reducing her walking speed.
-Her mind was occupied, but a dissonance of sensory expectations and reality rang alarm bells in her brain.
+การเดินทางของเธอวันนี้เหมือนทุกวันก่อนหน้า เธอหยิบบัตรไร้สารมาแตะที่ประตูอัตโนมัติของสถานีรถไฟฟ้า
+พลันจิตใจที่หลงอยู่ในภวังค์ของอนาคตกลับถูกปลุกให้ตื่น ด้วยสัมผัสบางอย่างจากระบบประสาทของเธอ
 
-Too late.
+ไม่ทันแล้ว
 
-Nose first she ran into the subway entrance gate and fell with her butt first to the ground.
-The door was supposed to open, ... but it did not.
-Dumbfounded, she stood up and looked at the screen next to the gate.
-"Please try another time," suggested a friendly looking smiley on the screen.
-A person passed by and, ignoring her, wiped his hand over the reader.
-The door opened and he went through.
-The door closed again.
-She wiped her nose.
-It hurt, but at least it did not bleed.
-She tried to open the door, but was rejected again.
-It was strange.
-Maybe her public transport account did not have sufficient tokens.
-She looked at her smartwatch to check the account balance.
+ร่างของเธอค่อยๆ ร่วงลง บั้นท้ายถูกแรงกระแทกจากพื้นปะทะ ประตูรถไฟฟ้าที่ควรเปิดกลับไม่เปิด   
+เธอประคองตัวเองขึ้นมา สายตามองที่จอภาพบนประตูทางเข้า ปรากฎข้อความ "กรุณาลองอีกครั้ง" พร้อมกับภาพรอยยิ้ม
+ระหว่างนั้นใครสักคนเดินผ่านไป ไม่สนใจแม้แต่ตัวเธอที่อยู่บนพื้น เขาผู้นั้นหยิบบัตรรถไฟฟ้าแปะที่ทางเข้า ประตูเปิดให้เขาเข้าไปในสถานีก่อนปิดอย่างปกติอีกครั้ง
+เธอจับจมูกที่ก่อนหน้านี้กระแทกกับประตูกั้น มันเจ็บ แต่อย่างน้อยก็ยังดีที่เลือดไม่ออก เธอทาบบัตรอีกครั้ง ประตูไม่เปิดเช่นเคย   
+น่าประหลาดใจ บางทีเธออาจจะลืมเติมเงินในบัตรก็เป็นได้ เธอก้มลงไปดูสมาร์ตวอตช์ของเธอเพื่อดูว่ายอดเงินคงเหลือเป็นเท่าไหร่
 
-"Login denied. Please contact your Citizens Advice Bureau!" her watch informed her.
+เธอพบข้อความ "ไม่ได้รับอนุญาตให้เข้าใช้งาน กรุณาติดต่อศูนย์ให้คำแนะนำพลเรือน!" บนจอนาฬิกา
 
-A feeling of nausea hit her like a fist to the stomach.
-She suspected what had happened.
-To confirm her theory, she started the mobile game "Sniper Guild", an ego shooter.
-The app was directly closed again automatically, which confirmed her theory.
-She became dizzy and sat down on the floor again.
+ร่างกายของเธอโต้ตอบข้อความนั้นด้วยอาการคลื่นไส้ เธอสงสัยว่าเกิดอะไรขึ้น
+พลางหยิบโทรศัพท์มือถือมาเพื่อทดลองอะไรบางอย่าง เธอเปิดเกม "สไนเปอร์ กิลด์" ซึ่งเป็นเกมแนวต่อสู้ยิงกัน
+หน้าจอเกมถูกปิดลงเองโดยอัตโนมัติ เธอเข้าใจแล้วว่าเกิดอะไรขึ้น
+มวลในท้องไหลเวียนหนักกว่าเก่า เธอทรุดตัวลงบนพื้น
 
-There was only one possible explanation:
-Her Civic Trust Score had dropped. 
-Substantially.
-A small drop meant minor inconveniences, such as not getting first class flights or having to wait a little longer for official documents.
-A low trust score was rare and meant that you were classified as a threat to society.
-One measure in dealing with these people was to keep them away from public places such as the subway.
-The government restricted the financial transactions of subjects with low Civic Trust Scores.
-They also began to actively monitor your behavior on social media and even went as far as to restrict certain content, such as violent games.
-It became exponentially more difficult to increase your Civic Trust Score the lower it was.
-People with a very low score usually never recovered.
+เธอเข้าใจแล้วว่าคะแนนพลเรือนของเธอลดลง--ไม่ใช่แค่ลดลงเล็กน้อย แต่เป็นการลดลงแบบฉับพลัน   
+เมื่อคะแนนพลเรือนลดลงเล็กน้อย ความไม่สะดวกต่างๆ ก็อาจจะเข้ามากวนใจเล็กน้อยเช่นกัน ไม่ว่าจะเป็นการไม่ได้นั่งเที่ยวบินชั้นหนึ่ง หรือการต้องรอติดต่อขอเอกสารราชการที่ช้าลงหน่อย
+การที่ใครได้คะแนนพลเรือนต่ำ หมายความว่าเขาหรือเธอคนนั้นเป็นภัยต่อสังคมโดยรวม และเพราะเหตุนี้จึงไม่ค่อยมีใครมีคะแนนทีั่ต่ำนัก
+และหนึ่งในมาตรการจัดการกับพลเรือนกลุ่มนี้ก็คือการไม่อนุญาตให้เข้าพื้นที่สาธารณะบางแห่ง เช่นรถไฟฟ้าใต้ดิน
+รวมไปถึงการจำกัดการนทำธุรกรรมทางการเงินบางอย่างด้วย   
+เมื่อคะแนนต่ำจนถึงจุดหนึ่ง รัฐบาลจะเริ่มจับตามองพฤติกรรมผ่านการสอดแนมสื่อสังคมออนไลน์ และจำกัดการเข้าถึงเนื้อหาความบันเทิงบางอย่าง เช่นเกมที่มีความรุนแรง
+ยิ่งคะแนนต่ำมากเท่าใด โอกาสที่จะพยายามทำตัวให้คะแนนกลับมาสูงเท่าเดิม ก็เป็นไปได้ยากมากเท่านั้น หลายคนที่คะแนนต่ำมากๆ อาจจะเหมือนตายทั้งเป็น
 
-She could not think of any reason why her score should have fallen.
-The score was based on machine learning.
-The Civic Trust Score System worked like a well-oiled engine that ran society.
-The performance of the Trust Score System was always closely monitored.
-Machine learning had become much better since the beginning of the century.
-It had become so efficient that decisions made by the Trust Score System could no longer be disputed.
-An infallible system.
+เธอนั่งนึกถึงเหตุผลที่ทำให้คะแนนของเธอลดลงอย่างรวดเร็ว
+การให้คะแนนพลเรือนนั้นทำโดยระบบจักรกลเรียนรู้
+และคะแนนพลเรือนก็กลายเป็นหนึ่งในกลไกขับเคลื่อนสังคมที่ภาครัฐเฝ้าสังเกตมาเป็นเวลานาน
+นับตั้งแต่วันแรกที่มนุษย์เริ่มศึกษาระบบจักรกลเรียนรู้จนถึงทุกวันนี้ ประสิทธิภาพของมันก็ทวีความสามารถเพิ่มขึ้นไปมาก
+จักรกลเรียนรู้ และรวมถึงระบบให้คะแนนพลเรือนโดยจักรกลเรียนรู้ กลายเป็นผู้พิพากษาความเป็นพลเรือนที่ดี ที่ไม่มีใครสามารถโต้แย้งได้
+และได้กลายเป็นระบบที่ไม่มีวันพังทลายเป็นที่เรียบร้อย
 
-She laughed in despair.
-Infallible system.
-If only.
-The system has rarely failed.
-But it failed.
-She must be one of those special cases;
-an error of the system;
-from now on an outcast.
-Nobody dared to question the system.
-It was too integrated into the government, into society itself, to be questioned.
-In the few remaining democratic countries it was forbidden to form anti-democratic movements, not because they where inherently malicious, but because they would destabilize the current system.
-The same logic applied to the now more common algocraties.
-Critique in the algorithms was forbidden because of the danger to the status quo.
+เธอแค่นหัวเราะ ระบบที่ไม่มีวันพังทลาย แต่กลับมีข้อผิดพลาด--อาจจะน้อย แต่ก็มีข้อผิดพลาด และเธอที่เพิ่งถูกระบบตราหน้าว่าเป็นส่วนเกิน ก็เป็นหนึ่งในข้อผิดพลาดนั้น แถมไม่มีใครกล้าตั้งคำถามกับระบบที่ถูกฝังลึกและใช้งานอย่างแพร่หลายโดยรัฐบาลหรอก   
+ในประเทศที่เป็นประชาธิปไตยอย่างที่นี่ (ซึ่งเธอก็เพิ่งนึกได้ว่าเหลือน้อยลงทุกวัน) รัฐบาลออกกฎหมายห้ามการประท้วงต่อต้านประชาธิปไต ไม่ใช่เพราะเป็นภัยต่อความมั่นคง แต่เพราะเป็นภัยต่อระบบคะแนนพลเรือนในลักษณะนี้ต่างหาก
+เธอนึกขึ้นได้ว่าคำศัพท์ "อภิสิทธิ์กล" เป็นหนึ่งในคำศัพท์เกิดใหม่ เป็นอภิสิทธิ์ที่เกิดขึ้นสำหรับจักรกล และเป็นอภิสิทธิ์นี้เองที่ทำให้ระบบตัดสินใจอย่างระบบให้คะแนนพลเรือนไม่สามารถถูกตั้งคำถาม สงสัย และวิพากษ์ได้
 
-Algorithmic trust was the fabric of the social order.
-For the common good, rare false trust scorings were tacitly accepted.
-Hundreds of other prediction systems and databases fed into the score, making it impossible to know what caused the drop in her score.
-She felt like a big dark hole was opening in and under her.
-With horror she looked into the void.
+ความเชื่อใจในจักรกลและขั้นตอนวิธีเปรียบเสมือนความเชื่อหล่อเลี้ยงสังคม เพื่อพลเรือนโดยส่วนใหญ่ การแปะป้ายพลเรือนบางส่วนว่าเป็นพลเรือนคุณภาพต่ำ แม้จะเป็นเรื่องผิดพลาด แต่ก็เกิดขึ้นน้อยมากจนพอมองข้ามไปได้บ้าง
+ข้อมูลนับร้อยนับพันถูกป้อนเข้าไปสู่ระบบให้คะแนนพลเรือน เธอไม่มีทางรู้ได้เลยว่าข้อมูลตัวใดทำให้คะแนนของเธอลดต่ำลง
+เธอรู้สึกเหมือนกำลังถูกดูดกลืนเข้าไปในหลุมดำ กลายเป็นประชากรชั้นล่างในสังคมเวิ้งว้าง
 
-Her tax affinity system was eventually integrated into the Civic Trust Score System, but she never got to know it.
-
+ตอนนี้ระบบคาดเดาการเลี่ยงภาษีที่เธอสร้างกลายเป็นส่วนหนึ่งของระบบให้คะแนนพลเรือนไปแล้ว แต่เธอคงไม่ได้รู้เรื่องนี้ไปอีกตลอดชีวิตของเธอ
 
 
 ### Fermi's Paperclips {-}
@@ -197,91 +152,56 @@ Her tax affinity system was eventually integrated into the Civic Trust Score Sys
 knitr::include_graphics("images/burnt-earth.jpg")
 ```
 
-"History is boring," Xola whispered to her friend.
-Xola, a blue-haired girl, was lazily chasing one of the projector drones humming in the room with her left hand.
-"History is important," the teacher said with an upset voice, looking at the girls.
-Xola blushed.
-She did not expect her teacher to overhear her.
+"เบื่อวิชาประวัติศาสตร์อะ" โซลากระซิบบอกกับเพื่อน เธอวิ่งตามโดรนลำจิ๋วที่ทำหน้าที่เป็นโปรเจกเตอร์ เอื้อมมือไปพยายามคว้ามัน ผมสีน้ำเงินของเธอสะบัดยามวิ่ง
+"ประวัติศาสตร์เป็นหนึ่งในวิชาที่สำคัญมากๆ นะคะ" คุณครูบอกนักเรียนทั้งห้องด้วยเสียงที่ไม่ค่อยดีเท่าไหร่ สายตาคุณครูพลันมองกลุ่มนักเรียนหญิง โซลาเขินอาจ เธอไม่คิดว่าคุณครูจะได้ยิน
 
-"Xola, what did you just learn?" the teacher asked her. 
-"That the ancient people used up all resources from Earther Planet and then died?" she asked carefully.
-"No. They made the climate hot and it wasn't people, it was computers and machines. And it's Planet Earth, not Earther Planet," added another girl named Lin.
-Xola nodded in agreement.
-With a touch of pride, the teacher smiled and nodded.
-"You are both right. Do you know why it happened?" 
-"Because people were short-sighted and greedy?" Xola asked.
-"People could not stop their machines!" Lin blurted out.
+"โซลาคะ ครูอยากให้สรุปสิ่งที่ได้เรียนในวันนี้ให้ฟังหน่อยค่ะ" คุณครูถาม   
+"มนุษย์สมัยโบราณใช้ทรัพยากรจนหมดจาก 'ดาวโลภ' แล้วก็ตายไปหรือเปล่าคะ" เธอถาม   
+"ไม่ใช่ เกิดภาวะโลกร้อนจนคนอยู่อาศัยไม่ได้ต่างหาก แล้วก็นะ หนึ่ง ต้นเหตุไม่ใช่คนแต่เป็นเครื่องจักร และสอง ชื่อดาวคือ 'ดาวโลก' ไม่ใช่ 'ดาวโลภ'" ลิน--เพื่อนของโซลา--เอ่ยเสริม   
+โซลาพยักหน้าตาม คุณครูยิ้มและพยักหน้าตามเช่นกัน   
+"ถูกทั้งสองคนค่ะ แล้วรู้ไหมคะว่าเกิดเหตุการณ์นี้ได้อย่างไร"   
+"เพราะมนุษย์โลภมาก ไม่รู้จักมองอนาคตหรือเปล่าคะ" โซลาถาม   
+"เพราะคนไม่สามารถหยุดการทำงานของเครื่องจักรได้ต่างหาก" ลินแย้งขึ้นมา
 
-"Again, you are both right," the teacher decided,
-"but it's much more complicated than that.
-Most people at the time were not aware of what was happening.
-Some saw the drastic changes, but could not reverse them.
-The most famous piece from this period is a poem by an anonymous author.
-It best captures what happened at that time.
-Listen carefully!"
+"ถูกทั้งคู่อีกแหละค่ะ" คุณครูเอ่ย   
+"แต่จริงๆ แล้วเรื่องราวไปมาซับซ้อนกว่านั้นมาก คนส่วนใหญ่ในเวลานั้นยังไม่เข้าใจว่าอะไรบ้างกำลังจะเกิดขึ้น
+บางคนก็เห็นความเปลี่ยนแปลงที่กำลังจะสร้างอันตราย แต่ก็ไม่สามารถหยุดความเปลี่ยนแปลงได้
+ครูจะอ่านร้อยกรองชิ้นนี้ เป็นผลงานที่ไม่ทราบผู้แต่ง ที่แต่งไว้เกี่ยวกับเหตุการณ์บนดาวโลกในขณะนั้น
+ตั้งใจฟังให้ดีนะคะ"
+
+คุณครูเริ่มอ่านร้อยกรอง โดรนหลายตัวบินเรียงหมู่ เกาะกลุ่มกันเป็นรูปเป็นร่าง ฉายวิดีโอลงไปบนนัยน์ตาของเด็กแต่ละคน
+นักเรียนทุกคนในห้องเห็นภาพชายคนหนึ่งในชุดสูท ยืนอยู่กับสถานที่ที่เคยเป็นป่า ที่แทบไม่เหลทอต้นไม้แล้ว
+ชายคนนั้นเริ่มเอ่ยบทกลอน
 
 
-The teacher started the poem.
-A dozen of the small drones repositioned themselves in front of the children and began to project the video directly into their eyes.
-It showed a person in a suit standing in a forest with only tree stumps left.
-He began to talk:
+*จักรกลคำนวณ จักรกลนักคิด*   
+*มนุษย์และเครื่อง นั้นล้วนเป็นมิตร*   
+*สร้างแบบจำลอง ปัญญาประดิษฐ์*   
+*เพื่อเป็นหนทาง อนาคตวิจิตร*
 
-*The machines compute; the machines predict.* 
+*เลือดเนื้อและไฟ-ฟ้าคือเพื่อนกัน*   
+*เพื่อความก้าวหน้า สมานฉันท์*   
+*เก็บเกี่ยวดอกผล หยิบมาแบ่งปัน*   
+*สู่ความเจริญ อันเป็นอนันต์*
 
-*We march on as we are part of it.* 
+*โอ้อนิจจา หามองเห็นไม่*   
+*อันตรายเหล่า-นั้นอยู่ไม่ไกล*   
+*จักรกลคำนวณ ผลเสียยิ่งใหญ่*   
+*หากเผลอมองข้าม ก็ย่อมเป็นภัย*
 
-*We chase an optimum as trained.* 
+*เหตุคือเครื่องจักร กลืนกินพลังงาน*   
+*ใช้ทรัพยากร เสียมหาศาล*   
+*อุณหภูมิโลก สูงเป็นประวัติการณ์*   
+*ฤๅนี่จะถึง กาลอวสาน*
 
-*The optimum is one-dimensional, local and unconstrained.* 
-
-
-*Silicon and flesh, chasing exponentiality.* 
-
-*Growth is our mentality.* 
-
-*When all rewards are collected,* 
-
-*and side-effects neglected;* 
-
-*When all the coins are mined,* 
-
-*and nature has fallen behind;* 
-
-*We will be in trouble,* 
-
-*After all, exponential growth is a bubble.* 
+*โอ้หนอมนุษย์ เหมือนออกผจญภัย*   
+*ก่อนพบจุดจบ ต้องพินาศไป*   
+*เพราะมิได้มอง ถึงอนาคตไซร้*   
+*ว่าความเป็นอยู่ จะเป็นอย่างไร*
 
 
-*The tragedy of the commons unfolding,* 
+"ร้อยกรองชุด ความทรงจำที่มืดมน" คุณครูเอ่ยพลันเสียงจากวิดีโอจบ
+"ครูจะอัปโหลดร้อยกรองชุดนี้ไว้ให้นักเรียน ให้นักเรียนไปท่องมาให้ได้ภายในอาทิตย์หน้า"   
+โซลาถอนหายใจ เธอคว้ามือออกไปกุมโดรนหนึ่งตัวมาเก็บไว้ ระบบไฟฟ้าภายในโดรนทำให้ตัวของมันอุ่น
 
-*Exploding,*
-
-*Before our eyes.* 
-
-
-*Cold calculations and icy greed,* 
-
-*Fill the earth with heat.* 
-
-*Everything is dying,* 
-
-*And we are complying.* 
-
-
-*Like horses with blinders we race the race of our own creation,*
-
-*Towards the Great Filter of civilization.*
-
-*And so we march on relentlessly.*
-
-*As we are part of the machine.*
-
-*Embracing entropy.*
-
-"A dark memory," the teacher said to break the silence in the room.
-"It will be uploaded to your library.
-Your homework is to memorise it until next week."
-Xola sighed.
-She managed to catch one of the little drones.
-The drone was warm from the CPU and the engines.
-Xola liked how it warmed her hands.
+ความอุ่นของโดรนแผ่ไปถึงมือของโซลา มันช่วยคลายหนาวห้เธอ

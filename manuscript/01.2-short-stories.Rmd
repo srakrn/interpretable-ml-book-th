@@ -84,7 +84,7 @@ knitr::include_graphics("images/hospital.png")
 "ไม่ ทอม มันเป็นบั๊ก... แม่งแค่บั๊ก"
 
 
-### ขอแค่เธอจงไว้ใจ {trust-fall .unnumbered}
+### ขอแค่เธอจงไว้ใจ {#trust-fall .unnumbered}
 
 **ค.ศ. 2050: สถานีรถไฟฟ้าในสิงคโปร์**
 

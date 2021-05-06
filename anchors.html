@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.8 Scoped Rules (Anchors) | Interpretable Machine Learning</title>
-  <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <title>5.8 Scoped Rules (Anchors) | จักรกลเรียนรู้แบบแปลความได้</title>
+  <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.8 Scoped Rules (Anchors) | Interpretable Machine Learning" />
+  <meta property="og:title" content="5.8 Scoped Rules (Anchors) | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
-  <meta name="github-repo" content="christophM/interpretable-ml-book" />
+  <meta property="og:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
+  <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.8 Scoped Rules (Anchors) | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="5.8 Scoped Rules (Anchors) | จักรกลเรียนรู้แบบแปลความได้" />
   
-  <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
 
 <meta name="author" content="Christoph Molnar" />
@@ -115,7 +115,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> บทนำ</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
@@ -364,7 +364,7 @@ window.cookieconsent.initialise({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interpretable Machine Learning</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">จักรกลเรียนรู้แบบแปลความได้</a>
           </h1>
         </div>
 
@@ -382,7 +382,7 @@ window.cookieconsent.initialise({
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
 <img src="images/anchors-visualization.png" alt="LIME vs. Anchors -- A Toy Visualization. Figure from Ribeiro, Singh, and Guestrin (2018)." width="350" />
 <p class="caption">
-FIGURE 5.37: LIME vs. Anchors -- A Toy Visualization. Figure from Ribeiro, Singh, and Guestrin (2018).
+ภาพประกอบ 5.37: LIME vs. Anchors -- A Toy Visualization. Figure from Ribeiro, Singh, and Guestrin (2018).
 </p>
 </div>
 <p>As mentioned before, the algorithm’s results or explanations come in the form of rules, called anchors. The following simple example illustrates such an anchor. For instance, suppose we are given a bivariate black-box model that predicts whether or not a passenger survives the Titanic disaster. Now we would like to know <em>why</em> the model predicts for one specific individual that it survives. The anchors algorithm provides a result explanation like the one shown below.</p>
@@ -459,7 +459,7 @@ AND COVERAGE <code>15%</code></p>
 <div class="figure"><span id="fig:unnamed-chunk-22"></span>
 <img src="images/anchors-process.jpg" alt="The anchors algorithm’s components and their interrelations (simplified)" width="800" />
 <p class="caption">
-FIGURE 5.38: The anchors algorithm’s components and their interrelations (simplified)
+ภาพประกอบ 5.38: The anchors algorithm’s components and their interrelations (simplified)
 </p>
 </div>
 <p>The approach is a seemingly perfect recipe for efficiently deriving statistically sound information about why any system classified an instance the way it did. It systematically experiments with the model’s input and concludes by observing respective outputs. It relies on well established and researched Machine Learning methods (MABs) to reduce the number of calls made to the model. This, in turn, drastically reduces the algorithm’s runtime.</p>
@@ -478,7 +478,7 @@ FIGURE 5.38: The anchors algorithm’s components and their interrelations (simp
 <div class="figure"><span id="fig:unnamed-chunk-25"></span>
 <img src="images/unnamed-chunk-25-1.png" alt="Anchors explaining six instances of the bike rental dataset. Each row represents one explanation or anchor, and each bar depicts the feature predicates contained by it. The x-axis displays a rule's precision, and a bar's thickness corresponds to its coverage. The 'base' rule contains no predicates. These anchors show that the model mainly considers the temperature for predictions." width="1500" />
 <p class="caption">
-FIGURE 5.39: Anchors explaining six instances of the bike rental dataset. Each row represents one explanation or anchor, and each bar depicts the feature predicates contained by it. The x-axis displays a rule's precision, and a bar's thickness corresponds to its coverage. The 'base' rule contains no predicates. These anchors show that the model mainly considers the temperature for predictions.
+ภาพประกอบ 5.39: Anchors explaining six instances of the bike rental dataset. Each row represents one explanation or anchor, and each bar depicts the feature predicates contained by it. The x-axis displays a rule's precision, and a bar's thickness corresponds to its coverage. The 'base' rule contains no predicates. These anchors show that the model mainly considers the temperature for predictions.
 </p>
 </div>
 <p>The results are instinctively interpretable and show for each explained instance, which features are most important for the model's prediction. As the anchors only have a few predicates, they additionally have high coverage and hence apply to other cases. The rules shown above were generated with <span class="math inline">\(\tau = 0.9\)</span>. Thus, we ask for anchors whose evaluated perturbations faithfully support the label with an accuracy of at least <span class="math inline">\(90\%\)</span>. Also, discretization was used to increase the expressiveness and applicability of numerical features.</p>
@@ -486,7 +486,7 @@ FIGURE 5.39: Anchors explaining six instances of the bike rental dataset. Each r
 <div class="figure"><span id="fig:unnamed-chunk-26"></span>
 <img src="images/unnamed-chunk-26-1.png" alt="Explaining instances near decision boundaries leads to specific rules comprising a higher number of feature predicates and lower coverage. Also, the empty rule, i.e., the base feature, gets less important. This can be interpreted as a signal for a decision boundary, as the instance is located in a volatile neighborhood." width="1500" />
 <p class="caption">
-FIGURE 5.40: Explaining instances near decision boundaries leads to specific rules comprising a higher number of feature predicates and lower coverage. Also, the empty rule, i.e., the base feature, gets less important. This can be interpreted as a signal for a decision boundary, as the instance is located in a volatile neighborhood.
+ภาพประกอบ 5.40: Explaining instances near decision boundaries leads to specific rules comprising a higher number of feature predicates and lower coverage. Also, the empty rule, i.e., the base feature, gets less important. This can be interpreted as a signal for a decision boundary, as the instance is located in a volatile neighborhood.
 </p>
 </div>
 <p>While choosing the default perturbation space is a comfortable choice to make, it may have a great impact on the algorithm and can thus lead to biased results. For example, if the train set is unbalanced (there is an unequal number of instances of each class), the perturbation space is as well. This condition further affects the rule-finding and the result's precision.</p>
@@ -498,7 +498,7 @@ FIGURE 5.40: Explaining instances near decision boundaries leads to specific rul
 <div class="figure"><span id="fig:unnamed-chunk-29"></span>
 <img src="images/unnamed-chunk-29-1.png" alt="Constructing anchors within unbalanced perturbation spaces leads to unexpressive results." width="1500" />
 <p class="caption">
-FIGURE 5.41: Constructing anchors within unbalanced perturbation spaces leads to unexpressive results.
+ภาพประกอบ 5.41: Constructing anchors within unbalanced perturbation spaces leads to unexpressive results.
 </p>
 </div>
 <p>This outcome may be unwanted and can be approached in multiple ways. For example, a custom perturbation space can be defined that samples differently, e.g., from an unbalanced data set or a normal distribution. This, however, comes with a side-effect: the sampled neighbors are not representative and change the coverage's scope. Alternatively, we could modify the MAB's confidence <span class="math inline">\(\delta\)</span> and error parameter values <span class="math inline">\(\epsilon\)</span>. This would cause the MAB to draw more samples, ultimately leading to the minority being sampled more often in absolute terms.</p>
@@ -506,7 +506,7 @@ FIGURE 5.41: Constructing anchors within unbalanced perturbation spaces leads to
 <div class="figure"><span id="fig:unnamed-chunk-30"></span>
 <img src="images/unnamed-chunk-30-1.png" alt="Balancing the data set before constructing anchors shows the model's reasoning for decisions in minority cases." width="1650" />
 <p class="caption">
-FIGURE 5.42: Balancing the data set before constructing anchors shows the model's reasoning for decisions in minority cases.
+ภาพประกอบ 5.42: Balancing the data set before constructing anchors shows the model's reasoning for decisions in minority cases.
 </p>
 </div>
 </div>
@@ -577,7 +577,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/05.8.1-agnostic-Anchors.Rmd",
-"text": "Edit"
+"text": "แก้ไข"
 },
 "history": {
 "link": null,

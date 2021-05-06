@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.2 Adversarial Examples | Interpretable Machine Learning</title>
-  <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <title>6.2 Adversarial Examples | จักรกลเรียนรู้แบบแปลความได้</title>
+  <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.2 Adversarial Examples | Interpretable Machine Learning" />
+  <meta property="og:title" content="6.2 Adversarial Examples | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
-  <meta name="github-repo" content="christophM/interpretable-ml-book" />
+  <meta property="og:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
+  <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.2 Adversarial Examples | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="6.2 Adversarial Examples | จักรกลเรียนรู้แบบแปลความได้" />
   
-  <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
 
 <meta name="author" content="Christoph Molnar" />
@@ -115,7 +115,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> บทนำ</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
@@ -364,7 +364,7 @@ window.cookieconsent.initialise({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interpretable Machine Learning</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">จักรกลเรียนรู้แบบแปลความได้</a>
           </h1>
         </div>
 
@@ -389,7 +389,7 @@ window.cookieconsent.initialise({
 <div class="figure"><span id="fig:adversarial-ostrich"></span>
 <img src="images/adversarial-ostrich.jpg" alt="Adversarial examples for AlexNet by Szegedy et. al (2013). All images in the left column are correctly classified. The middle column shows the (magnified) error added to the images to produce the images in the right column all categorized (incorrectly) as &quot;Ostrich&quot;. &quot;Intriguing properties of neural networks&quot;, Figure 5 by Szegedy et. al. CC-BY 3.0." width="600" />
 <p class="caption">
-FIGURE 6.3: Adversarial examples for AlexNet by Szegedy et. al (2013). All images in the left column are correctly classified. The middle column shows the (magnified) error added to the images to produce the images in the right column all categorized (incorrectly) as &quot;Ostrich&quot;. &quot;Intriguing properties of neural networks&quot;, Figure 5 by Szegedy et. al. CC-BY 3.0.
+ภาพประกอบ 6.3: Adversarial examples for AlexNet by Szegedy et. al (2013). All images in the left column are correctly classified. The middle column shows the (magnified) error added to the images to produce the images in the right column all categorized (incorrectly) as &quot;Ostrich&quot;. &quot;Intriguing properties of neural networks&quot;, Figure 5 by Szegedy et. al. CC-BY 3.0.
 </p>
 </div>
 <p>These adversarial examples were generated by minimizing the following function with respect to r:</p>
@@ -406,7 +406,7 @@ FIGURE 6.3: Adversarial examples for AlexNet by Szegedy et. al (2013). All image
 <div class="figure"><span id="fig:adversarial-1pixel"></span>
 <img src="images/adversarial-1pixel.png" alt="By intentionally changing a single pixel a neural network trained on ImageNet can be deceived to predict the wrong class instead of the original class." width="600" />
 <p class="caption">
-FIGURE 6.4: By intentionally changing a single pixel a neural network trained on ImageNet can be deceived to predict the wrong class instead of the original class.
+ภาพประกอบ 6.4: By intentionally changing a single pixel a neural network trained on ImageNet can be deceived to predict the wrong class instead of the original class.
 </p>
 </div>
 <p>Similar to counterfactuals, the 1-pixel attack looks for a modified example x' which comes close to the original image x, but changes the prediction to an adversarial outcome. However, the definition of closeness differs: Only a single pixel may change. The 1-pixel attack uses differential evolution to find out which pixel is to be changed and how. Differential evolution is loosely inspired by biological evolution of species. A population of individuals called candidate solutions recombines generation by generation until a solution is found. Each candidate solution encodes a pixel modification and is represented by a vector of five elements: the x- and y-coordinates and the red, green and blue (RGB) values. The search starts with, for example, 400 candidate solutions (= pixel modification suggestions) and creates a new generation of candidate solutions (children) from the parent generation using the following formula:</p>
@@ -418,7 +418,7 @@ FIGURE 6.4: By intentionally changing a single pixel a neural network trained on
 <div class="figure"><span id="fig:adversarial-toaster"></span>
 <img src="images/adversarial-toaster.png" alt="A sticker that makes a VGG16 classifier trained on ImageNet categorize an image of a banana as a toaster. Work by Brown et. al (2017)." width="600" />
 <p class="caption">
-FIGURE 6.5: A sticker that makes a VGG16 classifier trained on ImageNet categorize an image of a banana as a toaster. Work by Brown et. al (2017).
+ภาพประกอบ 6.5: A sticker that makes a VGG16 classifier trained on ImageNet categorize an image of a banana as a toaster. Work by Brown et. al (2017).
 </p>
 </div>
 <p>This method differs from the methods presented so far for adversarial examples, since the restriction that the adversarial image must be very close to the original image is removed. Instead, the method completely replaces a part of the image with a patch that can take on any shape. The image of the patch is optimized over different background images, with different positions of the patch on the images, sometimes moved, sometimes larger or smaller and rotated, so that the patch works in many situations. In the end, this optimized image can be printed and used to deceive image classifiers in the wild.</p>
@@ -427,7 +427,7 @@ FIGURE 6.5: A sticker that makes a VGG16 classifier trained on ImageNet categori
 <div class="figure"><span id="fig:adversarial-turtle"></span>
 <img src="images/adversarial-turtle.png" alt="Athalye et. al (2017) created a 3D-printed that is recognized as a rifle by TensorFlow’s standard pre-trained InceptionV3 classifier." width="600" />
 <p class="caption">
-FIGURE 6.6: Athalye et. al (2017) created a 3D-printed that is recognized as a rifle by TensorFlow’s standard pre-trained InceptionV3 classifier.
+ภาพประกอบ 6.6: Athalye et. al (2017) created a 3D-printed that is recognized as a rifle by TensorFlow’s standard pre-trained InceptionV3 classifier.
 </p>
 </div>
 <p>The authors have found a way to create an adversarial example in 3D for a 2D classifier that is adversarial over transformations, such as all possibilities to rotate the turtle, zoom in and so on. Other approaches such as the fast gradient method no longer work when the image is rotated or viewing angle changes. Athalye et. al (2017) propose the Expectation Over Transformation (EOT) algorithm, which is a method for generating adversarial examples that even work when the image is transformed. The main idea behind EOT is to optimize adversarial examples across many possible transformations. Instead of minimizing the distance between the adversarial example and the original image, EOT keeps the expected distance between the two below a certain threshold, given a selected distribution of possible transformations. The expected distance under transformation can be written as:</p>
@@ -518,7 +518,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/06.2-example-based-adversarial.Rmd",
-"text": "Edit"
+"text": "แก้ไข"
 },
 "history": {
 "link": null,

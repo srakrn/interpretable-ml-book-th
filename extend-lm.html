@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.3 GLM, GAM and more | Interpretable Machine Learning</title>
-  <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <title>4.3 GLM, GAM and more | จักรกลเรียนรู้แบบแปลความได้</title>
+  <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.3 GLM, GAM and more | Interpretable Machine Learning" />
+  <meta property="og:title" content="4.3 GLM, GAM and more | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
-  <meta name="github-repo" content="christophM/interpretable-ml-book" />
+  <meta property="og:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
+  <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.3 GLM, GAM and more | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="4.3 GLM, GAM and more | จักรกลเรียนรู้แบบแปลความได้" />
   
-  <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
 
 <meta name="author" content="Christoph Molnar" />
@@ -115,7 +115,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> บทนำ</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
@@ -364,7 +364,7 @@ window.cookieconsent.initialise({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interpretable Machine Learning</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">จักรกลเรียนรู้แบบแปลความได้</a>
           </h1>
         </div>
 
@@ -383,7 +383,7 @@ window.cookieconsent.initialise({
 <div class="figure"><span id="fig:three-lm-problems"></span>
 <img src="images/three-lm-problems-1.png" alt="Three assumptions of the linear model (left side): Gaussian distribution of the outcome given the features, additivity (= no interactions) and linear relationship. Reality usually does not adhere to those assumptions (right side): Outcomes might have non-Gaussian distributions, features might interact and the relationship might be nonlinear." width="1050" />
 <p class="caption">
-FIGURE 4.8: Three assumptions of the linear model (left side): Gaussian distribution of the outcome given the features, additivity (= no interactions) and linear relationship. Reality usually does not adhere to those assumptions (right side): Outcomes might have non-Gaussian distributions, features might interact and the relationship might be nonlinear.
+ภาพประกอบ 4.8: Three assumptions of the linear model (left side): Gaussian distribution of the outcome given the features, additivity (= no interactions) and linear relationship. Reality usually does not adhere to those assumptions (right side): Outcomes might have non-Gaussian distributions, features might interact and the relationship might be nonlinear.
 </p>
 </div>
 <p>There is a solution to all these problems:</p>
@@ -418,21 +418,21 @@ FIGURE 4.8: Three assumptions of the linear model (left side): Gaussian distribu
 <div class="figure"><span id="fig:poisson-data"></span>
 <img src="images/poisson-data-1.png" alt="Simulated distribution of number of daily coffees for 200 days." width="1050" />
 <p class="caption">
-FIGURE 4.9: Simulated distribution of number of daily coffees for 200 days.
+ภาพประกอบ 4.9: Simulated distribution of number of daily coffees for 200 days.
 </p>
 </div>
 <p>On 76 of the 200 days you had no coffee at all and on the most extreme day you had 7. Let us naively use a linear model to predict the number of coffees using sleep level, stress level and work yes/no as features. What can go wrong when we falsely assume a Gaussian distribution? A wrong assumption can invalidate the estimates, especially the confidence intervals of the weights. A more obvious problem is that the predictions do not match the &quot;allowed&quot; domain of the true outcome, as the following figure shows.</p>
 <div class="figure"><span id="fig:failing-linear-model"></span>
 <img src="images/failing-linear-model-1.png" alt="Predicted number of coffees dependent on stress, sleep and work. The linear model predicts negative values." width="1050" />
 <p class="caption">
-FIGURE 4.10: Predicted number of coffees dependent on stress, sleep and work. The linear model predicts negative values.
+ภาพประกอบ 4.10: Predicted number of coffees dependent on stress, sleep and work. The linear model predicts negative values.
 </p>
 </div>
 <p>The linear model does not make sense, because it predicts negative number of coffees. This problem can be solved with Generalized Linear Models (GLMs). We can change the link function and the assumed distribution. One possibility is to keep the Gaussian distribution and use a link function that always leads to positive predictions such as the log-link (the inverse is the exp-function) instead of the identity function. Even better: We choose a distribution that corresponds to the data generating process and an appropriate link function. Since the outcome is a count, the Poisson distribution is a natural choice, along with the logarithm as link function. In this case, the data was even generated with the Poisson distribution, so the Poisson GLM is the perfect choice. The fitted Poisson GLM leads to the following distribution of predicted values:</p>
 <div class="figure"><span id="fig:linear-model-positive"></span>
 <img src="images/linear-model-positive-1.png" alt="Predicted number of coffees dependent on stress, sleep and work. The GLM with Poisson assumption and log link is an appropriate model for this dataset." width="1050" />
 <p class="caption">
-FIGURE 4.11: Predicted number of coffees dependent on stress, sleep and work. The GLM with Poisson assumption and log link is an appropriate model for this dataset.
+ภาพประกอบ 4.11: Predicted number of coffees dependent on stress, sleep and work. The GLM with Poisson assumption and log link is an appropriate model for this dataset.
 </p>
 </div>
 <p>No negative amounts of coffees, looks much better now.</p>
@@ -765,7 +765,7 @@ FIGURE 4.11: Predicted number of coffees dependent on stress, sleep and work. Th
 <div class="figure"><span id="fig:interaction-plot"></span>
 <img src="images/interaction-plot-1.png" alt="The effect (including interaction) of temperature and working day on the predicted number of bikes for a linear model. Effectively, we get two slopes for the temperature, one for each category of the working day feature." width="1050" />
 <p class="caption">
-FIGURE 4.12: The effect (including interaction) of temperature and working day on the predicted number of bikes for a linear model. Effectively, we get two slopes for the temperature, one for each category of the working day feature.
+ภาพประกอบ 4.12: The effect (including interaction) of temperature and working day on the predicted number of bikes for a linear model. Effectively, we get two slopes for the temperature, one for each category of the working day feature.
 </p>
 </div>
 </div>
@@ -782,7 +782,7 @@ FIGURE 4.12: The effect (including interaction) of temperature and working day o
 <div class="figure"><span id="fig:nonlinear-effects"></span>
 <img src="images/nonlinear-effects-1.png" alt="Predicting the number of rented bicycles using only the temperature feature. A linear model (top left) does not fit the data well. One solution is to transform the feature with e.g. the logarithm (top right), categorize it (bottom left), which is usually a bad decision, or use Generalized Additive Models that can automatically fit a smooth curve for temperature (bottom right)." width="1050" />
 <p class="caption">
-FIGURE 4.13: Predicting the number of rented bicycles using only the temperature feature. A linear model (top left) does not fit the data well. One solution is to transform the feature with e.g. the logarithm (top right), categorize it (bottom left), which is usually a bad decision, or use Generalized Additive Models that can automatically fit a smooth curve for temperature (bottom right).
+ภาพประกอบ 4.13: Predicting the number of rented bicycles using only the temperature feature. A linear model (top left) does not fit the data well. One solution is to transform the feature with e.g. the logarithm (top right), categorize it (bottom left), which is usually a bad decision, or use Generalized Additive Models that can automatically fit a smooth curve for temperature (bottom right).
 </p>
 </div>
 <p><strong>Feature transformation</strong></p>
@@ -854,7 +854,7 @@ FIGURE 4.13: Predicting the number of rented bicycles using only the temperature
 <div class="figure"><span id="fig:splines"></span>
 <img src="images/splines-1.png" alt="To smoothly model the temperature effect, we use 4 spline functions. Each temperature value is mapped to (here) 4 spline values. If an instance has a temperature of 30 °C, the value for the first spline feature is -1, for the second 0.7, for the third -0.8 and for the 4th 1.7." width="1050" />
 <p class="caption">
-FIGURE 4.14: To smoothly model the temperature effect, we use 4 spline functions. Each temperature value is mapped to (here) 4 spline values. If an instance has a temperature of 30 °C, the value for the first spline feature is -1, for the second 0.7, for the third -0.8 and for the 4th 1.7.
+ภาพประกอบ 4.14: To smoothly model the temperature effect, we use 4 spline functions. Each temperature value is mapped to (here) 4 spline values. If an instance has a temperature of 30 °C, the value for the first spline feature is -1, for the second 0.7, for the third -0.8 and for the 4th 1.7.
 </p>
 </div>
 <p>The GAM assigns weights to each temperature spline feature:</p>
@@ -892,7 +892,7 @@ FIGURE 4.14: To smoothly model the temperature effect, we use 4 spline functions
 <div class="figure"><span id="fig:splines-curve"></span>
 <img src="images/splines-curve-1.png" alt="GAM feature effect of the temperature for predicting the number of rented bikes (temperature used as the only feature)." width="1050" />
 <p class="caption">
-FIGURE 4.15: GAM feature effect of the temperature for predicting the number of rented bikes (temperature used as the only feature).
+ภาพประกอบ 4.15: GAM feature effect of the temperature for predicting the number of rented bikes (temperature used as the only feature).
 </p>
 </div>
 <p>The interpretation of smooth effects requires a visual check of the fitted curve. Splines are usually centered around the mean prediction, so a point on the curve is the difference to the mean prediction. For example, at 0 degrees Celsius, the predicted number of bicycles is 3000 lower than the average prediction.</p>
@@ -993,7 +993,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/04.4-interpretable-lm-extensions.Rmd",
-"text": "Edit"
+"text": "แก้ไข"
 },
 "history": {
 "link": null,

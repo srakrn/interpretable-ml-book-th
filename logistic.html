@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.2 Logistic Regression | Interpretable Machine Learning</title>
-  <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <title>4.2 Logistic Regression | จักรกลเรียนรู้แบบแปลความได้</title>
+  <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.2 Logistic Regression | Interpretable Machine Learning" />
+  <meta property="og:title" content="4.2 Logistic Regression | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
-  <meta name="github-repo" content="christophM/interpretable-ml-book" />
+  <meta property="og:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
+  <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.2 Logistic Regression | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="4.2 Logistic Regression | จักรกลเรียนรู้แบบแปลความได้" />
   
-  <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
 
 <meta name="author" content="Christoph Molnar" />
@@ -115,7 +115,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> บทนำ</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
@@ -364,7 +364,7 @@ window.cookieconsent.initialise({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interpretable Machine Learning</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">จักรกลเรียนรู้แบบแปลความได้</a>
           </h1>
         </div>
 
@@ -385,7 +385,7 @@ window.cookieconsent.initialise({
 <div class="figure"><span id="fig:linear-class-threshold"></span>
 <img src="images/linear-class-threshold-1.png" alt="A linear model classifies tumors as malignant (1) or benign (0) given their size. The lines show the prediction of the linear model. For the data on the left, we can use 0.5 as classification threshold. After introducing a few more malignant tumor cases, the regression line shifts and a threshold of 0.5 no longer separates the classes. Points are slightly jittered to reduce over-plotting. " width="1050" />
 <p class="caption">
-FIGURE 4.5: A linear model classifies tumors as malignant (1) or benign (0) given their size. The lines show the prediction of the linear model. For the data on the left, we can use 0.5 as classification threshold. After introducing a few more malignant tumor cases, the regression line shifts and a threshold of 0.5 no longer separates the classes. Points are slightly jittered to reduce over-plotting.
+ภาพประกอบ 4.5: A linear model classifies tumors as malignant (1) or benign (0) given their size. The lines show the prediction of the linear model. For the data on the left, we can use 0.5 as classification threshold. After introducing a few more malignant tumor cases, the regression line shifts and a threshold of 0.5 no longer separates the classes. Points are slightly jittered to reduce over-plotting.
 </p>
 </div>
 </div>
@@ -397,7 +397,7 @@ FIGURE 4.5: A linear model classifies tumors as malignant (1) or benign (0) give
 <div class="figure"><span id="fig:logistic-function"></span>
 <img src="images/logistic-function-1.png" alt="The logistic function. It outputs numbers between 0 and 1. At input 0, it outputs 0.5." width="1050" />
 <p class="caption">
-FIGURE 4.6: The logistic function. It outputs numbers between 0 and 1. At input 0, it outputs 0.5.
+ภาพประกอบ 4.6: The logistic function. It outputs numbers between 0 and 1. At input 0, it outputs 0.5.
 </p>
 </div>
 <p>The step from linear regression to logistic regression is kind of straightforward. In the linear regression model, we have modelled the relationship between outcome and features with a linear equation:</p>
@@ -408,7 +408,7 @@ FIGURE 4.6: The logistic function. It outputs numbers between 0 and 1. At input 
 <div class="figure"><span id="fig:logistic-class-threshold"></span>
 <img src="images/logistic-class-threshold-1.png" alt="The logistic regression model finds the correct decision boundary between malignant and benign depending on tumor size. The line is the logistic function shifted and squeezed to fit the data." width="1050" />
 <p class="caption">
-FIGURE 4.7: The logistic regression model finds the correct decision boundary between malignant and benign depending on tumor size. The line is the logistic function shifted and squeezed to fit the data.
+ภาพประกอบ 4.7: The logistic regression model finds the correct decision boundary between malignant and benign depending on tumor size. The line is the logistic function shifted and squeezed to fit the data.
 </p>
 </div>
 <p>Classification works better with logistic regression and we can use 0.5 as a threshold in both cases. The inclusion of additional points does not really affect the estimated curve.</p>
@@ -439,7 +439,7 @@ FIGURE 4.7: The logistic regression model finds the correct decision boundary be
 <h3><span class="header-section-number">4.2.4</span> Example</h3>
 <p>We use the logistic regression model to predict <a href="cervical.html#cervical">cervical cancer</a> based on some risk factors. The following table shows the estimate weights, the associated odds ratios, and the standard error of the estimates.</p>
 <table>
-<caption><span id="tab:logistic-example">TABLE 4.1: </span>The results of fitting a logistic regression model on the cervical cancer dataset. Shown are the features used in the model, their estimated weights and corresponding odds ratios, and the standard errors of the estimated weights.</caption>
+<caption><span id="tab:logistic-example">ตาราง 4.1: </span>The results of fitting a logistic regression model on the cervical cancer dataset. Shown are the features used in the model, their estimated weights and corresponding odds ratios, and the standard errors of the estimated weights.</caption>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -545,7 +545,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/04.3-interpretable-logistic.Rmd",
-"text": "Edit"
+"text": "แก้ไข"
 },
 "history": {
 "link": null,

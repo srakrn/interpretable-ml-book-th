@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.1 Counterfactual Explanations | Interpretable Machine Learning</title>
-  <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <title>6.1 Counterfactual Explanations | จักรกลเรียนรู้แบบแปลความได้</title>
+  <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.1 Counterfactual Explanations | Interpretable Machine Learning" />
+  <meta property="og:title" content="6.1 Counterfactual Explanations | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
-  <meta name="github-repo" content="christophM/interpretable-ml-book" />
+  <meta property="og:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
+  <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.1 Counterfactual Explanations | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="6.1 Counterfactual Explanations | จักรกลเรียนรู้แบบแปลความได้" />
   
-  <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
 
 <meta name="author" content="Christoph Molnar" />
@@ -115,7 +115,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> บทนำ</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
@@ -364,7 +364,7 @@ window.cookieconsent.initialise({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interpretable Machine Learning</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">จักรกลเรียนรู้แบบแปลความได้</a>
           </h1>
         </div>
 
@@ -380,7 +380,7 @@ window.cookieconsent.initialise({
 <div class="figure"><span id="fig:ml-graph-cf"></span>
 <img src="images/graph.jpg" alt="The causal relationships between inputs of a machine learning model and the predictions, when the model is merely seen as a black box. The inputs cause the prediction (not necessarily reflecting the real causal relation of the data)." width="500" />
 <p class="caption">
-FIGURE 6.1: The causal relationships between inputs of a machine learning model and the predictions, when the model is merely seen as a black box. The inputs cause the prediction (not necessarily reflecting the real causal relation of the data).
+ภาพประกอบ 6.1: The causal relationships between inputs of a machine learning model and the predictions, when the model is merely seen as a black box. The inputs cause the prediction (not necessarily reflecting the real causal relation of the data).
 </p>
 </div>
 <p>Even if in reality the relationship between the inputs and the outcome to be predicted might not be causal, we can see the inputs of a model as the cause of the prediction.</p>
@@ -448,7 +448,7 @@ This means that two points are closer to each other when fewer features are diff
 <div class="figure"><span id="fig:nsgaII-cf"></span>
 <img src="images/cfexp-nsgaII.jpg" alt="Visualization of one generation of the NSGA-II algorithm." width="700" />
 <p class="caption">
-FIGURE 6.2: Visualization of one generation of the NSGA-II algorithm.
+ภาพประกอบ 6.2: Visualization of one generation of the NSGA-II algorithm.
 </p>
 </div>
 <p>In the first generation a group of counterfactual candidates is initialized by randomly changing some of the features compared to our instance x to be explained. Sticking with above's credit example, one counterfactual could suggest to increase the income by € 30,000 while another one proposes to have no default in the last 5 years and a reduction in age by 10. All other feature values are equal to the values of x. Each candidate is then evaluated using the four objective functions of above. Among them, we randomly select some candidates, where fitter candidates are more likely selected. The candidates are pairwise recombined to produce children that are similar to them by averaging their numerical feature values or by crossing over their categorical features. In addition, we slightly mutate the feature values of the children to explore the whole feature space.</p>
@@ -698,7 +698,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/06.1-example-based-counterfactual.Rmd",
-"text": "Edit"
+"text": "แก้ไข"
 },
 "history": {
 "link": null,

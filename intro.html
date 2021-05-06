@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction | Interpretable Machine Learning</title>
-  <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <title>บทที่ 1 บทนำ | จักรกลเรียนรู้แบบแปลความได้</title>
+  <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction | Interpretable Machine Learning" />
+  <meta property="og:title" content="บทที่ 1 บทนำ | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
-  <meta name="github-repo" content="christophM/interpretable-ml-book" />
+  <meta property="og:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
+  <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="บทที่ 1 บทนำ | จักรกลเรียนรู้แบบแปลความได้" />
   
-  <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
 
 <meta name="author" content="Christoph Molnar" />
@@ -115,7 +115,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> บทนำ</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
@@ -364,7 +364,7 @@ window.cookieconsent.initialise({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interpretable Machine Learning</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">จักรกลเรียนรู้แบบแปลความได้</a>
           </h1>
         </div>
 
@@ -373,7 +373,7 @@ window.cookieconsent.initialise({
 
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<h1><span class="header-section-number">บทที่ 1</span> บทนำ</h1>
 <p>หนังสือเล่มนี้อธิบายถึงวิธีการแปลความ (interpret) แบบจำลองจักรกลเรียนรู้ (ชนิดถูกกำกับ) ((supervised) machine learning model) โดยในบทนี้จะมีเนื้อหาและสมการทางคณิตศาสตร์ แต่คุณจะยังสามารถเข้าใจแนวคิดและหลักการที่อยู่เบื้องหลังวิธีการเหล่านี้ โดยไม่ต้องพึ่งสมการใดๆ อย่างไรก็ตาม หนังสือเล่มนี้ไม่เหมาะสำหรับผู้ที่ต้องการเรียนรู้เรื่องจักรกลเรียนรู้ตั้งแต่ต้น โดยถ้าคุณยังมีประสบการณ์หรือความรู้เกี่ยวกับจักรกลเรียนรู้ในระดับจำกัด มีแหล่งข้อมูลและเนื้อหาอื่นๆ มากมายที่จะช่วยให้คุณได้เรียนรู้พื้นฐานของจักรกลเรียนรู้ ผมขอแนะนำหนังสือ &quot;The Elements of Statistical Learning&quot; โดย Hastie, Tibshirani, และ Friedman (ตีพิมพ์ในปี 2009) <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> และ <a href="https://www.coursera.org/learn/machine-learning">คอร์สเรียนจักรกลเรียนรู้ของ Andrew Ng</a> บนเว็บไซต์ coursera.com ในการเริ่มต้นเรียนรู้เรื่องนี้ ข่าวดีคือทั้งหนังสือและคอร์สเรียนข้างต้นนั้นฟรี!</p>
 <p>งานวิจัยเกี่ยวกับขั้นตอนวิธีการแปลความแบบจำลองจักรกลเรียนรู้แบบใหม่ๆ ถูกตีพิมพ์ด้วยความเร็วสายฟ้าแลบ แทบจะเป็นไปไม่ได้เลยที่จะเขียนเนื้อหาในหนังสือเล่มนี้เพิ่มให้ทันกับงานตีพิมพ์เหล่านั้น นั่นคือเหตุผลว่าทำไมหนังสือเล่มนี้จะไม่พูดถึงวิธีการใหม่ๆ แต่จะพูดถึงพื้นฐานและแนวคิดของการแปลความ รวมถึงวิธีการแปลความที่ได้รับการยอมรับเป็นอย่างกว้าง ความรู้เหล่านี้มากพอที่คุณจะนำไปต่อยอดและสร้างแบบจำลองจักรกลเรียนรู้ที่แปลความได้ และการที่คุณเข้าใจพื้นฐานที่มากพอก็ย่อมช่วยให้คุณสามารถศึกษาขั้นตอนวิธีใหม่ๆ ผ่านงานตีพิมพ์ทางวิชาการว่าด้วยการแปลความแบบจำลองจักรกลเรียนรู้ ซึ่งเผยแพร่บน <a href="https://arxiv.org/">arxiv.org</a> และไม่แน่ว่าบทความใหม่สุดบนเว็บไซต์ดังกล่าวอาจจะเพิ่งเผยแพร่เมื่อห้านาทีก่อนคุณเริ่มแตะหนังสือเล่มนี้ก็เป็นได้ (ผมอาจจะพูดให้เว่อร์เกินไปนิดนึง)</p>
 <p>หนังสือเล่มนี้จะเริ่มด้วย<a href="storytime.html#storytime">เรื่องสั้น</a> (แนวหม่นหมอง (dystopia)) ที่ไม่ได้จำเป็นต่อการเข้าใจเนื้อหาในหนังสือเล่มนี้ แต่จะช่วยให้คุณได้สนุกกับหนังสือ และได้ใช้โอกาสในการฉุกคิด ต่อมาหนังสือจะพาทำความรู้จักกับแนวคิดเบื้องต้นเกี่ยวกับ<a href="interpretability.html#interpretability">การแปลความได้ของจักรกลเรียนรู้</a> และจะพูดคุยว่าเพราะเหตุใดการแปลความได้จึงเป็นเรื่องสำคัญ และคำอธิบายที่ได้จากการแปลความนั้นมีแบบใดบ้าน ทั้งนี้คำศัพท์ต่างๆ ที่ใช้ในหนังสือเล่มนี้สามารถอ่านได้จาก<a href="terminology.html#terminology">บทคำศัพท์</a></p>
@@ -430,7 +430,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/01-introduction.Rmd",
-"text": "Edit"
+"text": "แก้ไข"
 },
 "history": {
 "link": null,

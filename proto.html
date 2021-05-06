@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.3 Prototypes and Criticisms | Interpretable Machine Learning</title>
-  <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <title>6.3 Prototypes and Criticisms | จักรกลเรียนรู้แบบแปลความได้</title>
+  <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.3 Prototypes and Criticisms | Interpretable Machine Learning" />
+  <meta property="og:title" content="6.3 Prototypes and Criticisms | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
-  <meta name="github-repo" content="christophM/interpretable-ml-book" />
+  <meta property="og:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
+  <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.3 Prototypes and Criticisms | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="6.3 Prototypes and Criticisms | จักรกลเรียนรู้แบบแปลความได้" />
   
-  <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
+  <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
 
 <meta name="author" content="Christoph Molnar" />
@@ -115,7 +115,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> บทนำ</a><ul>
 <li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
@@ -364,7 +364,7 @@ window.cookieconsent.initialise({
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interpretable Machine Learning</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">จักรกลเรียนรู้แบบแปลความได้</a>
           </h1>
         </div>
 
@@ -379,7 +379,7 @@ window.cookieconsent.initialise({
 <div class="figure"><span id="fig:unnamed-chunk-43"></span>
 <img src="images/unnamed-chunk-43-1.png" alt="Prototypes and criticisms for a data distribution with two features x1 and x2." width="1050" />
 <p class="caption">
-FIGURE 6.7: Prototypes and criticisms for a data distribution with two features x1 and x2.
+ภาพประกอบ 6.7: Prototypes and criticisms for a data distribution with two features x1 and x2.
 </p>
 </div>
 <p>I selected the prototypes manually, which does not scale well and probably leads to poor results. There are many approaches to find prototypes in the data. One of these is k-medoids, a clustering algorithm related to the k-means algorithm. Any clustering algorithm that returns actual data points as cluster centers would qualify for selecting prototypes. But most of these methods find only prototypes, but no criticisms. This chapter presents MMD-critic by Kim et. al (2016)<a href="#fn70" class="footnoteRef" id="fnref70"><sup>70</sup></a>, an approach that combines prototypes and criticisms in a single framework.</p>
@@ -401,7 +401,7 @@ FIGURE 6.7: Prototypes and criticisms for a data distribution with two features 
 <div class="figure"><span id="fig:mmd"></span>
 <img src="images/mmd-1.png" alt="The squared maximum mean discrepancy measure (MMD2) for a dataset with two features and different selections of prototypes." width="1050" />
 <p class="caption">
-FIGURE 6.8: The squared maximum mean discrepancy measure (MMD2) for a dataset with two features and different selections of prototypes.
+ภาพประกอบ 6.8: The squared maximum mean discrepancy measure (MMD2) for a dataset with two features and different selections of prototypes.
 </p>
 </div>
 <p>A choice for the kernel is the radial basis function kernel:</p>
@@ -423,7 +423,7 @@ FIGURE 6.8: The squared maximum mean discrepancy measure (MMD2) for a dataset wi
 <div class="figure"><span id="fig:witness"></span>
 <img src="images/witness-1.png" alt="Evaluations of the witness function at different points." width="1050" />
 <p class="caption">
-FIGURE 6.9: Evaluations of the witness function at different points.
+ภาพประกอบ 6.9: Evaluations of the witness function at different points.
 </p>
 </div>
 <p>The witness function allows us to explicitly search for data instances that are not well represented by the prototypes. Criticisms are points with high absolute value in the witness function. Like prototypes, criticisms are also found through greedy search. But instead of reducing the overall MMD2, we are looking for points that maximize a cost function that includes the witness function and a regularizer term. The additional term in the optimization function enforces diversity in the points, which is needed so that the points come from different clusters.</p>
@@ -450,7 +450,7 @@ FIGURE 6.9: Evaluations of the witness function at different points.
 <div class="figure"><span id="fig:prototypes-and-criticisms2"></span>
 <img src="images/proto-critique2.jpg" alt="Prototypes for a handwritten digits dataset." width="600" />
 <p class="caption">
-FIGURE 6.10: Prototypes for a handwritten digits dataset.
+ภาพประกอบ 6.10: Prototypes for a handwritten digits dataset.
 </p>
 </div>
 </div>
@@ -531,7 +531,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/06.3-example-based-proto.Rmd",
-"text": "Edit"
+"text": "แก้ไข"
 },
 "history": {
 "link": null,

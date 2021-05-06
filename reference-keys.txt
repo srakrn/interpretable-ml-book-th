@@ -108,7 +108,6 @@ fig:unnamed-chunk-55
 fig:unnamed-chunk-59
 intro
 storytime
-ขอแคเธอจงไวใจ-trust-fall-.unnumbered
 what-is-machine-learning
 terminology
 interpretability

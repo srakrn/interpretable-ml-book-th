@@ -108,6 +108,7 @@ fig:unnamed-chunk-55
 fig:unnamed-chunk-59
 intro
 storytime
+ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered
 what-is-machine-learning
 terminology
 interpretability

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 Story Time | Interpretable Machine Learning</title>
+  <title>1.1 ได้เวลานิทานก่อนนอน | Interpretable Machine Learning</title>
   <meta name="description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 Story Time | Interpretable Machine Learning" />
+  <meta property="og:title" content="1.1 ได้เวลานิทานก่อนนอน | Interpretable Machine Learning" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="christophM/interpretable-ml-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 Story Time | Interpretable Machine Learning" />
+  <meta name="twitter:title" content="1.1 ได้เวลานิทานก่อนนอน | Interpretable Machine Learning" />
   
   <meta name="twitter:description" content="Machine learning algorithms usually operate as black boxes and it is unclear how they derived a certain decision. This book is a guide for practitioners to make machine learning decisions interpretable." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Christoph Molnar" />
 
 
-<meta name="date" content="2021-05-05" />
+<meta name="date" content="2021-05-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -116,9 +116,9 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> Story Time</a><ul>
-<li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#lightning-never-strikes-twice"><i class="fa fa-check"></i>Lightning Never Strikes Twice</a></li>
-<li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#trust-fall"><i class="fa fa-check"></i>Trust Fall</a></li>
+<li class="chapter" data-level="1.1" data-path="storytime.html"><a href="storytime.html"><i class="fa fa-check"></i><b>1.1</b> ได้เวลานิทานก่อนนอน</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="storytime.html"><a href="storytime.html#ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered"><i class="fa fa-check"></i><b>1.1.1</b> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</a></li>
+<li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#ขอแคเธอจงไวใจ"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#fermis-paperclips"><i class="fa fa-check"></i>Fermi's Paperclips</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="what-is-machine-learning.html"><a href="what-is-machine-learning.html"><i class="fa fa-check"></i><b>1.2</b> What Is Machine Learning?</a></li>
@@ -373,89 +373,95 @@ window.cookieconsent.initialise({
 
             <section class="normal" id="section-">
 <div id="storytime" class="section level2">
-<h2><span class="header-section-number">1.1</span> Story Time</h2>
-<p>We will start with some short stories. Each story is an admittedly exaggerated call for interpretable machine learning. If you are in a hurry, you can skip the stories. If you want to be entertained and (de-)motivated, read on!</p>
-<p>The format is inspired by Jack Clark's Tech Tales in his <a href="https://jack-clark.net/">Import AI Newsletter</a>. If you like this kind of stories or if you are interested in AI, I recommend that you sign up.</p>
-<div id="lightning-never-strikes-twice" class="section level3 unnumbered">
-<h3>Lightning Never Strikes Twice</h3>
-<p><strong>2030: A medical lab in Switzerland</strong></p>
+<h2><span class="header-section-number">1.1</span> ได้เวลานิทานก่อนนอน</h2>
+<p>เราจะเริ่มกันด้วยเรื่องสั้นสักเล็กน้อย ผมสารภาพว่าเรื่องสั้นแต่ละเรื่องถูกใส่สีตีไข่เพื่อให้เข้าใจความจำเป็นว่าด้วยการมีจักรกลเรียนรู้ที่แปลความได้ ถ้าคุณรีบอ่านรีบใช้เนื้อหาในหนังสือเล่มนี้ ข้ามบทนี้ไปก่อนได้เลย แต่ถ้าคุณอยากหาความบันเทิงใส่ตัว หรืออยากหา (เรื่องบั่นทอน) แรงบันดาลใจ มาฟังนิทานกัน!</p>
+<p>เรื่องเล่าเหล่านี้ได้แรงบันดาลใจมาจากเรื่องเล่าว่าด้วยเทคโนโลยีของ Jack Clark ใน<a href="https://jack-clark.net/">จดหมายข่าว Import AI</a> ถ้าคุณชอบอ่านเรื่องราวประมาณนี้หรือว่ามีความสนใจในปัญญาประดิษฐ์ (AI) เป็นพิเศษ ผมแนะนำให้คุณสมัครบอกรับจดหมายข่าว</p>
+<div id="ฟาไมผาทเดยวกนสองหน-lightning-never-strikes-twice-.unnumbered" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> ฟ้าไม่ผ่าที่เดียวกันสองหน {#lightning-never-strikes-twice, .unnumbered}</h3>
+<p><strong>ค.ศ. 2030: ห้องปฏิบัติการวิจัยทางการแพทย์ ประเทศสวิตเซอร์แลนด์</strong></p>
 <p><img src="images/hospital.png" width="512" /></p>
-<p>&quot;It's definitely not the worst way to die!&quot; Tom summarised, trying to find something positive in the tragedy. He removed the pump from the intravenous pole.<br />
-&quot;He just died for the wrong reasons,&quot; Lena added.<br />
-&quot;And certainly with the wrong morphine pump! Just creating more work for us!&quot; Tom complained while unscrewing the back plate of the pump. After removing all the screws, he lifted the plate and put it aside. He plugged a cable into the diagnostic port.<br />
-&quot;You didn't just complain about having a job, did you?&quot; Lena gave him a mocking smile.<br />
-&quot;Of course not. Never!&quot; he exclaimed with a sarcastic undertone.</p>
-<p>He booted the pump's computer.<br />
-Lena plugged the other end of the cable into her tablet. &quot;All right, diagnostics are running,&quot; she announced. &quot;I am really curious about what went wrong.&quot;<br />
-&quot;It certainly shot our John Doe into Nirvana. That high concentration of this morphine stuff. Man. I mean ... that's a first, right? Normally a broken pump gives off too little of the sweet stuff or nothing at all. But never, you know, like that crazy shot,&quot; Tom explained.<br />
-&quot;I know. You don't have to convince me ... Hey, look at that.&quot; Lena held up her tablet. &quot;Do you see this peak here? That's the potency of the painkillers mix. Look! This line shows the reference level. The poor guy had a mixture of painkillers in his blood system that could kill him 17 times over. Injected by our pump here. And here ...&quot; she swiped, &quot;here you can see the moment of the patient's demise.&quot;<br />
-&quot;So, any idea what happened, boss?&quot; Tom asked his supervisor.<br />
-&quot;Hm ... The sensors seem to be fine. Heart rate, oxygen levels, glucose, ... The data were collected as expected. Some missing values in the blood oxygen data, but that's not unusual. Look here. The sensors have also detected the patient's slowing heart rate and extremely low cortisol levels caused by the morphine derivate and other pain blocking agents.&quot; She continued to swipe through the diagnostics report.<br />
-Tom stared captivated at the screen. It was his first investigation of a real device failure.</p>
-<p>&quot;Ok, here is our first piece of the puzzle. The system failed to send a warning to the hospital's communication channel. The warning was triggered, but rejected at protocol level. It could be our fault, but it could also be the fault of the hospital. Please send the logs over to the IT team,&quot; Lena told Tom.<br />
-Tom nodded with his eyes still fixed on the screen.<br />
-Lena continued: &quot;It's odd. The warning should also have caused the pump to shut down. But it obviously failed to do so. That must be a bug. Something the quality team missed. Something really bad. Maybe it's related to the protocol issue.&quot;<br />
-&quot;So, the emergency system of the pump somehow broke down, but why did the pump go full bananas and inject so much painkiller into John Doe?&quot; Tom wondered.<br />
-&quot;Good question. You are right. Protocol emergency failure aside, the pump shouldn't have administered that amount of medication at all. The algorithm should have stopped much earlier on its own, given the low level of cortisol and other warning signs,&quot; Lena explained.<br />
-&quot;Maybe some bad luck, like a one in a million thing, like being hit by a lightning?&quot; Tom asked her.<br />
-&quot;No, Tom. If you had read the documentation I sent you, you would have known that the pump was first trained in animal experiments, then later on humans, to learn to inject the perfect amount of painkillers based on the sensory input. The algorithm of the pump might be opaque and complex, but it's not random. That means that in the same situation the pump would behave exactly the same way again. Our patient would die again. A combination or undesired interaction of the sensory inputs must have triggered the erroneous behavior of the pump. That is why we have to dig deeper and find out what happened here,&quot; Lena explained.</p>
-<p>&quot;I see ...,&quot; Tom replied, lost in thought. &quot;Wasn't the patient going to die soon anyway? Because of cancer or something?&quot;<br />
-Lena nodded while she read the analysis report.<br />
-Tom got up and went to the window. He looked outside, his eyes fixed on a point in the distance. &quot;Maybe the machine did him a favor, you know, in freeing him from the pain. No more suffering. Maybe it just did the right thing. Like a lightning, but, you know, a good one. I mean like the lottery, but not random. But for a reason. If I were the pump, I would have done the same.&quot;<br />
-She finally lifted her head and looked at him.<br />
-He kept looking at something outside.<br />
-Both were silent for a few moments.<br />
-Lena lowered her head again and continued the analysis. &quot;No, Tom. It's a bug... Just a damn bug.&quot;</p>
+<p>&quot;ตายแบบนี้ไม่นับว่าศพไม่สวยหรอกนะ&quot; ทอมบอกกับเพื่อนร่วมงาน หวังจะพยายามทำให้สถานการณ์ที่ตึงเครียดพอคลายลงไปได้บ้าง เขาถอดเครื่องปั๊มออกจากเสาน้ำเกลือ<br />
+&quot;คือยังไงก็ตายด้วยสาเหตุไม่ธรรมชาติปะ&quot; เลนาเสริม<br />
+&quot;เออ ก็ตายด้วยไอ้เครื่องปั๊มสำหรับจ่ายมอร์ฟีนให้คนไข้นี่แหละ งานงอกเราอีก&quot; ทอมบ่นพลางหยิบไขควงมาขันน็อตด้านหลังเครื่องออก เขายกฝาหลังเครื่อง เผยให้เห็นถึงพอร์ตเสียบสำหรับวิเคราะห์ตัวเครื่อง เขาเสียบสายเพื่อเตรียมการวิเคราะห์เครื่องปั๊ม<br />
+&quot;อย่าบอกนะว่าสาเหตุที่เธอบ่นคือ ณ ตอนนี้เรายังไม่ตกงานอะ&quot; เลนาแซวพลางแสยะยิ้ม<br />
+&quot;ไม่โว้ย!&quot; ทอมเถียงสุดใจ</p>
+<p>ทอมเปิดเครื่องปั๊ม เลนาพลางหยิบสายส่งข้อมูลเสียบบนแท็บเล็ตของเธอ<br />
+&quot;โอเค ปล่อยมันรันโปรแกรมวิเคราะห์ปัญหาไปสักพักแล้วกัน&quot; เลนาเอ่ย<br />
+&quot;อยากรู้จริงๆ นะว่าอะไรผิดพลาดตรงไหนอะ&quot; &quot;เครื่องปั๊มตัวนี้อัดมอร์ฟีนใส่คนไข้รายนี้จนคนไข้น่าจะ<em>ลอย</em>จนถึงนิพพาน มอร์ฟีนความเข้มข้นสูงขนาดนั้น... แบบ เฮ้ย... อะไรแบบนี้เพิ่งเคยเกิดเป็นครั้งแรกใช่ปะ ปกติเครื่องปั๊มที่เสียจะจ่ายมอร์ฟีนที่ความเข้มข้นมากไปนิดเดียว หรือไม่ก็ไม่จ่ายเลย แต่ไม่เคยเจอเลยนะ ไม่เคยเจอที่จ่ายมอร์ฟีนออกมาถึงขั้นคนไข้ตาย&quot; ทอมอธิบาย &quot;รู้แล้ว ไม่ต้องบอกอะไรแล้ว... เอ้ย ดูนี่&quot; เลนากล่าวพลางหยิบแท็บเล็ตขึ้นมา &quot;เห็นพี้กของกราฟตรงนี้ไหม อันนี้คือระดับมอร์ฟีนที่ปั๊มนี่จ่ายไปมากที่สุด แล้วดูเส้นนี้ นี่ ตรงนี้ นี่คือเส้นระดับมาตรฐานที่ควรจ่ายให้คนไข้ ปั๊มตัวนี้อัดมอร์ฟีนเข้าตัวคนไข้ในปริมาณมากพอที่จะฆ่าเค้าได้ 17 ครั้งด้วยซ้ำ... เอ่อ... แล้วนี่...&quot; เธอปัดแท็บเล็ต &quot;จุดนี้ เห็นได้ชัดเลยว่าคนไข้เสียชีวิต ณ เวลานี้&quot;<br />
+&quot;พอมีไอเดียไหมว่าเกิดอะไรขึ้น&quot; ทอมถามหัวหน้างานของเขา<br />
+&quot;อืม... เซนเซอร์ก็ดูปกติดีนะ อัตราการเต้นหัวใจ ออกซิเจนในเลือด กลูโคส... ข้อมูลก็เก็บมาครบ ค่าระดับออกซิเจนในเลือดหายไปบ้าง แต่ก็ไม่ใช่เรื่องประหลาดอะไร เอ้อ มาดูนี่ ตรงนี้เซนเซอร์วัดอัตราการเต้นของหัวใจกับระดับของคอร์ทิซอลในเลือดที่ต่ำกว่าปกติได้ สาเหตุคือสารอนุพันธ์ของมอร์ฟีนกับสารยับยั้งความเจ็บปวดตัวอื่น&quot;<br />
+เธอปัดหน้าจอแท็บเล็บดูค่าต่างๆ ทอมพลางจ้องมองจอด้วยความฉงน นี่เป็นครั้งแรกที่เขาได้เข้าร่วมการสอบสวนกรณีอุปกรณ์เกิดความผิดพลาด</p>
+<p>&quot;โอเค อันนี้คือจิ๊กซอว์ตัวแรกของเรา ระบบไม่ได้ส่งสัญญาณเตือนไปที่ช่องทางการสื่อสารของโรงพยาบาล แต่ระบบพยายามส่งการแจ้งเตือนนะ แค่มันไปไม่ถึงเพราะถูกบล็อกระดับโปรโตคอล อาจจะเป็นความผิดเราก็ได้ แต่ก็อาจจะเป็นความผิดของโรงพยาบาลก็ได้ รบกวนส่งล็อกไฟล์ทั้งหมดไปให้ฝ่ายไอทีหน่อย&quot; เลนาบอกทอม<br />
+ทอมพยักหน้า สายตาชองเชายังคงจับจ้องบนจอ เลนากล่าวต่อ &quot;แปลกมาก การแจ้งเตือนจากระบบควรสั่งให้ปั๊มนี่หยุดทำงาน แต่ปั๊มมันไม่หยุดตามที่ระบบสั่ง ต้องเป็นบั๊กแน่ๆ เป็นบั๊กที่ทีมคิวซีหาไม่เจอ บั๊กที่ซวยมากๆ อาจจะเกี่ยวกับโปรโตคอลก็เป็นได้&quot;<br />
+&quot;โอเค ระบบเซฟตี้ฉุกเฉินของปั๊มอาจจะพัง แต่ว่าเพราะอะไรปั๊มถึงได้เลือก ฉีดมอร์ฟีนเข้าไปในตัวคนไข้แบบบ้าคลั่งแบบนี้หละ&quot; ทอมสงสัย &quot;จริง เป็นคำถามที่ดี ต่อให้ระบบหยุดการทำงานฉุกเฉินไม่ยอมทำงาน ตัวปั๊มก็ไม่ควรทำงานแบบที่ฉีดมอร์ฟีนเข้าไปในตัวคนไข้ในปริมาณระดับนั้นแน่ๆ ตัววิธีการทำงานของปั๊มควรจะสั่งให้ปั๊มหยุดการทำงานก่อนหน้านี้นานมากๆ แล้ว ยิ่งปั๊มเห็นระดับคอร์ติซอลกับสัญญาณเตือนอื่นๆ จากระบบมอนิเตอร์ด้วยนะ&quot; เลนาอธิบาย<br />
+&quot;เอ่อ อาจจะโชคร้ายหรือเปล่า เหมือนฟ้าผ่าอะ โอกาสหนึ่งในล้าน&quot; ทอมถาม<br />
+&quot;ไม่ ทอม ไม่ ถ้าเคยอ่านเอกสารที่ส่งให้ดูไปก่อนหน้านี้ น่าจะพอผ่านตาว่าปั๊มนี้ถูกฝึกสอนด้วยชุดข้อมูล จากการทดลองในสัตว์ ตามด้วยชุดข้อมูลจากการทดลองในคน เพื่อให้เรียนรู้ปริมาณการฉีดมอร์ฟีนที่พอดีเป๊ะๆ จากข้อมูลที่เซนเซอร์อ่านค่าได้ ขั้นตอนวิธีของปั๊มอาจจะซับซ้อนและอธิบายไม่ได้ แต่ว่ามันไม่ได้เกิดขึ้นสุ่มๆ แน่ นั่นหมายถึงว่าถ้ามีสถานการณ์แบบนี้เกิดขึ้นอีกครั้ง ผู้ป่วยอีกคนก็จะตายอีกกครั้ง ความผิดพลาดนี้เกิดขึ้นเพราะว่าค่าอะไรบางอย่างจากเซนเซอร์ทำให้ปั๊มทำงานแบบนี้ ก็เพราะแบบนี้แหละเราถึงนั่งงุ่นอยู่ตอนนี้&quot; เลนาอธิบาย</p>
+<p>&quot;เข้าใจแล้ว...&quot; ทอมตอบเลนา เขาตกอยู่ในห้วงความคิด &quot;คนไข้ไม่ได้จะตายอยู่แล้วเหรอ มะเร็งที่เขาเป็นหนะ&quot;<br />
+เลนาพยักหน้า เธอยังคงอ่านรายงาน ทอมลุกขึ้นยืน ทอดสายตาออกไปนอกหน้าต่าง &quot;ไม่แน่นะ ไอ้ปั๊มนี่อาจจะเลือกทำแบบนั้นเพื่อตัวเขาก็ได้ หมายถึงว่า ปลดปล่อยเขาจากความมะเร็งหนะ เหมือนฟ้าผ่า แต่เป็นในแง่ดี เหมือนถูกหวยที่ไม่ได้มาจากการสุ่ม แต่เกิดขึ้นเพราะเหตุผลอะไรบางอย่าง ไม่แน่นะ ถ้าผมเป็นปั๊มนั่น ผมอาจจะทำแบบนี้เหมือนกันก็ได้&quot;<br />
+เลนาเงยหน้าขึ้น มองทอมที่ยังคงจับจ้องบางสิ่งนอกหน้าต่าง เธอก้มหน้า ถอนหายใจ ในหัวเริ่มกลับมาวิเคราะห์ถึงเหตุการณ์อีกครั้ง</p>
+<p>&quot;ไม่ ทอม มันเป็นบั๊ก... แม่งแค่บั๊ก&quot;</p>
 </div>
-<div id="trust-fall" class="section level3 unnumbered">
-<h3>Trust Fall</h3>
-<p><strong>2050: A subway station in Singapore</strong></p>
+<div id="ขอแคเธอจงไวใจ" class="section level3 unnumbered">
+<h3>ขอแค่เธอจงไว้ใจ</h3>
+<p><strong>ค.ศ. 2050: สถานีรถไฟฟ้าในสิงคโปร์</strong></p>
 <p><img src="images/access-denied.jpg" width="640" /></p>
-<p>She rushed to the Bishan subway station. With her thoughts she was already at work. The tests for the new neural architecture should be completed by now. She led the redesign of the government's &quot;Tax Affinity Prediction System for Individual Entities&quot;, which predicts whether a person will hide money from the tax office. Her team has come up with an elegant piece of engineering. If successful, the system would not only serve the tax office, but also feed into other systems such as the counter-terrorism alarm system and the commercial registry. One day, the government could even integrate the predictions into the Civic Trust Score. The Civic Trust Score estimates how trustworthy a person is. The estimate affects every part of your daily life, such as getting a loan or how long you have to wait for a new passport. As she descended the escalator, she imagined how an integration of her team's system into the Civic Trust Score System might look like.</p>
-<p>She routinely wiped her hand over the RFID reader without reducing her walking speed. Her mind was occupied, but a dissonance of sensory expectations and reality rang alarm bells in her brain.</p>
-<p>Too late.</p>
-<p>Nose first she ran into the subway entrance gate and fell with her butt first to the ground. The door was supposed to open, ... but it did not. Dumbfounded, she stood up and looked at the screen next to the gate. &quot;Please try another time,&quot; suggested a friendly looking smiley on the screen. A person passed by and, ignoring her, wiped his hand over the reader. The door opened and he went through. The door closed again. She wiped her nose. It hurt, but at least it did not bleed. She tried to open the door, but was rejected again. It was strange. Maybe her public transport account did not have sufficient tokens. She looked at her smartwatch to check the account balance.</p>
-<p>&quot;Login denied. Please contact your Citizens Advice Bureau!&quot; her watch informed her.</p>
-<p>A feeling of nausea hit her like a fist to the stomach. She suspected what had happened. To confirm her theory, she started the mobile game &quot;Sniper Guild&quot;, an ego shooter. The app was directly closed again automatically, which confirmed her theory. She became dizzy and sat down on the floor again.</p>
-<p>There was only one possible explanation: Her Civic Trust Score had dropped. Substantially. A small drop meant minor inconveniences, such as not getting first class flights or having to wait a little longer for official documents. A low trust score was rare and meant that you were classified as a threat to society. One measure in dealing with these people was to keep them away from public places such as the subway. The government restricted the financial transactions of subjects with low Civic Trust Scores. They also began to actively monitor your behavior on social media and even went as far as to restrict certain content, such as violent games. It became exponentially more difficult to increase your Civic Trust Score the lower it was. People with a very low score usually never recovered.</p>
-<p>She could not think of any reason why her score should have fallen. The score was based on machine learning. The Civic Trust Score System worked like a well-oiled engine that ran society. The performance of the Trust Score System was always closely monitored. Machine learning had become much better since the beginning of the century. It had become so efficient that decisions made by the Trust Score System could no longer be disputed. An infallible system.</p>
-<p>She laughed in despair. Infallible system. If only. The system has rarely failed. But it failed. She must be one of those special cases; an error of the system; from now on an outcast. Nobody dared to question the system. It was too integrated into the government, into society itself, to be questioned. In the few remaining democratic countries it was forbidden to form anti-democratic movements, not because they where inherently malicious, but because they would destabilize the current system. The same logic applied to the now more common algocraties. Critique in the algorithms was forbidden because of the danger to the status quo.</p>
-<p>Algorithmic trust was the fabric of the social order. For the common good, rare false trust scorings were tacitly accepted. Hundreds of other prediction systems and databases fed into the score, making it impossible to know what caused the drop in her score. She felt like a big dark hole was opening in and under her. With horror she looked into the void.</p>
-<p>Her tax affinity system was eventually integrated into the Civic Trust Score System, but she never got to know it.</p>
+<p>เธอวิ่งตรงไปยังสถานี Bishan กายหยาบกำลังใช้แรงเคลื่อนตัว แต่จิตละเอียดนั้นเดินทางจนถึงที่ทำงานแล้ว ในใจเธอคิดถึงแต่ผลการทดลองประสาทเทียมแบบใหม่ที่น่าจะเพิ่งทดลองเสร็จไป-- เธอเป็นหัวหน้างานในการปรับปรุง &quot;ระบบคาดเดาการเลี่ยงภาษีรายบุคคล&quot; ที่ทำหน้าที่ตรงไปตางมาตามชื่อของมัน กล่าวคือคาดเดาว่าใครจะหนีภาษี หรือซ่อนเงินไว้สักที่ที่สรรพากรตรวจไม่พบ<br />
+งานที่ทีมของเธอทำนั้นล้ำหน้าเป็นอย่างมาก เมื่อผลงานเสร็จสิ้นโดยสมบูรณ์ ระบบนี้จะไม่ได้ถูกใช้แค่ภายในกรมสรรพากร แต่ข้อมูลจะถูกกระจายไปยังโครงข่ายระบบประมวลผลอื่นๆ ไม่ว่าจะเป็นระบบป้องกันการก่อการร้าย หรือระบบลงทะเบียนนิติบุคคล วันหนึ่งผลลัพธ์จากระบบคาดเดาการหนีภาษีของเธออาจจะถูกนำไปใช้เป็นส่วนหนึ่งในการคิด &quot;คะแนนพลเรือน&quot; ที่เป็นคะแนนซึ่งประชาชนทุกคนได้รับจากรัฐบาลว่าเป็นบุคคลที่รัฐเชื่อถือได้มากแค่ไหน และแน่นอนว่าระดับคะแนนมีผลต่อการใช้ชีวิตประจำวัน ไม่ว่าจะเป็นการพิจารณาขอสินเชื่อ หรือแม้แต่ระยะเวลาการขอพาสปอร์ต<br />
+ระหว่างที่เธอลงบันไดเลื่อน ภาพในหัวของเธอจินตนาการถึงอนาคตของประเทศเมื่อระบบที่ทีมของเธอทำถูกนำไปใช้อย่างกว้างขวาง</p>
+<p>การเดินทางของเธอวันนี้เหมือนทุกวันก่อนหน้า เธอหยิบบัตรไร้สารมาแตะที่ประตูอัตโนมัติของสถานีรถไฟฟ้า พลันจิตใจที่หลงอยู่ในภวังค์ของอนาคตกลับถูกปลุกให้ตื่น ด้วยสัมผัสบางอย่างจากระบบประสาทของเธอ</p>
+<p>ไม่ทันแล้ว</p>
+<p>ร่างของเธอค่อยๆ ร่วงลง บั้นท้ายถูกแรงกระแทกจากพื้นปะทะ ประตูรถไฟฟ้าที่ควรเปิดกลับไม่เปิด<br />
+เธอประคองตัวเองขึ้นมา สายตามองที่จอภาพบนประตูทางเข้า ปรากฎข้อความ &quot;กรุณาลองอีกครั้ง&quot; พร้อมกับภาพรอยยิ้ม ระหว่างนั้นใครสักคนเดินผ่านไป ไม่สนใจแม้แต่ตัวเธอที่อยู่บนพื้น เขาผู้นั้นหยิบบัตรรถไฟฟ้าแปะที่ทางเข้า ประตูเปิดให้เขาเข้าไปในสถานีก่อนปิดอย่างปกติอีกครั้ง เธอจับจมูกที่ก่อนหน้านี้กระแทกกับประตูกั้น มันเจ็บ แต่อย่างน้อยก็ยังดีที่เลือดไม่ออก เธอทาบบัตรอีกครั้ง ประตูไม่เปิดเช่นเคย<br />
+น่าประหลาดใจ บางทีเธออาจจะลืมเติมเงินในบัตรก็เป็นได้ เธอก้มลงไปดูสมาร์ตวอตช์ของเธอเพื่อดูว่ายอดเงินคงเหลือเป็นเท่าไหร่</p>
+<p>เธอพบข้อความ &quot;ไม่ได้รับอนุญาตให้เข้าใช้งาน กรุณาติดต่อศูนย์ให้คำแนะนำพลเรือน!&quot; บนจอนาฬิกา</p>
+<p>ร่างกายของเธอโต้ตอบข้อความนั้นด้วยอาการคลื่นไส้ เธอสงสัยว่าเกิดอะไรขึ้น พลางหยิบโทรศัพท์มือถือมาเพื่อทดลองอะไรบางอย่าง เธอเปิดเกม &quot;สไนเปอร์ กิลด์&quot; ซึ่งเป็นเกมแนวต่อสู้ยิงกัน หน้าจอเกมถูกปิดลงเองโดยอัตโนมัติ เธอเข้าใจแล้วว่าเกิดอะไรขึ้น มวลในท้องไหลเวียนหนักกว่าเก่า เธอทรุดตัวลงบนพื้น</p>
+<p>เธอเข้าใจแล้วว่าคะแนนพลเรือนของเธอลดลง--ไม่ใช่แค่ลดลงเล็กน้อย แต่เป็นการลดลงแบบฉับพลัน<br />
+เมื่อคะแนนพลเรือนลดลงเล็กน้อย ความไม่สะดวกต่างๆ ก็อาจจะเข้ามากวนใจเล็กน้อยเช่นกัน ไม่ว่าจะเป็นการไม่ได้นั่งเที่ยวบินชั้นหนึ่ง หรือการต้องรอติดต่อขอเอกสารราชการที่ช้าลงหน่อย การที่ใครได้คะแนนพลเรือนต่ำ หมายความว่าเขาหรือเธอคนนั้นเป็นภัยต่อสังคมโดยรวม และเพราะเหตุนี้จึงไม่ค่อยมีใครมีคะแนนทีั่ต่ำนัก และหนึ่งในมาตรการจัดการกับพลเรือนกลุ่มนี้ก็คือการไม่อนุญาตให้เข้าพื้นที่สาธารณะบางแห่ง เช่นรถไฟฟ้าใต้ดิน รวมไปถึงการจำกัดการนทำธุรกรรมทางการเงินบางอย่างด้วย<br />
+เมื่อคะแนนต่ำจนถึงจุดหนึ่ง รัฐบาลจะเริ่มจับตามองพฤติกรรมผ่านการสอดแนมสื่อสังคมออนไลน์ และจำกัดการเข้าถึงเนื้อหาความบันเทิงบางอย่าง เช่นเกมที่มีความรุนแรง ยิ่งคะแนนต่ำมากเท่าใด โอกาสที่จะพยายามทำตัวให้คะแนนกลับมาสูงเท่าเดิม ก็เป็นไปได้ยากมากเท่านั้น หลายคนที่คะแนนต่ำมากๆ อาจจะเหมือนตายทั้งเป็น</p>
+<p>เธอนั่งนึกถึงเหตุผลที่ทำให้คะแนนของเธอลดลงอย่างรวดเร็ว การให้คะแนนพลเรือนนั้นทำโดยระบบจักรกลเรียนรู้ และคะแนนพลเรือนก็กลายเป็นหนึ่งในกลไกขับเคลื่อนสังคมที่ภาครัฐเฝ้าสังเกตมาเป็นเวลานาน นับตั้งแต่วันแรกที่มนุษย์เริ่มศึกษาระบบจักรกลเรียนรู้จนถึงทุกวันนี้ ประสิทธิภาพของมันก็ทวีความสามารถเพิ่มขึ้นไปมาก จักรกลเรียนรู้ และรวมถึงระบบให้คะแนนพลเรือนโดยจักรกลเรียนรู้ กลายเป็นผู้พิพากษาความเป็นพลเรือนที่ดี ที่ไม่มีใครสามารถโต้แย้งได้ และได้กลายเป็นระบบที่ไม่มีวันพังทลายเป็นที่เรียบร้อย</p>
+<p>เธอแค่นหัวเราะ ระบบที่ไม่มีวันพังทลาย แต่กลับมีข้อผิดพลาด--อาจจะน้อย แต่ก็มีข้อผิดพลาด และเธอที่เพิ่งถูกระบบตราหน้าว่าเป็นส่วนเกิน ก็เป็นหนึ่งในข้อผิดพลาดนั้น แถมไม่มีใครกล้าตั้งคำถามกับระบบที่ถูกฝังลึกและใช้งานอย่างแพร่หลายโดยรัฐบาลหรอก<br />
+ในประเทศที่เป็นประชาธิปไตยอย่างที่นี่ (ซึ่งเธอก็เพิ่งนึกได้ว่าเหลือน้อยลงทุกวัน) รัฐบาลออกกฎหมายห้ามการประท้วงต่อต้านประชาธิปไต ไม่ใช่เพราะเป็นภัยต่อความมั่นคง แต่เพราะเป็นภัยต่อระบบคะแนนพลเรือนในลักษณะนี้ต่างหาก เธอนึกขึ้นได้ว่าคำศัพท์ &quot;อภิสิทธิ์กล&quot; เป็นหนึ่งในคำศัพท์เกิดใหม่ เป็นอภิสิทธิ์ที่เกิดขึ้นสำหรับจักรกล และเป็นอภิสิทธิ์นี้เองที่ทำให้ระบบตัดสินใจอย่างระบบให้คะแนนพลเรือนไม่สามารถถูกตั้งคำถาม สงสัย และวิพากษ์ได้</p>
+<p>ความเชื่อใจในจักรกลและขั้นตอนวิธีเปรียบเสมือนความเชื่อหล่อเลี้ยงสังคม เพื่อพลเรือนโดยส่วนใหญ่ การแปะป้ายพลเรือนบางส่วนว่าเป็นพลเรือนคุณภาพต่ำ แม้จะเป็นเรื่องผิดพลาด แต่ก็เกิดขึ้นน้อยมากจนพอมองข้ามไปได้บ้าง ข้อมูลนับร้อยนับพันถูกป้อนเข้าไปสู่ระบบให้คะแนนพลเรือน เธอไม่มีทางรู้ได้เลยว่าข้อมูลตัวใดทำให้คะแนนของเธอลดต่ำลง เธอรู้สึกเหมือนกำลังถูกดูดกลืนเข้าไปในหลุมดำ กลายเป็นประชากรชั้นล่างในสังคมเวิ้งว้าง</p>
+<p>ตอนนี้ระบบคาดเดาการเลี่ยงภาษีที่เธอสร้างกลายเป็นส่วนหนึ่งของระบบให้คะแนนพลเรือนไปแล้ว แต่เธอคงไม่ได้รู้เรื่องนี้ไปอีกตลอดชีวิตของเธอ</p>
 </div>
 <div id="fermis-paperclips" class="section level3 unnumbered">
 <h3>Fermi's Paperclips</h3>
 <p><strong>Year 612 AMS (after Mars settlement): A museum on Mars</strong></p>
 <p><img src="images/burnt-earth.jpg" width="960" /></p>
-<p>&quot;History is boring,&quot; Xola whispered to her friend. Xola, a blue-haired girl, was lazily chasing one of the projector drones humming in the room with her left hand. &quot;History is important,&quot; the teacher said with an upset voice, looking at the girls. Xola blushed. She did not expect her teacher to overhear her.</p>
-<p>&quot;Xola, what did you just learn?&quot; the teacher asked her. &quot;That the ancient people used up all resources from Earther Planet and then died?&quot; she asked carefully. &quot;No. They made the climate hot and it wasn't people, it was computers and machines. And it's Planet Earth, not Earther Planet,&quot; added another girl named Lin. Xola nodded in agreement. With a touch of pride, the teacher smiled and nodded. &quot;You are both right. Do you know why it happened?&quot; &quot;Because people were short-sighted and greedy?&quot; Xola asked. &quot;People could not stop their machines!&quot; Lin blurted out.</p>
-<p>&quot;Again, you are both right,&quot; the teacher decided, &quot;but it's much more complicated than that. Most people at the time were not aware of what was happening. Some saw the drastic changes, but could not reverse them. The most famous piece from this period is a poem by an anonymous author. It best captures what happened at that time. Listen carefully!&quot;</p>
-<p>The teacher started the poem. A dozen of the small drones repositioned themselves in front of the children and began to project the video directly into their eyes. It showed a person in a suit standing in a forest with only tree stumps left. He began to talk:</p>
-<p><em>The machines compute; the machines predict.</em></p>
-<p><em>We march on as we are part of it.</em></p>
-<p><em>We chase an optimum as trained.</em></p>
-<p><em>The optimum is one-dimensional, local and unconstrained.</em></p>
-<p><em>Silicon and flesh, chasing exponentiality.</em></p>
-<p><em>Growth is our mentality.</em></p>
-<p><em>When all rewards are collected,</em></p>
-<p><em>and side-effects neglected;</em></p>
-<p><em>When all the coins are mined,</em></p>
-<p><em>and nature has fallen behind;</em></p>
-<p><em>We will be in trouble,</em></p>
-<p><em>After all, exponential growth is a bubble.</em></p>
-<p><em>The tragedy of the commons unfolding,</em></p>
-<p><em>Exploding,</em></p>
-<p><em>Before our eyes.</em></p>
-<p><em>Cold calculations and icy greed,</em></p>
-<p><em>Fill the earth with heat.</em></p>
-<p><em>Everything is dying,</em></p>
-<p><em>And we are complying.</em></p>
-<p><em>Like horses with blinders we race the race of our own creation,</em></p>
-<p><em>Towards the Great Filter of civilization.</em></p>
-<p><em>And so we march on relentlessly.</em></p>
-<p><em>As we are part of the machine.</em></p>
-<p><em>Embracing entropy.</em></p>
-<p>&quot;A dark memory,&quot; the teacher said to break the silence in the room. &quot;It will be uploaded to your library. Your homework is to memorise it until next week.&quot; Xola sighed. She managed to catch one of the little drones. The drone was warm from the CPU and the engines. Xola liked how it warmed her hands.</p>
+<p>&quot;เบื่อวิชาประวัติศาสตร์อะ&quot; โซลากระซิบบอกกับเพื่อน เธอวิ่งตามโดรนลำจิ๋วที่ทำหน้าที่เป็นโปรเจกเตอร์ เอื้อมมือไปพยายามคว้ามัน ผมสีน้ำเงินของเธอสะบัดยามวิ่ง &quot;ประวัติศาสตร์เป็นหนึ่งในวิชาที่สำคัญมากๆ นะคะ&quot; คุณครูบอกนักเรียนทั้งห้องด้วยเสียงที่ไม่ค่อยดีเท่าไหร่ สายตาคุณครูพลันมองกลุ่มนักเรียนหญิง โซลาเขินอาจ เธอไม่คิดว่าคุณครูจะได้ยิน</p>
+<p>&quot;โซลาคะ ครูอยากให้สรุปสิ่งที่ได้เรียนในวันนี้ให้ฟังหน่อยค่ะ&quot; คุณครูถาม<br />
+&quot;มนุษย์สมัยโบราณใช้ทรัพยากรจนหมดจาก 'ดาวโลภ' แล้วก็ตายไปหรือเปล่าคะ&quot; เธอถาม<br />
+&quot;ไม่ใช่ เกิดภาวะโลกร้อนจนคนอยู่อาศัยไม่ได้ต่างหาก แล้วก็นะ หนึ่ง ต้นเหตุไม่ใช่คนแต่เป็นเครื่องจักร และสอง ชื่อดาวคือ 'ดาวโลก' ไม่ใช่ 'ดาวโลภ'&quot; ลิน--เพื่อนของโซลา--เอ่ยเสริม<br />
+โซลาพยักหน้าตาม คุณครูยิ้มและพยักหน้าตามเช่นกัน<br />
+&quot;ถูกทั้งสองคนค่ะ แล้วรู้ไหมคะว่าเกิดเหตุการณ์นี้ได้อย่างไร&quot;<br />
+&quot;เพราะมนุษย์โลภมาก ไม่รู้จักมองอนาคตหรือเปล่าคะ&quot; โซลาถาม<br />
+&quot;เพราะคนไม่สามารถหยุดการทำงานของเครื่องจักรได้ต่างหาก&quot; ลินแย้งขึ้นมา</p>
+<p>&quot;ถูกทั้งคู่อีกแหละค่ะ&quot; คุณครูเอ่ย<br />
+&quot;แต่จริงๆ แล้วเรื่องราวไปมาซับซ้อนกว่านั้นมาก คนส่วนใหญ่ในเวลานั้นยังไม่เข้าใจว่าอะไรบ้างกำลังจะเกิดขึ้น บางคนก็เห็นความเปลี่ยนแปลงที่กำลังจะสร้างอันตราย แต่ก็ไม่สามารถหยุดความเปลี่ยนแปลงได้ ครูจะอ่านร้อยกรองชิ้นนี้ เป็นผลงานที่ไม่ทราบผู้แต่ง ที่แต่งไว้เกี่ยวกับเหตุการณ์บนดาวโลกในขณะนั้น ตั้งใจฟังให้ดีนะคะ&quot;</p>
+<p>คุณครูเริ่มอ่านร้อยกรอง โดรนหลายตัวบินเรียงหมู่ เกาะกลุ่มกันเป็นรูปเป็นร่าง ฉายวิดีโอลงไปบนนัยน์ตาของเด็กแต่ละคน นักเรียนทุกคนในห้องเห็นภาพชายคนหนึ่งในชุดสูท ยืนอยู่กับสถานที่ที่เคยเป็นป่า ที่แทบไม่เหลทอต้นไม้แล้ว ชายคนนั้นเริ่มเอ่ยบทกลอน</p>
+<p><em>จักรกลคำนวณ จักรกลนักคิด</em><br />
+<em>มนุษย์และเครื่อง นั้นล้วนเป็นมิตร</em><br />
+<em>สร้างแบบจำลอง ปัญญาประดิษฐ์</em><br />
+<em>เพื่อเป็นหนทาง อนาคตวิจิตร</em></p>
+<p><em>เลือดเนื้อและไฟ-ฟ้าคือเพื่อนกัน</em><br />
+<em>เพื่อความก้าวหน้า สมานฉันท์</em><br />
+<em>เก็บเกี่ยวดอกผล หยิบมาแบ่งปัน</em><br />
+<em>สู่ความเจริญ อันเป็นอนันต์</em></p>
+<p><em>โอ้อนิจจา หามองเห็นไม่</em><br />
+<em>อันตรายเหล่า-นั้นอยู่ไม่ไกล</em><br />
+<em>จักรกลคำนวณ ผลเสียยิ่งใหญ่</em><br />
+<em>หากเผลอมองข้าม ก็ย่อมเป็นภัย</em></p>
+<p><em>เหตุคือเครื่องจักร กลืนกินพลังงาน</em><br />
+<em>ใช้ทรัพยากร เสียมหาศาล</em><br />
+<em>อุณหภูมิโลก สูงเป็นประวัติการณ์</em><br />
+<em>ฤๅนี่จะถึง กาลอวสาน</em></p>
+<p><em>โอ้หนอมนุษย์ เหมือนออกผจญภัย</em><br />
+<em>ก่อนพบจุดจบ ต้องพินาศไป</em><br />
+<em>เพราะมิได้มอง ถึงอนาคตไซร้</em><br />
+<em>ว่าความเป็นอยู่ จะเป็นอย่างไร</em></p>
+<p>&quot;ร้อยกรองชุด ความทรงจำที่มืดมน&quot; คุณครูเอ่ยพลันเสียงจากวิดีโอจบ &quot;ครูจะอัปโหลดร้อยกรองชุดนี้ไว้ให้นักเรียน ให้นักเรียนไปท่องมาให้ได้ภายในอาทิตย์หน้า&quot;<br />
+โซลาถอนหายใจ เธอคว้ามือออกไปกุมโดรนหนึ่งตัวมาเก็บไว้ ระบบไฟฟ้าภายในโดรนทำให้ตัวของมันอุ่น</p>
+<p>ความอุ่นของโดรนแผ่ไปถึงมือของโซลา มันช่วยคลายหนาวห้เธอ</p>
 
 <!--{pagebreak}-->
 </div>

@@ -128,17 +128,29 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 
 (This is a translator's note regarding translation guidelines, and is not found in the original book.)
 
+### การแจ้งข้อผิดพลาด
+
+กรุณาใช้หน้า [Issues](https://github.com/srakrn/interpretable-ml-book-th/issues) ในการแจ้งข้อผิดพลาดการแปลสองรายการนี้
+* การสะกดผิด (typography error)
+* การแปลที่ผิดไปจากความหมายของหนังสือต้นฉบับ (mistranslation)
+* เนื้อหาที่ผิดไปจากความจริง (inccuracies) โดยแนะนำให้แจ้งไปยังเรโพฯ หลักภาคภาษาอังกฤษของหนังสือด้วย
+
+การพูดคุยอื่นๆ เช่นคำแนะนำ หรือสอบถามเนื้อหา กรุณาใช้หน้า [Discussions](https://github.com/srakrn/interpretable-ml-book-th/discussions)
+
 ### การร่วมแปลหนังสือ {#translating-guide .unnumbered}
 
-เรโพสิทอรี (repository) หลักของฉบับภาษาไทยอยู่ที่ https://github.com/srakrn/interpretable-ml-book-th กรุณาอย่าเกรงใจที่จะติดต่อผู้ดูแลเรโพฯ เพื่อเพิ่มคุณเข้าเป็นสมาชิกสำหรับเข้าถึงการใช้งานบอร์ดงานและวิกิ
+เรโพสิทอรี (repository) หลักของฉบับภาษาไทยอยู่ที่ `https://github.com/srakrn/interpretable-ml-book-th` กรุณาอย่าเกรงใจที่จะติดต่อผู้ดูแลเรโพฯ เพื่อเพิ่มคุณเข้าเป็นสมาชิกสำหรับเข้าถึงการใช้งานบอร์ดงานและวิกิ
+
+พูดคุยเกี่ยวกับการแปลหนังสือ (เช่นการแปลศัพท์ หรือการใช้คำ) ได้ที่หน้า [Discussions](https://github.com/srakrn/interpretable-ml-book-th/discussions)
 
 #### บอร์ดงาน {#translating-kanban-board .unnumbered}
 
-หากคุณสนใจแปลงาน คุณสามารถใช้หน้า[บอร์ดคันบันสำหรับรายการบทต่างๆ ในหนังสือ](https://github.com/srakrn/interpretable-ml-book-th/projects/1) เพื่อบอกทุกคนว่าคุณกำลังแปลงานส่วนนี้
+หากคุณสนใจแปลงาน กรุณาใช้[บอร์ดคันบันสำหรับรายการบทต่างๆ ในหนังสือ](https://github.com/srakrn/interpretable-ml-book-th/projects/1) เพื่อบอกทุกคนว่าคุณกำลังแปลงานส่วนนี้
 
-กรุณาย้ายชื่อไฟล์ที่คุณสนใจหยิบมาแปลมาไว้ในส่วน "translating" และเมื่อแปลเสร็จแล้ว กรุณาย้ายไว้ในส่วน "waiting for proofreading" พร้อมส่ง pull request มาเป็นการต่อไป
+เมื่อคุณอาสาแปลบทใดบทหนึ่งในหนังสือ กรุณาย้ายชื่อไฟล์ที่คุณสนใจหยิบมาแปลมาไว้ในส่วน "translating" และเมื่อแปลเสร็จแล้ว กรุณาย้ายไว้ในส่วน "waiting for proofreading" พร้อมส่ง pull request มาเป็นการต่อไป
 
-นอกจากนี้ กรุณาเพิ่มชื่อลงในหัวข้อ "คณะผู้แปลภาษาไทย" ในรายการด้านล่างหากต้องการ โดยต้องเป็นชื่อจริงหรือนามแฝงส่วนบุคคล และยูอาร์แอลจะต้องเป็นยูอาร์แอลของสื่อสังคมออนไลน์หรือหน้าเว็บส่วนตัวเท่านั้น
+นอกจากนี้ หากคุณต้องการเครดิตสำหรับการแปล สามารถเพิ่มชื่อของคุณไว้ในส่วน "คณะผู้แปลภาษาไทย" ด้านล่าง   
+ชื่อที่เพิ่มต้องเป็นชื่อจริงหรือนามแฝงส่วนบุคคล และยูอาร์แอลจะต้องเป็นยูอาร์แอลของสื่อสังคมออนไลน์หรือหน้าเว็บส่วนตัวเท่านั้น
 
 #### Pull request {#translating-pull-request .unnumbered}
 

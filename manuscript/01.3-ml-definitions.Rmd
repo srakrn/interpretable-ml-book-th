@@ -1,120 +1,101 @@
 
 <!--{pagebreak}-->
 
-## What Is Machine Learning?
+## อะไรคือจักรกลเรียนรู้ {#what-is-machine-learning}
 
-Machine learning is a set of methods that computers use to make and improve predictions or behaviors based on data.
+จักรกลเรียนรู้เป็นชุดเครื่องมือที่คอมพิวเตอร์สามารถใช้สร้างหรือปรับปรุงวิธีการตัดสินใจและพฤติกรรม โดยอ้างอิงจากข้อมูล
 
-For example, to predict the value of a house, the computer would learn patterns from past house sales.
-The book focuses on supervised machine learning, which covers all prediction problems where we have a dataset for which we already know the outcome of interest (e.g. past house prices) and want to learn to predict the outcome for new data.
-Excluded from supervised learning are for example clustering tasks (= unsupervised learning) where we do not have a specific outcome of interest, but want to find clusters of data points.
-Also excluded are things like reinforcement learning, where an agent learns to optimize a certain reward by acting in an environment (e.g. a computer playing Tetris).
-The goal of supervised learning is to learn a predictive model that maps features of the data (e.g. house size, location, floor type, ...) to an output (e.g. house price).
-If the output is categorical, the task is called classification, and if it is numerical, it is called regression.
-The machine learning algorithm learns a model by estimating parameters (like weights) or learning structures (like trees).
-The algorithm is guided by a score or loss function that is minimized.
-In the house value example, the machine minimizes the difference between the estimated house price and the predicted price.
-A fully trained machine learning model can then be used to make predictions for new instances.
+ยกตัวอย่างเช่น เมื่อต้องการคาดเดาราคาขายของบ้านหลังหนึ่ง ระบบจักรกลเรียนรู้จะทำหน้าที่เรียนรู้รูปแบบของบ้านและราคาขายของบ้านจากการขายบ้านครั้งที่ผ่านๆ มา หนังสือเล่มนี้จะกล่าวถึงจักรกลเรียนรู้แบบถูกกำกับ (supervised machine learning) เป็นหลัก กล่าวคือเมื่อเรามีผลลัพธ์ของการตัดสินใจที่เราต้องการ (ในที่นี้คือราคาบ้านที่ผ่านๆ มา) เราจะให้จักรกลทำการตัดสินใจราคาบ้านหลังใหม่ที่เราไม่เคยเห็น โดยใช้ราคาบ้านที่เรามีอยู่ก่อนหน้านี้มาเป็นข้อมูลประกอบการคัดสินใจราคาบ้านหลังอื่นๆ ต่อไป   
+ปัญหาของจักรกลเรียนรู้ที่ไม่อยู่ในกลุ่มจักรกลเรียนรู้แบบถูกกำกับ อาจยกตัวอย่างการเรียนรู้แบบไม่กำกับ (unsupervised learning) เช่นการพยายามจัดกลุ่มของข้อมูลเข้าด้วยกันโดยดูจากความเหมือนกัน ซึ่งเรียกว่าการคลัสเตอร์ (clustering) หรือการเรียนรู้แบบเสริมแรง (reinforcement learning) ที่ระบบจะเรียนรู้ผ่านการทดลองว่าการตอบสนองแบบใดจะให้ผลลัพธ์ดีที่สุด (เช่นการทดลองเล่น Tetris ไปเรื่อยๆ จนได้คะแนนมากที่สุด)
 
-Estimation of house prices, product recommendations, street sign detection, credit default prediction and fraud detection:
-All these examples have in common that they can be solved by machine learning.
-The tasks are different, but the approach is the same:  
-Step 1: Data collection.
-The more, the better.
-The data must contain the outcome you want to predict and additional information from which to make the prediction.
-For a street sign detector ("Is there a street sign in the image?"), you would collect street images and label whether a street sign is visible or not.
-For a credit default predictor, you need past data on actual loans, information on whether the customers were in default with their loans, and data that will help you make predictions, such as income, past credit defaults, and so on.
-For an automatic house value estimator program, you could collect data from past house sales and information about the real estate such as size, location, and so on.  
-Step 2: Enter this information into a machine learning algorithm that generates a sign detector model, a credit rating model or a house value estimator.  
-Step 3: Use model with new data.
-Integrate the model into a product or process, such as a self-driving car, a credit application process or a real estate marketplace website.
+เป้าหมายของระบบจักรกลเรียนรู้แบบถูกกำกับคือ เพื่อสร้างแบบจำลองสำหรับคาดเดา (predictive model) ที่เมื่อรับข้อมูลนำเข้า (เช่นพื้นที่บ้าน ที่ตั้งของบ้าน วิธีการปูพื้นบ้าน ฯลฯ) จะส่งออกคำตอบที่ต้องการได้ (ในที่นี้คือราคาบ้าน) โดยเราเรียกแบบจำลองที่ให้คำตอบออกมาเป็นหมวดหมู่ *[เช่นการแปะป้ายว่าบ้านหลังนี้ดี หรือไม่ดี หรือการแปะป้ายว่าบ้านหลังนี้สำหรับตลาดกลุ่มลูกค้าเกรดเอ บี ซี หรืออื่นๆ: ผู้แปล]* ว่าแบบจำลองชนิดทำนายประเภท (classification) และเรียกแบบจำลองที่ให้คำตอบออกมาเป็นตัวเลขต่อ *[เช่นราคาบ้าน: ผู้แปล]* ว่าเป็นแบบจำลองชนิดถดถอย (regression)   
+ในการสร้างแบบจำลองจักรกลเรียนรู้ (machine learning model) นั้น ขั้นตอนวิธีจักรกลเรียนรู้ (machine learning algorithm) จะเรียนรู้ข้อมูลและจำลองความรู้ที่ได้ออกมาเป็นพารามิเตอร์เช่นค่าน้ำหนัก (weights) หรือโครงสร้างการเรียนรู้เช่นต้นไม้ (tree)   จะยกตัวอย่างกรณีการทำนายราคาบ่าน เมื่อต้องการทำนายราคาบ้านหลังหนึ่ง ระบบจักรกลเรียนรู้จะพยายามทำให้ราคาที่ทำนายออกมากับราคาจริงของบ้านหลังนั้นใกล้เคียงกันมากที่สุด
+โดยระบบจักรกลเรียนรู้ที่ถูกฝึกสอนอย่างสมบูรณ์ควรจะสามารถทำนายคำตอบของปัญหาที่เราต้องการบนชุดของข้อมูลที่ไม่เคยเห็นมาก่อน *[ในปัญหาของการทำนายราคาบ้าน ระบบจักรกลเรียนรู้ควรสามารถทำนายราคาบ้านหลังอื่นๆ นอกเหนือจากหลังที่ระบบเคยถูกสอนให้ทำนายได้: ผู้แปล]*
 
-Machines surpass humans in many tasks, such as playing chess (or more recently Go) or predicting the weather.
-Even if the machine is as good as a human or a bit worse at a task, there remain great advantages in terms of speed, reproducibility and scaling.
-A once implemented machine learning model can complete a task much faster than humans, reliably delivers consistent results and can be copied infinitely.
-Replicating a machine learning model on another machine is fast and cheap.
-The training of a human for a task can take decades (especially when they are young) and is very costly.
-A major disadvantage of using machine learning is that insights about the data and the task the machine solves is hidden in increasingly complex models.
-You need millions of numbers to describe a deep neural network, and there is no way to understand the model in its entirety.
-Other models, such as the random forest, consist of hundreds of decision trees that "vote" for predictions.
-To understand how the decision was made, you would have to look into the votes and structures of each of the hundreds of trees.
-That just does not work no matter how clever you are or how good your working memory is.
-The best performing models are often blends of several models (also called ensembles) that cannot be interpreted, even if each single model could be interpreted.
-If you focus only on performance, you will automatically get more and more opaque models.
+ทั้งการทำนายราคาบ้าน การแนะนำสินค้าที่ลูกค้าอาจสนใจ การตรวจหาป้ายจราจรบนท้องถนน การคาดเดาความตรงต่อเวลาในการชำระหนี้ และการตรวจสอบธุรกรรมที่ผิดปกติ ล้วนเป็นปัญหาที่สามารถแก้ได้ด้วยจักรกลเรียนรู้ทั้งสิ้น โดยขั้นตอนโดยคร่าวในการสร้างระบบจักรกลเรียนรู้มีดังนี้:   
+ขั้นที่ 1: การเก็บข้อมูล--เนื่องจากจักรกลเรียนรู้ใช้ข้อมูลในการสร้างการตัดสินใจ ดังนั้นยิ่งมีข้อมูลมากยิ่งดี โดยข้อมูลควรจะมีทั้งคุณลักษณะที่เราต้องการใช้เป็นคำตอบ และคุณลักษณะที่เกี่ยวข้องกับคำตอบนั้นๆ ยกตัวอย่างเช่นในการจำแนกว่ารูปภาพรูปหนึ่งเป็นป้ายจราจรหรือไม่ การเก็บข้อมูลคือการรวบรวมภาพบนท้องถนนและกำกับข้อมูลว่าในภาพภาพนั้นมีป้ายจราจรอยู่หรือไม่ ในการจำแนกข้อมูลความตรงต่อเวลาในการชำระหนี้ การเก็บข้อมูลคือการรวบรวมข้อมูลประวัติการชำระหนี้ ข้อมูลการกู้เงิน และรายละเอียดอื่นๆ อย่างรายได้ผู้กู้ ประวัติการผิดนัดชำระหนี้ และอื่นๆ   
+ขั้นที่ 2: ป้อนข้อมูลเหล่านี้เข้าสู่ขั้นตอนวิธีจักรกลเรียนรู้ เพื่อให้ได้แบบจำลองที่ต้องการ ในตัวอย่างของเราคือแบบจำลองสำหรับตรวจจับป้ายจราจร สำหรับคาดเดาการผิดนัดชำระหนี้ หรือแบบจำลองสำหรับคาดเดาราคาบ้าน   
+ขั้นที่ 3: ใช้แบบจำลองกับข้อมูลชุดที่อยู่นอกเหนือจากข้อมูลที่ป้อนให้ระบบจักรกลได้เรียนก่อนหน้านี้ กล่าวคือนำแบบจำลองไปใช้กับสถานการณ์ที่เราต้องการ เช่นใช้แบบจำลองตรวจจับป้ายในรถยนต์ไร้คนขับ ใช้แบบจำลองคาดเดาการผิดหนี้ในระบบประเมินความเสี่ยงการปล่อยกู้ หรือใช้แบบจำลองคาดเดาราคาบ้านในระบบนายหน้าอสังหาริมทรัพย์
+
+จักรกลเรียนรู้มีประสิทธิภาพมากกว่ามนุษย์ในงานหลายอย่าง เช่นการเล่นหมากรุก (และไม่นานมานี้วงการปัญญาประดิษฐ์สนใจการเล่นหมากโกะเป็นพิเศษ) หรือการพยากรณ์อากาศ
+และแม้ว่าคุณภาพการตัดสินใจของจักรกลเรียนรู้จะดีแค่ในระดับเทียบเท่ามนุษย์ หรือแย่กว่าเล็กน้อย แต่จักรกลเรียนรู้ก็ยังเหนือกว่ามนุษย์ในด้านความเร็ว ความคงเส้นคงวาในการตัดสินใจ และการขยายขนาดระบบตัดสินใจให้สามารถรองรับการตัดสินใจจำนวนมาก   
+แบบจำลองจักรกลเรียนรู้สามารถคิดคำนวณให้ได้ผลการตัดสินใจในเวลาที่สั้นกว่ามนุษย์ สามารถตัดสินใจได้อย่างคงเส้นคงวาและไม่แปรปรวน รวมถึงยังสามารถถูกคัดลอกไปใช้งานในที่ต่างๆ ได้นับครั้งไม่ถ้วน
+การคัดลอกแบบจำลองไปทำงานบนชิปหรือคอมพิวเตอร์อื่นนั้นสามารถทำได้เร็วและทำได้ในราคาไม่แพง
+ในขณะที่การสอนมนุษย์คนหนึ่งให้ทำงานรูปแบบใดรูปแบบหนึ่งอาจจะใช้เวลานับสิบปี (ยิ่งฝึกสอนตอนอายุน้อย ยิ่งต้องฝึกสอนนาน) และมีราคาสูงมาก   
+อย่างไรก็ตาม หนึ่งในข้อเสียของการใช้ระบบจักรกลเรียนรู้คือคำอธิบายและความเข้าใจเชิงลึกที่ระบบมีต่อข้อมูลนั้นถูกซ่อนไว้ภายใต้กลไกการทำงานที่ซับซ้อนและไม่เอื้อต่อการทำความเข้าใจ
+แบบจำลองการเรียนรู้อย่างเช่นโครงข่ายประสาทเทียม (deep neural network) สร้างขึ้นจากตัวเลขนับล้านชุด และมนุษย์ไม่สามารถที่จะอธิบายได้โดยง่ายว่าตัวเลขที่ประกอบกันภายในแบบจำลองเหล่านี้ทำให้พฤติกรรมของแบบจำลองเป็นอย่างไรบ้าง
+นอกจากนี้ยังมีแบบจำลองอื่นๆ เช่นแรนดอมฟอเรสต์ (random forest) ที่ประกอบไปด้วยต้นไม้ตัดสินใจ (decision tree) นับร้อย คอยทำหน้าที่ "ลงคะแนนเสีบง" เพื่อเลือกผลลัพธ์ที่จะมาเป็นคำตอบของแบบจำลอง
+หากต้องการเข้าใจผลลัพธ์ที่ได้จากแรนดอมฟอเรสต์ นั่นหมายถึงเราต้องพิจารณาดูคำตอบและเหตุผลในการตัดสินใจในต้นไม้ตัดสินใจย่อยๆ นับร้อยเหล่านั้น และแน่นอนว่านั่นฟังดูแทบจะเป็นไปไม่ได้เลย   
+ขั้นตอนวิธีแรนดอมฟอเรสต์จัดอยู่ในการเรียนรู้แบบออนเซิมเบิล (ensemble learning) ซึ่งให้ผลลัพธ์ออกมาเป็นแบบจำลองที่มีความแม่นยำสูง โดยหลักการทำงานคือภายในแบบจำลองออนเซิมเบิลประกอบด้วยแบบจำลองขนาดเล็กหลายๆ ตัว คอยช่วยกันทำหน้าที่ในการตัดสินใจ
+ปัญหาในการทำความเข้าใจแบบจำลองออนเซิมเบิลคือ ถึงแม้เราจะเข้าใจแบบจำลองเล็กๆ ข้างใน แต่การทำความเข้าใจว่าแบบจำลองแต่ละตัวทำงานร่วมกันอย่างไรนั้นเป็นไปไม่ได้   
+กล่าวโดยสรุปย่อคือหากเราสร้างแบบจำลองโดยมุ่งเน้นความแม่นยำในการให้คำตอบของแบบจำลองเพียงอย่างเดียว เราจะได้แบบจำลองที่จะไม่สามารถอธิบายพฤติกรรมอะไรใดๆ ข้างในตัวมันได้เลย
+
 <!--
 Just take a look at [interviews with winners on the kaggle.com machine learning competition platform](http://blog.kaggle.com/):
 -->
-The winning models on machine learning competitions are often ensembles of models or very complex models such as boosted trees or deep neural networks.
+ในการแข่งขันสร้างแบบจำลองจักรกลเรียนรู้ เราจะพบว่าทีมผู้ชนะมักจะเลือกสร้างแบบจำลองออนเซิมเบิลที่มีความซับซ้อนสูง เช่น boosted trees หรือโครงข่ายประสาทเทียม
 
 <!--{pagebreak}-->
 
-## Terminology {#terminology}
+## รายการคำศัพท์ {#terminology}
 
-To avoid confusion due to ambiguity, here are some definitions of terms used in this book:
+เราจะลดความกำกวมจากศัพท์ในหนังสือเล่มนี้ด้วยการสร้างคำนิยามและความเข้าใจที่ตรงกันก่อน
 
-An **Algorithm** is a set of rules that a machine follows to achieve a particular goal[^algorithm].
-An algorithm can be considered as a recipe that defines the inputs, the output and all the steps needed to get from the inputs to the output.
-Cooking recipes are algorithms where the ingredients are the inputs, the cooked food is the output, and the preparation and cooking steps are the algorithm instructions.  
+**ขั้นตอนวิธี (algorithm)** คือชุดของกฎและคำสั่งที่จักรกลทำตามเพื่อให้บรรลุเป้าหมายหรือผลสำเร็จอย่างใดอย่างหนึ่ง [^algorithm]   
+เราอาจมองขั้นตอนวิธีเป็นคู่มือที่ระบุข้อมูลรับเข้าที่ต้องใส่ ข้อมูลส่งออกที่จะได้เป็นผลลัพธ์จากขั้นตอนวิธี และขั้นตอนที่จะต้องทำเพื่อให้ได้ผลลัพธ์นั้นออกมา ยกตัวอย่างเช่นเราอาจมองคู่มือหรือตำราสูตรอาหารเป็นขั้นตอนวิธีที่มีข้อมูลรับเข้าเป็นส่วนผสมต่างๆ มีข้อมูลส่งออกเป็นอาหารจานที่เราต้องการ โดยต้องทำตามขั้นตอนต่างๆ เพื่อปรุงอาหารออกมา
 
-
-**Machine Learning** is a set of methods that allow computers to learn from data to make and improve predictions (for example cancer, weekly sales, credit default).
-Machine learning is a paradigm shift from "normal programming" where all instructions must be explicitly given to the computer to "indirect programming" that takes place through providing data.
+**จักรกลเรียนรู้ (machine learning)** เป็นชุดวิธีการที่ทำให้คอมพิวเตอร์สามารถสังเคราะห์ความรู้จากข้อมูลเพื่อนำมาใช้และปรับปรุงการตัดสินใจ (เช่นการตรวจโรคมะเร็ง การทำนายยอดขาย การทำนายการผิดชำระหนี้) การสร้างระบบจักรกลเรียนรู้เปรียบเสมือนการเขียนโปรแกรมทางอ้อม ซึ่งต่างจากแนวคิด (paradigm) ของการเขียนโปรแกรมโดยทั่วไป กล่าวคือการเขียนโปรแกรมทั่วไปใช้มนุษย์ในการสร้างกฎและขั้นตอนชัดเจน แต่การสร้างระบบจักรกลเรียนรู้เป็นการสอนให้ระบบทำตามคำสั่งผ่านข้อมูล
 
 ```{r programing-vs-ml, echo = FALSE, fig.cap = "", width = 400}
 knitr::include_graphics("images/programing-ml.png")
 ```
 
-A **Learner** or **Machine Learning Algorithm** is the program used to learn a machine learning model from data.
-Another name is "inducer" (e.g. "tree inducer").
+**ผู้เรียน (learner)** หรือ **ขั้นตอนวิธีจักรกลเรียนรู้ (machine learning algorithm)** คือโปรแกรมที่ใช้เรียนรู้ในระบบจักรกลเรียนรู้ผ่านข้อมูล โดยมีชื่อเรียกอีกชื่อหนึ่งว่า "inducer"
 
+**แบบจำลองจักรกลเรียนรู้ (machine learning model)**คือโปรแกรมที่เป็นผลจากจักรกลเรียนรู้ มีหน้าที่คาดเดาคำตอบที่ต้องการจากข้อมูลนำเข้า   
+ซึ่งอาจจะอยู่ในรูปของชุดน้ำหนัก (weights) ของแบบจำลองเชิงเส้นหรือโครงข่าวประสาทเทียม
+เราอาจเรียกแบบจำลองว่า "ตัวคาดเดา (predictor)" ซึ่งสามารถจำแนกย่อยได้เป็น "แบบจำลองชนิดจำแนก/ตัวจำแนก (classifier)" หรือ "แบบจำลองชนิดถดถอย/ตัวถดถอย (regresssor)" ตามชนิดของคำตอบที่แบบจำลองให้ออกมา   
+ในทางคณิตศาสตร์ เราเขียนแทนแบบจำลองที่ฝึกสอนแล้วด้วย $\hat{f}$ หรือ $\hat{f}(x)$.
 
-A **Machine Learning Model** is the learned program that maps inputs to predictions.
-This can be a set of weights for a linear model or for a neural network.
-Other names for the rather unspecific word "model" are "predictor" or - depending on the task - "classifier" or "regression model".
-In formulas, the trained machine learning model is called $\hat{f}$ or $\hat{f}(x)$.
-
-```{r learner-definition, fig.cap = "A learner learns a model from labeled training data. The model is used to make predictions.", echo = FALSE, width = 500}
+```{r learner-definition, fig.cap = "ผู้เรียนที่เรียนรู้แบบจำลองจากชุดข้อมูลฝึกสอนแบบกำกับป้าย ได้แบบจำลองที่สามารถใช้ในการคาดเดาคำตอบต่อไป", echo = FALSE, width = 500}
 knitr::include_graphics("images/learner.png")
 ```
 
-
-A **Black Box Model** is a system that does not reveal its internal mechanisms.
-In machine learning, "black box" describes models that cannot be understood by looking at their parameters (e.g. a neural network).
-The opposite of a black box is sometimes referred to as **White Box**, and is referred to in this book as [interpretable model](#simple).
-[Model-agnostic methods](#agnostic) for interpretability treat machine learning models as black boxes, even if they are not.
+**แบบจำลองชนิดกล่องดำ (black-box models)** คือระบบที่กลไกการทำงานภายในนั้นถูกปิดซ่อนหรือไม่สามารถเข้าใจได้   
+ในจักรกลเรียนรู้ แบบจำลองชนิดกล่องดำหมายถึงแบบจำลองที่เราไม่สามารถเข้าใจกลไกการทำงานของมันได้ด้วยการดูค่าพารามิเตอร์ของแบบจำลอง (เช่นโครงข่าวประสาทเทียม) แบบจำลองลักษณะนี้เป็นขั้วตรงข้ามของ**แบบจำลองชนิดกล่องขาว (white-box models)** [ที่เราสามารถอธิบายและเข้าใจกลไกการทำงานของมันได้: ผู้แปล] โดยในหนังสือเล่มนี้เราจะเรียกแบบจำลองชนิดกล่องขาวว่า[แบบจำลองชนิดแปลความได้](#simple) ทั้งนี้ หนึ่งในหัวข้อที่เราจะกล่าวถึงภายหลัง คือ[ขั้นตอนวิธีแปลความที่ไม่ขึ้นกับแบบจำลอง](#agnostic) เป็นขั้นตอนวิธีแปลความแบบจำลองที่จะมองแบบจำลองทุกชนิดเป็นแบบจำลองชนิดกล่องดำ (แม้ว่าความเป็นจริงแบบจำลองนั้นจะไม่ใช่แบบกล่องดำก็ตาม)
 
 ```{r black-box, echo = FALSE, fig.cap  = "", width = 1500}
 knitr::include_graphics("images/iml.png")
 ```
 
 
-**Interpretable Machine Learning** refers to methods and models that make the behavior and predictions of machine learning systems understandable to humans.
+**จักรกลเรียนรู้แบบแปลความได้ (interpretable machine learning)** เป็นวลีที่ใช้กล่าวรวมถึงขั้นตอนวิธีและชนิดของแบบจำลองที่ช่วยให้มนุษย์สามารถเข้าใจพฤติกรรมและผลการทำนายที่ได้จากระบบจักรกลเรียนรู้
 
 
-A **Dataset** is a table with the data from which the machine learns.
-The dataset contains the features and the target to predict.
-When used to induce a model, the dataset is called training data.
+**ชุดข้อมูล (dataset)** คือข้อมูลรูปแบบตารางที่ใช้ในการเรียนรู้ของระบบจักรกลเรียรรู้
+ข้อมูลประกอบด้วยคุณลักษณะ (feature) และเป้าหมาย (target) ที่จะกลายเป็นคำตอบที่แบบจำลองคาดเดาออกมา
+เมื่อชุดข้อมูลถูกนำไปสอนแบบจำลอง เราเรียกข้อมูลชุดนั้นว่าชุดข้อมูลฝึกสอน (training data)
 
-An **Instance** is a row in the dataset. 
-Other names for 'instance' are: (data) point, example, observation.
-An instance consists of the feature values $x^{(i)}$ and, if known, the target outcome $y_i$.
+**จุดข้อมูล (instance)** คือแถวแถวใดแถวหนึ่งในชุดข้อมูล
+ชื่ออื่นที่พบได้บ่อยของ "จุดข้อมูล" คือตัวอย่าง (example) และผลการสังเกต (observation)
+จุดข้อมูลจุดหนึ่งประกอบด้วยคุณลักษณะ $x^{(i)}$ และผลลัพธ์เป้าหมาย $y_i$
 
-The **Features** are the inputs used for prediction or classification.
-A feature is a column in the dataset.
-Throughout the book, features are assumed to be interpretable, meaning it is easy to understand what they mean, like the temperature on a given day or the height of a person.
-The interpretability of the features is a big assumption.
-But if it is hard to understand the input features, it is even harder to understand what the model does.
-The matrix with all features is called X and $x^{(i)}$ for a single instance.
-The vector of a single feature for all instances is $x_j$ and the value for the feature j and instance i is $x^{(i)}_j$.
+**คุณลักษณะ (feature)** ตือข้อมูลนำเข้าที่ใช้ในการส่งออกผลลัพธ์การคาดเดา
+ในข้อมูลรูปแบบตาราง คุณลักษณะอยู่ในรูปแบบของคอลัมน์หนึ่งของตาราง
+ตลอดทั้งหนังสือเล่มนี้ เราจะอนุมานว่าชุดคุณลักษณะแต่ละชุดสามารถแปลความได้ กล่าวคือเราสามารถเข้าใจความหมายของมันได้โดยง่าย เช่นค่าอุณหภูมิของอากาศในช่วงเวลาของวัน หรือความสูงของคน
+ยื่งเราสามารถเข้าใจชุดคุณลักษณะได้ เราก็จะยิ่งสามารถเข้าใจผลการแปลความของแบบจำลองได้ และในทางกลับกัน ถ้าเราไม่สามารถเข้าใจคุณลักษณะ เราก็จะไม่สามารถเข้าใจผลการแปลความของแบบจำลองได้เช่นกัน
+เราเรียกเมทริกซ์ที่เขียนแทนคุณลักษณะทั้งหมดบนทุกจุดข้อมูลด้วย $X$ และเราเขียนแทนคุณลักษระทั้งหมดของจุดข้อมูลใดๆ จุดหนึ่งด้วย $x^{(i)}$
+ทั้งนี้เราอาจเขียนแทนเวกเตอร์ของชุดคุณลักษณะตัวใดตัวหนึ่งบนทุกจุดข้อมูลด้วด้วย $x_j$ เมื่อ $j$ คือชื่อของคุณลักษณะนั้น และเขียนแทนค่าของคุณลักษณะตัวใดตัวหนึ่งบนจุดข้อมูลจุดใดจุดหนึ่งด้วย $x^{(i)}_j$
 
-The **Target** is the information the machine learns to predict. 
-In mathematical formulas, the target is usually called y or $y_i$ for a single instance.
+**เป้าหมาย (target)** คือข้อมูลที่เราต้องการให้แบบจำลองจักรกลเรียนรู้ส่งออกมาเป็นผลการคาดเดา
+เราเขียนแทนเป้าหมายในทางคณิตศาสตร์ด้วย $y$ สำหรับเป้าหมายของทุกจุดข้อมูล และ $y_i$ สำหรับเป้าหมายในจุดข้อมูลจุดใดจุดหนึ่ง
 
-A **Machine Learning Task** is the combination of a dataset with features and a target.
+**งานจักรกลเรียนรู้ (machine learning task)** คือประเภทของงานที่สนใจเมื่อพูดถึงชุดข้อมูชลชุดหนึ่ง
+งานของจักรกลเรียนรู้อาจมีได้หลายประเภท เช่นการจำแนก (classification) การถดถอย (regression) การคำนวณโอกาสอยู่รอด (survival analysis) การคลัสเตอร์ (clustering) หรือการตรวจจับความผิดปกติ (outlier detection)
 Depending on the type of the target, the task can be for example classification, regression, survival analysis, clustering, or outlier detection.
 
-The **Prediction** is what the machine learning model "guesses" what the target value should be based on the given features.
-In this book, the model prediction is denoted by $\hat{f}(x^{(i)})$ or $\hat{y}$.
+**ผลการคาดเดา (prediction)** คือผลลัพธ์ที่ได้ออกมาจากแบบจำลองจักรกลเรียนรู้ว่าเป้าหมาย (ที่เป็นคำตอบ) เมื่อกำหนดค่าคุณลักษณะชุดหนึ่ง น่าจะมีค่าเป็นแบบใด
+โดยในหนังสือเล่มนี้ เราจะเขียนแทนผลการคาดเดาของแบบจำลองด้วย $\hat{f}(x^{(i)})$ or $\hat{y}$
 
 
 

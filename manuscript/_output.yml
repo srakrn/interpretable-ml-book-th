@@ -5,14 +5,14 @@ bookdown::gitbook:
   includes:
     in_header: html/header.html
   config:
-    edit: https://github.com/christophM/interpretable-ml-book/edit/master/manuscript/%s
+    edit: https://github.com/srakrn/interpretable-ml-book/edit/master/manuscript/%s
     sharing:
       github: yes
       facebook: yes
     toc:
       collapse: subsection
       before: |
-        <li><a href="./">Interpretable machine learning</a></li>
+        <li><a href="./">จักรกลเรียนรู้แบบแปลความได้</a></li>
       after: |
         <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 

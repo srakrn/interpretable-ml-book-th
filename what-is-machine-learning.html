@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.2 What Is Machine Learning? | จักรกลเรียนรู้แบบแปลความได้</title>
+  <title>1.2 อะไรคือจักรกลเรียนรู้ | จักรกลเรียนรู้แบบแปลความได้</title>
   <meta name="description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.2 What Is Machine Learning? | จักรกลเรียนรู้แบบแปลความได้" />
+  <meta property="og:title" content="1.2 อะไรคือจักรกลเรียนรู้ | จักรกลเรียนรู้แบบแปลความได้" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="srakrn/interpretable-ml-book-th" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.2 What Is Machine Learning? | จักรกลเรียนรู้แบบแปลความได้" />
+  <meta name="twitter:title" content="1.2 อะไรคือจักรกลเรียนรู้ | จักรกลเรียนรู้แบบแปลความได้" />
   
   <meta name="twitter:description" content="ปกติแล้วระบบจักรกลเรียนรู้จะมีลักษณะเป็นกล่องดำ กล่าวคือเราไม่สามารถเข้าใจเหตุผลในการตัดสินใจของมัน หนังสือเล่มนี้รวบรวมคำแนะนำเชิงประยุกต์ว่าด้วยการทำให้แบบจำลองสามารถแปลความได้" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Christoph Molnar" />
 
 
-<meta name="date" content="2021-05-06" />
+<meta name="date" content="2021-05-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,6 +112,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>บทนำ</a></li>
 <li class="chapter" data-level="" data-path="preface-by-the-author.html"><a href="preface-by-the-author.html"><i class="fa fa-check"></i>คำนำโดยผู้เขียน</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html"><i class="fa fa-check"></i>หมายเหตุโดยผู้แปล</a><ul>
+<li class="chapter" data-level="0.0.1" data-path="translator-notes.html"><a href="translator-notes.html#การแจงขอผดพลาด"><i class="fa fa-check"></i><b>0.0.1</b> การแจ้งข้อผิดพลาด</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translating-guide"><i class="fa fa-check"></i>การร่วมแปลหนังสือ</a></li>
 <li class="chapter" data-level="" data-path="translator-notes.html"><a href="translator-notes.html#translators"><i class="fa fa-check"></i>คณะผู้แปลภาษาไทย</a></li>
 </ul></li>
@@ -121,8 +122,8 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#trust-fall"><i class="fa fa-check"></i>ขอแค่เธอจงไว้ใจ</a></li>
 <li class="chapter" data-level="" data-path="storytime.html"><a href="storytime.html#fermis-paperclips"><i class="fa fa-check"></i>คลิปหนีบกระดาษของเฟอร์มี</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="what-is-machine-learning.html"><a href="what-is-machine-learning.html"><i class="fa fa-check"></i><b>1.2</b> What Is Machine Learning?</a></li>
-<li class="chapter" data-level="1.3" data-path="terminology.html"><a href="terminology.html"><i class="fa fa-check"></i><b>1.3</b> Terminology</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-machine-learning.html"><a href="what-is-machine-learning.html"><i class="fa fa-check"></i><b>1.2</b> อะไรคือจักรกลเรียนรู้</a></li>
+<li class="chapter" data-level="1.3" data-path="terminology.html"><a href="terminology.html"><i class="fa fa-check"></i><b>1.3</b> รายการคำศัพท์</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="interpretability.html"><a href="interpretability.html"><i class="fa fa-check"></i><b>2</b> Interpretability</a><ul>
 <li class="chapter" data-level="2.1" data-path="interpretability-importance.html"><a href="interpretability-importance.html"><i class="fa fa-check"></i><b>2.1</b> Importance of Interpretability</a></li>
@@ -373,16 +374,25 @@ window.cookieconsent.initialise({
 
             <section class="normal" id="section-">
 <div id="what-is-machine-learning" class="section level2">
-<h2><span class="header-section-number">1.2</span> What Is Machine Learning?</h2>
-<p>Machine learning is a set of methods that computers use to make and improve predictions or behaviors based on data.</p>
-<p>For example, to predict the value of a house, the computer would learn patterns from past house sales. The book focuses on supervised machine learning, which covers all prediction problems where we have a dataset for which we already know the outcome of interest (e.g. past house prices) and want to learn to predict the outcome for new data. Excluded from supervised learning are for example clustering tasks (= unsupervised learning) where we do not have a specific outcome of interest, but want to find clusters of data points. Also excluded are things like reinforcement learning, where an agent learns to optimize a certain reward by acting in an environment (e.g. a computer playing Tetris). The goal of supervised learning is to learn a predictive model that maps features of the data (e.g. house size, location, floor type, ...) to an output (e.g. house price). If the output is categorical, the task is called classification, and if it is numerical, it is called regression. The machine learning algorithm learns a model by estimating parameters (like weights) or learning structures (like trees). The algorithm is guided by a score or loss function that is minimized. In the house value example, the machine minimizes the difference between the estimated house price and the predicted price. A fully trained machine learning model can then be used to make predictions for new instances.</p>
-<p>Estimation of house prices, product recommendations, street sign detection, credit default prediction and fraud detection: All these examples have in common that they can be solved by machine learning. The tasks are different, but the approach is the same:<br />
-Step 1: Data collection. The more, the better. The data must contain the outcome you want to predict and additional information from which to make the prediction. For a street sign detector (&quot;Is there a street sign in the image?&quot;), you would collect street images and label whether a street sign is visible or not. For a credit default predictor, you need past data on actual loans, information on whether the customers were in default with their loans, and data that will help you make predictions, such as income, past credit defaults, and so on. For an automatic house value estimator program, you could collect data from past house sales and information about the real estate such as size, location, and so on.<br />
-Step 2: Enter this information into a machine learning algorithm that generates a sign detector model, a credit rating model or a house value estimator.<br />
-Step 3: Use model with new data. Integrate the model into a product or process, such as a self-driving car, a credit application process or a real estate marketplace website.</p>
-<p>Machines surpass humans in many tasks, such as playing chess (or more recently Go) or predicting the weather. Even if the machine is as good as a human or a bit worse at a task, there remain great advantages in terms of speed, reproducibility and scaling. A once implemented machine learning model can complete a task much faster than humans, reliably delivers consistent results and can be copied infinitely. Replicating a machine learning model on another machine is fast and cheap. The training of a human for a task can take decades (especially when they are young) and is very costly. A major disadvantage of using machine learning is that insights about the data and the task the machine solves is hidden in increasingly complex models. You need millions of numbers to describe a deep neural network, and there is no way to understand the model in its entirety. Other models, such as the random forest, consist of hundreds of decision trees that &quot;vote&quot; for predictions. To understand how the decision was made, you would have to look into the votes and structures of each of the hundreds of trees. That just does not work no matter how clever you are or how good your working memory is. The best performing models are often blends of several models (also called ensembles) that cannot be interpreted, even if each single model could be interpreted. If you focus only on performance, you will automatically get more and more opaque models. <!--
+<h2><span class="header-section-number">1.2</span> อะไรคือจักรกลเรียนรู้</h2>
+<p>จักรกลเรียนรู้เป็นชุดเครื่องมือที่คอมพิวเตอร์สามารถใช้สร้างหรือปรับปรุงวิธีการตัดสินใจและพฤติกรรม โดยอ้างอิงจากข้อมูล</p>
+<p>ยกตัวอย่างเช่น เมื่อต้องการคาดเดาราคาขายของบ้านหลังหนึ่ง ระบบจักรกลเรียนรู้จะทำหน้าที่เรียนรู้รูปแบบของบ้านและราคาขายของบ้านจากการขายบ้านครั้งที่ผ่านๆ มา หนังสือเล่มนี้จะกล่าวถึงจักรกลเรียนรู้แบบถูกกำกับ (supervised machine learning) เป็นหลัก กล่าวคือเมื่อเรามีผลลัพธ์ของการตัดสินใจที่เราต้องการ (ในที่นี้คือราคาบ้านที่ผ่านๆ มา) เราจะให้จักรกลทำการตัดสินใจราคาบ้านหลังใหม่ที่เราไม่เคยเห็น โดยใช้ราคาบ้านที่เรามีอยู่ก่อนหน้านี้มาเป็นข้อมูลประกอบการคัดสินใจราคาบ้านหลังอื่นๆ ต่อไป<br />
+ปัญหาของจักรกลเรียนรู้ที่ไม่อยู่ในกลุ่มจักรกลเรียนรู้แบบถูกกำกับ อาจยกตัวอย่างการเรียนรู้แบบไม่กำกับ (unsupervised learning) เช่นการพยายามจัดกลุ่มของข้อมูลเข้าด้วยกันโดยดูจากความเหมือนกัน ซึ่งเรียกว่าการคลัสเตอร์ (clustering) หรือการเรียนรู้แบบเสริมแรง (reinforcement learning) ที่ระบบจะเรียนรู้ผ่านการทดลองว่าการตอบสนองแบบใดจะให้ผลลัพธ์ดีที่สุด (เช่นการทดลองเล่น Tetris ไปเรื่อยๆ จนได้คะแนนมากที่สุด)</p>
+<p>เป้าหมายของระบบจักรกลเรียนรู้แบบถูกกำกับคือ เพื่อสร้างแบบจำลองสำหรับคาดเดา (predictive model) ที่เมื่อรับข้อมูลนำเข้า (เช่นพื้นที่บ้าน ที่ตั้งของบ้าน วิธีการปูพื้นบ้าน ฯลฯ) จะส่งออกคำตอบที่ต้องการได้ (ในที่นี้คือราคาบ้าน) โดยเราเรียกแบบจำลองที่ให้คำตอบออกมาเป็นหมวดหมู่ <em>[เช่นการแปะป้ายว่าบ้านหลังนี้ดี หรือไม่ดี หรือการแปะป้ายว่าบ้านหลังนี้สำหรับตลาดกลุ่มลูกค้าเกรดเอ บี ซี หรืออื่นๆ: ผู้แปล]</em> ว่าแบบจำลองชนิดทำนายประเภท (classification) และเรียกแบบจำลองที่ให้คำตอบออกมาเป็นตัวเลขต่อ <em>[เช่นราคาบ้าน: ผู้แปล]</em> ว่าเป็นแบบจำลองชนิดถดถอย (regression)<br />
+ในการสร้างแบบจำลองจักรกลเรียนรู้ (machine learning model) นั้น ขั้นตอนวิธีจักรกลเรียนรู้ (machine learning algorithm) จะเรียนรู้ข้อมูลและจำลองความรู้ที่ได้ออกมาเป็นพารามิเตอร์เช่นค่าน้ำหนัก (weights) หรือโครงสร้างการเรียนรู้เช่นต้นไม้ (tree) จะยกตัวอย่างกรณีการทำนายราคาบ่าน เมื่อต้องการทำนายราคาบ้านหลังหนึ่ง ระบบจักรกลเรียนรู้จะพยายามทำให้ราคาที่ทำนายออกมากับราคาจริงของบ้านหลังนั้นใกล้เคียงกันมากที่สุด โดยระบบจักรกลเรียนรู้ที่ถูกฝึกสอนอย่างสมบูรณ์ควรจะสามารถทำนายคำตอบของปัญหาที่เราต้องการบนชุดของข้อมูลที่ไม่เคยเห็นมาก่อน <em>[ในปัญหาของการทำนายราคาบ้าน ระบบจักรกลเรียนรู้ควรสามารถทำนายราคาบ้านหลังอื่นๆ นอกเหนือจากหลังที่ระบบเคยถูกสอนให้ทำนายได้: ผู้แปล]</em></p>
+<p>ทั้งการทำนายราคาบ้าน การแนะนำสินค้าที่ลูกค้าอาจสนใจ การตรวจหาป้ายจราจรบนท้องถนน การคาดเดาความตรงต่อเวลาในการชำระหนี้ และการตรวจสอบธุรกรรมที่ผิดปกติ ล้วนเป็นปัญหาที่สามารถแก้ได้ด้วยจักรกลเรียนรู้ทั้งสิ้น โดยขั้นตอนโดยคร่าวในการสร้างระบบจักรกลเรียนรู้มีดังนี้:<br />
+ขั้นที่ 1: การเก็บข้อมูล--เนื่องจากจักรกลเรียนรู้ใช้ข้อมูลในการสร้างการตัดสินใจ ดังนั้นยิ่งมีข้อมูลมากยิ่งดี โดยข้อมูลควรจะมีทั้งคุณลักษณะที่เราต้องการใช้เป็นคำตอบ และคุณลักษณะที่เกี่ยวข้องกับคำตอบนั้นๆ ยกตัวอย่างเช่นในการจำแนกว่ารูปภาพรูปหนึ่งเป็นป้ายจราจรหรือไม่ การเก็บข้อมูลคือการรวบรวมภาพบนท้องถนนและกำกับข้อมูลว่าในภาพภาพนั้นมีป้ายจราจรอยู่หรือไม่ ในการจำแนกข้อมูลความตรงต่อเวลาในการชำระหนี้ การเก็บข้อมูลคือการรวบรวมข้อมูลประวัติการชำระหนี้ ข้อมูลการกู้เงิน และรายละเอียดอื่นๆ อย่างรายได้ผู้กู้ ประวัติการผิดนัดชำระหนี้ และอื่นๆ<br />
+ขั้นที่ 2: ป้อนข้อมูลเหล่านี้เข้าสู่ขั้นตอนวิธีจักรกลเรียนรู้ เพื่อให้ได้แบบจำลองที่ต้องการ ในตัวอย่างของเราคือแบบจำลองสำหรับตรวจจับป้ายจราจร สำหรับคาดเดาการผิดนัดชำระหนี้ หรือแบบจำลองสำหรับคาดเดาราคาบ้าน<br />
+ขั้นที่ 3: ใช้แบบจำลองกับข้อมูลชุดที่อยู่นอกเหนือจากข้อมูลที่ป้อนให้ระบบจักรกลได้เรียนก่อนหน้านี้ กล่าวคือนำแบบจำลองไปใช้กับสถานการณ์ที่เราต้องการ เช่นใช้แบบจำลองตรวจจับป้ายในรถยนต์ไร้คนขับ ใช้แบบจำลองคาดเดาการผิดหนี้ในระบบประเมินความเสี่ยงการปล่อยกู้ หรือใช้แบบจำลองคาดเดาราคาบ้านในระบบนายหน้าอสังหาริมทรัพย์</p>
+<p>จักรกลเรียนรู้มีประสิทธิภาพมากกว่ามนุษย์ในงานหลายอย่าง เช่นการเล่นหมากรุก (และไม่นานมานี้วงการปัญญาประดิษฐ์สนใจการเล่นหมากโกะเป็นพิเศษ) หรือการพยากรณ์อากาศ และแม้ว่าคุณภาพการตัดสินใจของจักรกลเรียนรู้จะดีแค่ในระดับเทียบเท่ามนุษย์ หรือแย่กว่าเล็กน้อย แต่จักรกลเรียนรู้ก็ยังเหนือกว่ามนุษย์ในด้านความเร็ว ความคงเส้นคงวาในการตัดสินใจ และการขยายขนาดระบบตัดสินใจให้สามารถรองรับการตัดสินใจจำนวนมาก<br />
+แบบจำลองจักรกลเรียนรู้สามารถคิดคำนวณให้ได้ผลการตัดสินใจในเวลาที่สั้นกว่ามนุษย์ สามารถตัดสินใจได้อย่างคงเส้นคงวาและไม่แปรปรวน รวมถึงยังสามารถถูกคัดลอกไปใช้งานในที่ต่างๆ ได้นับครั้งไม่ถ้วน การคัดลอกแบบจำลองไปทำงานบนชิปหรือคอมพิวเตอร์อื่นนั้นสามารถทำได้เร็วและทำได้ในราคาไม่แพง ในขณะที่การสอนมนุษย์คนหนึ่งให้ทำงานรูปแบบใดรูปแบบหนึ่งอาจจะใช้เวลานับสิบปี (ยิ่งฝึกสอนตอนอายุน้อย ยิ่งต้องฝึกสอนนาน) และมีราคาสูงมาก<br />
+อย่างไรก็ตาม หนึ่งในข้อเสียของการใช้ระบบจักรกลเรียนรู้คือคำอธิบายและความเข้าใจเชิงลึกที่ระบบมีต่อข้อมูลนั้นถูกซ่อนไว้ภายใต้กลไกการทำงานที่ซับซ้อนและไม่เอื้อต่อการทำความเข้าใจ แบบจำลองการเรียนรู้อย่างเช่นโครงข่ายประสาทเทียม (deep neural network) สร้างขึ้นจากตัวเลขนับล้านชุด และมนุษย์ไม่สามารถที่จะอธิบายได้โดยง่ายว่าตัวเลขที่ประกอบกันภายในแบบจำลองเหล่านี้ทำให้พฤติกรรมของแบบจำลองเป็นอย่างไรบ้าง นอกจากนี้ยังมีแบบจำลองอื่นๆ เช่นแรนดอมฟอเรสต์ (random forest) ที่ประกอบไปด้วยต้นไม้ตัดสินใจ (decision tree) นับร้อย คอยทำหน้าที่ &quot;ลงคะแนนเสีบง&quot; เพื่อเลือกผลลัพธ์ที่จะมาเป็นคำตอบของแบบจำลอง หากต้องการเข้าใจผลลัพธ์ที่ได้จากแรนดอมฟอเรสต์ นั่นหมายถึงเราต้องพิจารณาดูคำตอบและเหตุผลในการตัดสินใจในต้นไม้ตัดสินใจย่อยๆ นับร้อยเหล่านั้น และแน่นอนว่านั่นฟังดูแทบจะเป็นไปไม่ได้เลย<br />
+ขั้นตอนวิธีแรนดอมฟอเรสต์จัดอยู่ในการเรียนรู้แบบออนเซิมเบิล (ensemble learning) ซึ่งให้ผลลัพธ์ออกมาเป็นแบบจำลองที่มีความแม่นยำสูง โดยหลักการทำงานคือภายในแบบจำลองออนเซิมเบิลประกอบด้วยแบบจำลองขนาดเล็กหลายๆ ตัว คอยช่วยกันทำหน้าที่ในการตัดสินใจ ปัญหาในการทำความเข้าใจแบบจำลองออนเซิมเบิลคือ ถึงแม้เราจะเข้าใจแบบจำลองเล็กๆ ข้างใน แต่การทำความเข้าใจว่าแบบจำลองแต่ละตัวทำงานร่วมกันอย่างไรนั้นเป็นไปไม่ได้<br />
+กล่าวโดยสรุปย่อคือหากเราสร้างแบบจำลองโดยมุ่งเน้นความแม่นยำในการให้คำตอบของแบบจำลองเพียงอย่างเดียว เราจะได้แบบจำลองที่จะไม่สามารถอธิบายพฤติกรรมอะไรใดๆ ข้างในตัวมันได้เลย</p>
+<!--
 Just take a look at [interviews with winners on the kaggle.com machine learning competition platform](http://blog.kaggle.com/):
---> The winning models on machine learning competitions are often ensembles of models or very complex models such as boosted trees or deep neural networks.</p>
+-->
+<p>ในการแข่งขันสร้างแบบจำลองจักรกลเรียนรู้ เราจะพบว่าทีมผู้ชนะมักจะเลือกสร้างแบบจำลองออนเซิมเบิลที่มีความซับซ้อนสูง เช่น boosted trees หรือโครงข่ายประสาทเทียม</p>
 <!--{pagebreak}-->
 </div>
             </section>

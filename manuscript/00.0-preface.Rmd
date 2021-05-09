@@ -128,7 +128,7 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 
 (This is a translator's note regarding translation guidelines, and is not found in the original book.)
 
-### การแจ้งข้อผิดพลาด
+### การแจ้งข้อผิดพลาด {#translating-issue-tracker .unnumbered}
 
 กรุณาใช้หน้า [Issues](https://github.com/srakrn/interpretable-ml-book-th/issues) ในการแจ้งข้อผิดพลาดการแปลสองรายการนี้
 * การสะกดผิด (typography error)

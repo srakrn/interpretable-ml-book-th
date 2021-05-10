@@ -2,19 +2,22 @@
 devtools::load_all()
 ```
 
-# Interpretability {#interpretability}
+# การแปลความได้ {#interpretability}
 
-There is no mathematical definition of interpretability. 
-A (non-mathematical) definition I like by Miller (2017)[^Miller2017] is:
-**Interpretability is the degree to which a human can understand the cause of a decision.**
-Another one is: 
-**Interpretability is the degree to which a human can consistently predict the model's result** [^critique].
-The higher the interpretability of a machine learning model, the easier it is for someone to comprehend why certain decisions or predictions have been made.
-A model is better interpretable than another model if its decisions are easier for a human to comprehend than decisions from the other model.
-I will use both the terms interpretable and explainable interchangeably.
-Like  Miller (2017), I think it makes sense to distinguish between the terms interpretability/explainability and explanation.
-I will use "explanation" for explanations of individual predictions.
-See the [section about explanations](#explanation) to learn what we humans see as a good explanation.
+เราไม่มีนิยามทางคณิตศาสตร์ที่ชัดเจนว่า "การแปลความได้" คืออะไร
+แต่นิยามที่ผมชอบ (ซึ่งไม่ใช่นิยามทางคณิตศาสตร์) เป็นของ Miller (2017)[^Miller2017] ที่กล่าวไว้ว่า
+**การแปลความได้คือการที่มนุษย์สามารถเข้าใจสาเหตุเบื้องหลังของผลการตัดสินใจได้ในระดับหนึ่ง**
+**(Interpretability is the degree to which a human can understand the cause of a decision.)**
+หรืออีกนิยามที่กล่าวว่า
+**การแปลความได้คือการที่มนุษย์สามารถคาดเดาผลการตัดสินใจของแบบจำลองได้ในระดับหนึ่ง**
+**(Interpretability is the degree to which a human can consistently predict the model's result)** [^critique]
+เนื่องจากว่ายิ่งแบบจำลองจักรกลเรียนรู้สามารถแปลความได้มากเท่าใด มนุษย์ก็ยิ่งสามารถที่จะเข้าใจว่าเพราะเหตุใดแบบจำลองถึงให้คำตอบในการตัดสินใจครั้งใดครี่งหนึ่งได้ง่ายขึ้นเท่านั้น
+และจะกล่าวว่าแบบจำลองตัวใดตัวหนึ่งสามารถแปลความได้มากกว่าแบบจำลองอีกตัว ถ้ามนุษย์สามารถเข้าใจผลการคัดสินใจของแบบจำลองตัวแรกได้ง่ายกว่าแบบจำลองตัวที่สอง
+ในหนังสือเล่มนี้ วลี "แปลความได้ (interpretable)" และ "อธิบายได้ (explainable)" มีความหมายเหมือนกันในแง่ของความสามารถในการเข้าใจแบบจำลอง
+อย่างไรก็ตาม Miller (2017) เสนอว่าคำสองคำนี้ควรมีความหมายแตกต่างกัน
+ผมเห็นด้วยว่าควรจะมีความแตกต่างระหว่างคำสองคำนี้ และผมจะใช้คำว่า "คำอธิบาย (explaination)" ในการเรียกคำอธิบายของจุดข้อมูลจุดใดจุดหนึ่งในแบบจำลอง
+*[ในขณะที่คำว่า "แปลความได้" หรือ "interpretable" จะมุ่งเน้นการอธิบายพฤติกรรมของแบบจำลองโดยภาพรวมมากกว่า: ผู้แปล]*
+ใน[หัวข้อว่าด้วยคำอธิบาย](#explanation) เราจะมาพูดถึงกันว่าอะไรนับเป็นคำอธิบายที่ดีของแบบจำลอง
 
 ## Importance of Interpretability {#interpretability-importance}
 

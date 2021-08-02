@@ -130,7 +130,8 @@ knitr::include_graphics('images/title_page.jpg', dpi = NA)
 
 ### การแจ้งข้อผิดพลาด {#translating-issue-tracker .unnumbered}
 
-กรุณาใช้หน้า [Issues](https://github.com/srakrn/interpretable-ml-book-th/issues) ในการแจ้งข้อผิดพลาดการแปลสองรายการนี้
+กรุณาใช้หน้า [Issues](https://github.com/srakrn/interpretable-ml-book-th/issues) ในการแจ้งข้อผิดพลาดที่เกี่ยวกับ
+
 * การสะกดผิด (typography error)
 * การแปลที่ผิดไปจากความหมายของหนังสือต้นฉบับ (mistranslation)
 * เนื้อหาที่ผิดไปจากความจริง (inccuracies) โดยแนะนำให้แจ้งไปยังเรโพฯ หลักภาคภาษาอังกฤษของหนังสือด้วย

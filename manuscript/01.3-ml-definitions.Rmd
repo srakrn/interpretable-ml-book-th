@@ -95,7 +95,7 @@ knitr::include_graphics("images/iml.png")
 Depending on the type of the target, the task can be for example classification, regression, survival analysis, clustering, or outlier detection.
 
 **ผลการคาดเดา (prediction)** คือผลลัพธ์ที่ได้ออกมาจากแบบจำลองจักรกลเรียนรู้ว่าเป้าหมาย (ที่เป็นคำตอบ) เมื่อกำหนดค่าคุณลักษณะชุดหนึ่ง น่าจะมีค่าเป็นแบบใด
-โดยในหนังสือเล่มนี้ เราจะเขียนแทนผลการคาดเดาของแบบจำลองด้วย $\hat{f}(x^{(i)})$ or $\hat{y}$
+โดยในหนังสือเล่มนี้ เราจะเขียนแทนผลการคาดเดาของแบบจำลองด้วย $\hat{f}(x^{(i)})$ หรือ $\hat{y}$
 
 
 

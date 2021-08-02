@@ -24,7 +24,7 @@
 <meta name="author" content="Christoph Molnar" />
 
 
-<meta name="date" content="2021-05-09" />
+<meta name="date" content="2021-08-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -125,7 +125,7 @@ window.cookieconsent.initialise({
 <li class="chapter" data-level="1.2" data-path="what-is-machine-learning.html"><a href="what-is-machine-learning.html"><i class="fa fa-check"></i><b>1.2</b> อะไรคือจักรกลเรียนรู้</a></li>
 <li class="chapter" data-level="1.3" data-path="terminology.html"><a href="terminology.html"><i class="fa fa-check"></i><b>1.3</b> รายการคำศัพท์</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="interpretability.html"><a href="interpretability.html"><i class="fa fa-check"></i><b>2</b> Interpretability</a><ul>
+<li class="chapter" data-level="2" data-path="interpretability.html"><a href="interpretability.html"><i class="fa fa-check"></i><b>2</b> การแปลความได้</a><ul>
 <li class="chapter" data-level="2.1" data-path="interpretability-importance.html"><a href="interpretability-importance.html"><i class="fa fa-check"></i><b>2.1</b> Importance of Interpretability</a></li>
 <li class="chapter" data-level="2.2" data-path="taxonomy-of-interpretability-methods.html"><a href="taxonomy-of-interpretability-methods.html"><i class="fa fa-check"></i><b>2.2</b> Taxonomy of Interpretability Methods</a></li>
 <li class="chapter" data-level="2.3" data-path="scope-of-interpretability.html"><a href="scope-of-interpretability.html"><i class="fa fa-check"></i><b>2.3</b> Scope of Interpretability</a><ul>
@@ -399,7 +399,7 @@ window.cookieconsent.initialise({
 <p><strong>คุณลักษณะ (feature)</strong> ตือข้อมูลนำเข้าที่ใช้ในการส่งออกผลลัพธ์การคาดเดา ในข้อมูลรูปแบบตาราง คุณลักษณะอยู่ในรูปแบบของคอลัมน์หนึ่งของตาราง ตลอดทั้งหนังสือเล่มนี้ เราจะอนุมานว่าชุดคุณลักษณะแต่ละชุดสามารถแปลความได้ กล่าวคือเราสามารถเข้าใจความหมายของมันได้โดยง่าย เช่นค่าอุณหภูมิของอากาศในช่วงเวลาของวัน หรือความสูงของคน ยื่งเราสามารถเข้าใจชุดคุณลักษณะได้ เราก็จะยิ่งสามารถเข้าใจผลการแปลความของแบบจำลองได้ และในทางกลับกัน ถ้าเราไม่สามารถเข้าใจคุณลักษณะ เราก็จะไม่สามารถเข้าใจผลการแปลความของแบบจำลองได้เช่นกัน เราเรียกเมทริกซ์ที่เขียนแทนคุณลักษณะทั้งหมดบนทุกจุดข้อมูลด้วย <span class="math inline">\(X\)</span> และเราเขียนแทนคุณลักษระทั้งหมดของจุดข้อมูลใดๆ จุดหนึ่งด้วย <span class="math inline">\(x^{(i)}\)</span> ทั้งนี้เราอาจเขียนแทนเวกเตอร์ของชุดคุณลักษณะตัวใดตัวหนึ่งบนทุกจุดข้อมูลด้วด้วย <span class="math inline">\(x_j\)</span> เมื่อ <span class="math inline">\(j\)</span> คือชื่อของคุณลักษณะนั้น และเขียนแทนค่าของคุณลักษณะตัวใดตัวหนึ่งบนจุดข้อมูลจุดใดจุดหนึ่งด้วย <span class="math inline">\(x^{(i)}_j\)</span></p>
 <p><strong>เป้าหมาย (target)</strong> คือข้อมูลที่เราต้องการให้แบบจำลองจักรกลเรียนรู้ส่งออกมาเป็นผลการคาดเดา เราเขียนแทนเป้าหมายในทางคณิตศาสตร์ด้วย <span class="math inline">\(y\)</span> สำหรับเป้าหมายของทุกจุดข้อมูล และ <span class="math inline">\(y_i\)</span> สำหรับเป้าหมายในจุดข้อมูลจุดใดจุดหนึ่ง</p>
 <p><strong>งานจักรกลเรียนรู้ (machine learning task)</strong> คือประเภทของงานที่สนใจเมื่อพูดถึงชุดข้อมูชลชุดหนึ่ง งานของจักรกลเรียนรู้อาจมีได้หลายประเภท เช่นการจำแนก (classification) การถดถอย (regression) การคำนวณโอกาสอยู่รอด (survival analysis) การคลัสเตอร์ (clustering) หรือการตรวจจับความผิดปกติ (outlier detection) Depending on the type of the target, the task can be for example classification, regression, survival analysis, clustering, or outlier detection.</p>
-<p><strong>ผลการคาดเดา (prediction)</strong> คือผลลัพธ์ที่ได้ออกมาจากแบบจำลองจักรกลเรียนรู้ว่าเป้าหมาย (ที่เป็นคำตอบ) เมื่อกำหนดค่าคุณลักษณะชุดหนึ่ง น่าจะมีค่าเป็นแบบใด โดยในหนังสือเล่มนี้ เราจะเขียนแทนผลการคาดเดาของแบบจำลองด้วย <span class="math inline">\(\hat{f}(x^{(i)})\)</span> or <span class="math inline">\(\hat{y}\)</span></p>
+<p><strong>ผลการคาดเดา (prediction)</strong> คือผลลัพธ์ที่ได้ออกมาจากแบบจำลองจักรกลเรียนรู้ว่าเป้าหมาย (ที่เป็นคำตอบ) เมื่อกำหนดค่าคุณลักษณะชุดหนึ่ง น่าจะมีค่าเป็นแบบใด โดยในหนังสือเล่มนี้ เราจะเขียนแทนผลการคาดเดาของแบบจำลองด้วย <span class="math inline">\(\hat{f}(x^{(i)})\)</span> หรือ <span class="math inline">\(\hat{y}\)</span></p>
 
 </div>
 <!-- </div> -->

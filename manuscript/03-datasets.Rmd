@@ -3,43 +3,42 @@ devtools::load_all()
 ```
 
 
-# Datasets {#data}
+# ชุดข้อมูล {#data}
 
-Throughout the book, all models and techniques are applied to real datasets that are freely available online.
-We will use different datasets for different tasks:
-Classification, regression and text classification.
+ตลอดหนังสือเล่มนี้ ตัวแบบและเทคนิคทั้งหมดจะถูกใช้กับชุดข้อมูลจริงที่สามารถหาได้ออนไลน์โดยไม่มีค่าใช้จ่าย
+เราจะใช้ชุดข้อมูลต่างๆ กันสำหรับงานแต่ละงาน:
+การจำแนกประเภท (classification), การถดถอย (regression), และการจำแนกข้อความ
 
-## Bike Rentals (Regression) {#bike-data}
-This dataset contains daily counts of rented bicycles from the bicycle rental company [Capital-Bikeshare](https://www.capitalbikeshare.com/) in Washington D.C., along with weather and seasonal information.
-The data was kindly made openly available by Capital-Bikeshare.
-Fanaee-T and Gama (2013)[^Fanaee] added weather data and season information.
-The goal is to predict how many bikes will be rented depending on the weather and the day.
-The data can be downloaded from the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset).
+## การเช่าจักรยาน (regression) {#bike-data}
+ชุดข้อมูลนี้ประกอบด้วยจำนวนการเช่าจักรยานจากบริษัทให้เช่าจักรยาน [Capital-Bikeshare](https://www.capitalbikeshare.com/) ในวอชิงตัน ดี.ซี.
+พร้อมทั้งข้อมูลสภาพอากาศและฤดูกาล
+บริษัท Capital-Bikeshare ได้กรุณาเปิดข้อมูลดังกล่าวให้ใช้ได้
+ส่วนข้อมูลสภาพอากาศและฤดูกาลถูกเพิ่มโดย Fanaee-T and Gama (2013)[^Fanaee] 
+จุดประสงค์คือเพื่อทำนายว่าจะมีจักรยานจำนวนกี่คันที่จะถูกเช่า ในวันและสภาพอากาศหนึ่ง
+ข้อมูลดังกล่าวสามารถดาวน์โหลดได้จาก [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset)
 
+ฟีเจอร์ใหม่ถูกเพิ่มเข้าไปในชุดข้อมูลและไม่ใช่ทุกฟีเจอร์ต้นฉบับที่ถูกใช้สำหรับตัวอย่างในหนังสือเล่มนี้
+นี่คือรายการของฟีเจอร์ที่ถูกใช้:
 
-New features were added to the dataset and not all original features were used for the examples in this book.
-Here is the list of features that were used:
-
-- Count of bicycles including both casual and registered users.
-The count is used as the target in the regression task.
-- The season, either spring, summer, fall or winter.
-- Indicator whether the day was a holiday or not.
-- The year, either 2011 or 2012.
-- Number of days since the 01.01.2011 (the first day in the dataset).
-This feature was introduced to take account of the trend over time.
-- Indicator whether the day was a working day or weekend.
-- The weather situation on that day. One of:
+- จำนวนของจักรยาน จากทั้งผู้ใช้รายครั้ง (casual) และผู้ใช้ลงทะเบียน (registered)
+จำนวนนี้จะถูกใช้เป็นเป้าหมายสำหรับงาน regression
+- ฤดูกาล: spring, summer, fall หรือ winter
+- ตัวระบุว่าวันดังกล่าวเป็นวันหยุดนักขัตฤกษ์หรือไม่
+- ปี: 2011 หรือ 2012
+- จำนวนวันนับจากวันที่ 01.01.2011 (วันแรกที่ปรากฏในชุดข้อมูล)
+ฟีเจอร์นี้ถูกเพิ่มเข้ามาเพื่อจับแนวโน้มที่เกิดขึ้นเมื่อเวลาผ่านไป
+- ตัวระบุว่าเป็นวันทำงานหรือวันสุดสัปดาห์
+- ตัวระบุสภาพอากาศของวันดังกล่าว โดยเป็นค่าใดค่าหนึ่งดังต่อไปนี้:
     - clear, few clouds, partly cloudy, cloudy
     - mist + clouds, mist + broken clouds, mist + few clouds, mist
     - light snow, light rain + thunderstorm + scattered clouds, light rain + scattered clouds
     - heavy rain + ice pallets + thunderstorm + mist, snow + mist
-- Temperature in degrees Celsius.
-- Relative humidity in percent (0 to 100).
-- Wind speed in km per hour.
+- อุณหภูมิ หน่วยเป็นองศาเซลเซียส
+- ค่าความชื้นสัมพันธ์ เป็นร้อยละ (0 ถึง 100)
+- ความเร็วลม เป็นกิโลเมตรต่อชั่วโมง
 
-
-For the examples in this book, the data has been slightly processed.
-You can find the processing R-script in the book's [Github repository](https://github.com/christophM/interpretable-ml-book/blob/master/R/get-bike-sharing-dataset.R) together with the [final RData file](https://github.com/christophM/interpretable-ml-book/blob/master/data/bike.RData).
+สำหรับตัวอย่างในหนังสือเล่มนี้ ข้อมูลถูกปรับเปลี่ยนเล็กน้อย
+R-script สำหรับแปลงข้อมูลนั้นอยู่ใน [GitHub ของหนังสือ](https://github.com/christophM/interpretable-ml-book/blob/master/R/get-bike-sharing-dataset.R) พร้อมกับตัว[แฟ้ม RData ตัวสุดท้าย](https://github.com/christophM/interpretable-ml-book/blob/master/data/bike.RData)
 
 
 <!--{pagebreak}-->
